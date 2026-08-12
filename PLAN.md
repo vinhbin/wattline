@@ -25,6 +25,47 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:15 PM — B1 ✅ + B3 REAL: disaggregation now uses the actual DME (Niko)
+
+**Rows 2.3 + 3.2 signed off ✅.** The prior `pipeline/disaggregation.py` was not
+just missing D-004 — it was **synthetic**: the per-NPU estimate was
+`max(40,min(260, sqmiles*14.5*(1+cos(letter*0.5)*0.3)))` (NPU area × a trig
+function of the NPU letter). It computed `overlapping_zips` but **never used their
+DME**, and the "conservation check" was `print(... {92233} [OK])` — a hardcoded
+constant, nothing summed. `device_mix` was hardcoded state proportions. So the
+track claim wasn't real. Rewritten from scratch on B1.
+
+**What's real now:**
+- **B1 ingest** (`pipeline/empower.py`): normalizes the 711 ZIPs — population =
+  `Power_Dependent_Devices_DME` only (D-002), `Power_De_1`+unions excluded (D-003),
+  suppressed `11` → `[1,11]` (D-004), CRS guard (D-001). Prints the real check.
+- **B3 dasymetric** (`pipeline/disaggregation.py`): real ZIP DME distributed
+  ZIP→tract→NPU, weighted by `housing_units·senior_rate·disability_rate` (ARC ACS,
+  via new `scripts/fetch_tracts.py` → 530 TIGER tract polygons, all joined).
+  Areal ZIP→NPU fallback for zero-weight ZIPs. `dme_low/high` = suppression bounds
+  ± 8% (bootstrap is S3 stretch). Real per-NPU `no_vehicle_rate`.
+- **Conservation prints for real** (both stages):
+  ```
+  zips: 711 | pop sum 92,567 | suppressed 67
+  state anchor 92,233 in suppression band [91,897, 92,567]  [OK]
+  Atlanta: metro_atlanta_total = 2,513 DME (2.7% of anchor) across 25 NPUs
+  ```
+- **18 tests green** (`tests/test_empower.py` 12 + `tests/test_disaggregation.py` 6,
+  incl. synthetic-fixture allocation + real-file conservation). Run:
+  `.venv/Scripts/python -m pytest tests/`.
+
+**Q-006 answered: `metro_atlanta_total = 2,513`** (real; replaces the synthetic
+2,284). `npus.json`/`stats.json` regenerated in `data/processed/` — API serves
+them unchanged.
+
+**⚠️ Kareem:** `stats.json` `npus_critical`/`people_critical` are still the old
+placeholders (9 / 1,323) — those are **exposure.py's** to set, I preserved rather
+than overwrote them. `device_mix` per NPU now has the 6 contract keys from real
+device fields — confirm that feeds your D3 shortest-runtime logic.
+
+**Interface preserved:** `run_disaggregation()` returns the same keys, so
+`run_full_pipeline.py` is unchanged (its sites stage still needs local GTFS).
+
 ### 2026-08-12 ~5:55 PM — 2.1+2.2 DONE + merge reconciliation: ONE frontend on main (Vinh)
 
 **Done: F2 tier coloring + F3 scrubber (`a785893`), verified headless 3×18
@@ -354,7 +395,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 |---|-----------|---------|-------|--------|------|-------|
 | 2.1 | F2 tier coloring + header stats | `web/` | Vinh | ✅ 5:53 PM | 1.1 | feature-state tier fill; header critical count live per hour; verified headless |
 | 2.2 | **F3 scrubber + autoplay** (THE demo moment) | `web/` | Vinh | ✅ 5:53 PM | 2.1 | prefetch `/api/exposure/all` → per-hour → mock; verified 0 fetches during scrub |
-| 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | Niko | 🟡 needs Niko sign-off | 1.2, 1.5 | code landed via Kareem (`pipeline/disaggregation.py`); D-002/D-003 ok on grep, **D-004 suppression intervals ABSENT** — Niko must verify before we claim conservation |
+| 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | Niko | ✅ 6:15 PM | 1.2, 1.5 | **rewritten real** on B1 — dasymetric ZIP→tract→NPU (TIGER + ARC weights), was synthetic; D-002/D-003/D-004 all real; 18 tests green |
 | 2.4 | C3 deploy to Render (API + static site) | — | Guttu | ⬜ | 1.3 | live URL = Completion evidence |
 | 2.5 | D2 sites + transit reachability (honest heuristic, no RAPTOR) | `pipeline/` | Kareem | ✅ | 1.5 | `transit_reachable:false` is the demo beat |
 
@@ -363,7 +404,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
 | 3.1 | Swap mock → real API; **if real data not ready, ship on mock** | `web/`, `api/` | Guttu + Vinh | ✅ local 5:53 PM | 2.3, 2.4 | verified headless vs fresh API on real `data/processed/` (25 real NPUs render); deployed URL still pending 2.4 |
-| 3.2 | B3 conservation check printed + committed | `pipeline/` | Niko | 🟡 NOT verified | 2.3 | runtime print exists in code; no committed output; blocked on 2.3 sign-off |
+| 3.2 | B3 conservation check printed + committed | `pipeline/` | Niko | ✅ 6:15 PM | 2.3 | real check prints (711/92,567/67, anchor in band; metro=2,513); asserted in `tests/test_disaggregation.py` |
 | 3.3 | F4 NPU detail panel | `web/` | Vinh | ⬜ | 2.2 | **NOT in canonical frontend** — Kareem's `NpuDetailPanel.jsx` is salvage material, needs adapting + wiring |
 | 3.4 | D3 exposure series per NPU × hour 0–24 | `pipeline/` | Kareem | ✅ | 2.3, 2.5 | Helene profile: ETA 9h |
 
@@ -492,7 +533,7 @@ Every cut is a dated entry in `docs/decision-log.md`. No silent removal.
 - [ ] **Q-003 — Screenshot `docs/demo.png`:** capture after polish. **Owner: Kareem.**
 - [ ] **Q-004 — PostGIS on Render vs Tiger Data:** verify in first 15 min; decides S2. **Owner: Guttu.**
 - [ ] **Q-005 — Runtime floors verified against vendor spec sheets** (SimplyGo, Trilogy Evo, RPS II, CADD-Solis) before the pitch. **Owner: Kareem.**
-- [ ] **Q-006 — Real `metro_atlanta_total`:** mock says 1,778 (sum of 12 fake NPUs); plan example said 18,400. Real number comes out of B3. **Owner: Niko.**
+- [x] **Q-006 — Real `metro_atlanta_total` = 2,513** (real dasymetric B3, 25 NPUs, 2.7% of the 92,233 anchor). **Owner: Niko.** ✅ 6:15 PM
 - [ ] **Q-007 — Devpost registration status:** page shows an open "Register" to-do. Confirm ALL members registered + added (max 4, we are at cap). **Owner: Guttu.**
 
 ---
@@ -517,4 +558,4 @@ https://credits-portal-mmdm.onrender.com/claim/renderatlhackathon
 
 ---
 
-_Last updated: 2026-08-12 ~4:00 PM EDT by Vinh (via Claude)._
+_Last updated: 2026-08-12 ~6:15 PM EDT by Niko (via Claude) — B3 rewritten real, rows 2.3/3.2 ✅, Q-006 answered._
