@@ -1,16 +1,16 @@
 <!-- ═══════════════════════════════════════════════════════════════════
-  SUBMISSION TODOs — fill these at T+3:45, then delete this comment block:
-  1. Live demo URL  (Guttu, after Render deploy)
+  SUBMISSION TODOs — delete this comment block once #2 lands:
+  1. DONE — live demo URL is in (Render blueprint, auto-deploys from main)
   2. Video URL      (Kareem, must be PUBLIC — unlisted does not count)
-  3. Screenshot     (drop docs/demo.png, uncomment the image line below)
-  4. If Tiger Data ends up hosting the time-series, add it to Architecture
+  3. DONE — docs/demo.png is in and the image line is uncommented
+  4. Tiger Data was not adopted — nothing to add to Architecture
 ═══════════════════════════════════════════════════════════════════ -->
 
 # WATTLINE
 
 **When the power goes out, some people are on a clock. Nobody is counting.**
 
-[Live demo](#) · [2-minute video](#) · Built at Hack RenderATL, August 2026
+[**Live demo**](https://wattline-web.onrender.com) · [2-minute video](#) · Built at Hack RenderATL, August 2026
 
 ![Wattline Outage Exposure Map](docs/demo.png)
 
@@ -79,31 +79,40 @@ real data lands.
 
 ## Architecture
 
-Python ingest → Postgres + PostGIS → FastAPI → React + MapLibre GL
-Deployed on Render.
+Python ingest → precomputed tables → FastAPI (read-only) → React + MapLibre GL
+
+Every stage writes its own output, and the API only reads. Nothing is computed
+per request — the 25-hour exposure series ships as a single payload so the
+timeline scrubber never waits on the network.
+
+Deployed on Render as a Blueprint: a Python web service for the API and a
+static site for the frontend, both auto-deploying from `main`.
 
 ```
 wattline/
-├── mocks/      frozen API contract — npus, exposure, sites, stats
-├── data/       device runtime floors (manufacturer published minimums)
-├── scripts/    make_mocks.py — regenerates mocks/ deterministically
-├── pipeline/   ingest + disaggregation + exposure series   (build-day)
-├── api/        FastAPI, read-only                          (build-day)
-└── web/        React + Vite + MapLibre GL                  (build-day)
+├── scripts/         source fetchers — emPOWER, ARC tracts, MARTA GTFS
+├── pipeline/        Atlanta layers · disaggregation · sites · exposure series
+├── data/            raw pulls + device runtime floors
+│   └── processed/   pipeline output — what the API actually serves
+├── mocks/           frozen API contract, and the offline fallback
+├── api/             FastAPI, read-only
+├── workflows/       ingest DAG (Render Workflows)
+└── web/             React + Vite + MapLibre GL
 ```
 
 ## Running locally
 
 ```bash
-# Mock data (works today — the frontend builds against this)
-python scripts/make_mocks.py     # regenerates mocks/*.json
-
-# Full stack (as the pipeline lands)
-cp .env.example .env             # add DATABASE_URL
+# API — needs no database and no environment at all
 pip install -r requirements.txt
-python -m pipeline.ingest
-uvicorn api.main:app --reload
+uvicorn api.main:app --reload        # serves data/processed/, else mocks/
+
+# Frontend
 cd web && npm install && npm run dev
+
+# Regenerate the pipeline from source data (optional)
+python pipeline/run_full_pipeline.py # rewrites data/processed/
+python scripts/make_mocks.py         # regenerates mocks/*.json
 ```
 
 ## Limitations
