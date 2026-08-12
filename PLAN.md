@@ -170,8 +170,8 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 2.1 | F2 tier coloring + header stats | `web/` | Vinh | ⬜ | 1.1 | palette in §4 |
-| 2.2 | **F3 scrubber + autoplay** (THE demo moment) | `web/` | Vinh | ⬜ | 2.1 | prefetch all 25 hours; must be instant |
+| 2.1 | F2 tier coloring + header stats | `web/` | **Vinh** | 🟡 5:39 PM | 1.1 | palette in §4 |
+| 2.2 | **F3 scrubber + autoplay** (THE demo moment) | `web/` | **Vinh** | 🟡 5:39 PM | 2.1 | prefetch all 25 hours; must be instant |
 | 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | Niko | ⬜ | 1.2, 1.5 | conserve vs 92,233; print the check |
 | 2.4 | C3 deploy to Render (API + static site) | — | Guttu | ⬜ | 1.3 | live URL = Completion evidence |
 | 2.5 | D2 sites + transit reachability (honest heuristic, no RAPTOR) | `pipeline/` | Kareem | ⬜ | 1.5 | `transit_reachable:false` is the demo beat |
