@@ -579,7 +579,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ⬜ | 3.4 | Kareem's `SitesPanel.jsx` is salvage; dispatch data NOW POPULATED (83/90 `assigned_npus`, 7 transit deserts — verified 6:25 PM) |
+| 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | 🟡 6:45 PM | 3.4 | in progress — site dots + grey unreachable + dispatch-lines toggle in canonical MapView (dispatch data 83/90 verified) |
 | 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
 | 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ⬜ | 3.1 | dashboard → New → Workflow (Blueprints unsupported); trigger `run_pipeline` once, screenshot the passing run |
 | 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ✅ 6:07 PM | 4.2 | shipped, but current shot predates F4 panel + 4.2 polish — **re-capture after 4.2** (judges scroll on mobile) |
