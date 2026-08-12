@@ -5,7 +5,23 @@ Reference entries by `D-###` in commits. Do not re-litigate a logged decision wi
 
 ---
 
-## 2026-08-12 ~5:15 PM D-011: Render Workflows promoted stretch → Core
+## 2026-08-12 ~5:30 PM D-012: D-011 reversed — Workflows back to stretch
+
+**Decision.** Render Workflows returns to stretch S1. The workflow code
+(`workflows/main.py`, requirements, render.yaml) stays in the repo.
+
+**Rationale.** User call, fifteen minutes after D-011: with the frontend just
+started and ~90 min of build time before code freeze, no one's attention
+should be on a sponsor prize until the core demo is safe. The reversal costs
+nothing — the code is written, so the stretch goal is "loaded": if Core is
+green at the 6:30 PM check, the deploy is ~10 minutes of dashboard clicks.
+
+**Scope.** Priority only. No code removed. Guttu's paste-message becomes a
+heads-up, not an action item.
+
+---
+
+## 2026-08-12 ~5:15 PM D-011: Render Workflows promoted stretch → Core *(superseded by D-012)*
 
 **Decision.** We commit to the Best Use of Render Workflows track. The ingest
 pipeline ships as a Workflow service (`workflows/main.py`): fetch_empower →

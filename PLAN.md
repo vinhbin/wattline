@@ -117,7 +117,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 |---|-----------|---------|-------|--------|------|-------|
 | 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ⬜ | 3.4 | grey no-transit sites, tooltip |
 | 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
-| 4.3 | C4 Render Workflows deploy — **COMMITTED (D-011)** | `workflows/main.py` | Guttu | 🟡 code done | — | dashboard → New → Workflow (Blueprints unsupported); run `run_pipeline` once so a successful run shows in dashboard |
+| 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ⬜ | 3.1 | dashboard → New → Workflow (Blueprints unsupported); trigger `run_pipeline` once, screenshot the passing run |
 | 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ⬜ | 4.2 | judges scroll on mobile |
 
 ### Phase 5 — Submission (7:15–8:00 PM) — no new features
@@ -193,19 +193,17 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 4. **C4** Polish block F6 (half the rubric is Design + Completion)
 5. **C5** Video ≤2:00, public, created today + Devpost submission complete
 
-6. **C6** Render Workflows deploy — promoted from S1 per **D-011** (user call,
-   5:15 PM): `workflows/main.py` is written, the deploy is dashboard clicks +
-   one triggered run. Demote back to cuttable ONLY if the map itself is at risk.
-
 **Stretch (cut without ceremony if Core slips):**
 
+- **S1** Render Workflows deploy — code is DONE (`workflows/main.py`, D-011/D-012);
+  remaining cost is ~10 min of dashboard clicks + one triggered run. Pull it
+  only if Core is green at the 6:30 PM check.
 - **S2** Tiger Data time-series ·
   **S3** Bootstrap uncertainty band (→ fixed ±8%) ·
   **S4** Dispatch assignment lines · **S5** Transit reachability (→ straight-line + caveat)
 
-**Cut-triggers (pre-decided, from BUILD-PLAN §8, cut top-down S2→S5):**
-behind at the 6:30 PM check → cut S2; behind at 7:00 → S3–S5 in order.
-C6 falls only after all stretch is gone — a failing map demo outranks any prize.
+**Cut-triggers (pre-decided, from BUILD-PLAN §8, cut top-down S1→S5):**
+behind at the 6:30 PM check → cut S1+S2; behind at 7:00 → S3–S5 in order.
 The entire sites layer goes before disaggregation, scrubber, or polish are touched.
 
 Every cut is a dated entry in `docs/decision-log.md`. No silent removal.
@@ -226,7 +224,8 @@ Every cut is a dated entry in `docs/decision-log.md`. No silent removal.
 - **D-008:** MapLibre GL (no Mapbox token) · no Redux · one screen · exposure-gap framing, never prediction naming.
 - **D-009 (2026-08-12):** Repo layout `mocks/` + `data/` + `scripts/`; mocks are the frozen contract.
 - **D-010 (2026-08-12):** `make_mocks.py` uses `zlib.crc32`, not salted `hash()` — mocks must be reproducible.
-- **D-011 (2026-08-12 ~5:15 PM):** Render Workflows promoted from stretch S1 to Core C6 — user decision; DAG code is already written, remaining cost is dashboard setup only.
+- **D-011 (2026-08-12 ~5:15 PM):** Render Workflows promoted from stretch S1 to Core C6. **Superseded by D-012.**
+- **D-012 (2026-08-12 ~5:30 PM):** D-011 reversed — Workflows stays stretch S1; the DAG code stays in the repo so the deploy remains a 10-minute pull if Core is green at 6:30 PM.
 
 ---
 
