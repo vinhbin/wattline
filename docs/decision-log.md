@@ -5,6 +5,29 @@ Reference entries by `D-###` in commits. Do not re-litigate a logged decision wi
 
 ---
 
+## 2026-08-12 ~5:15 PM D-011: Render Workflows promoted stretch → Core
+
+**Decision.** We commit to the Best Use of Render Workflows track. The ingest
+pipeline ships as a Workflow service (`workflows/main.py`): fetch_empower →
+fetch_arc_tracts → fetch_gtfs → verify_conservation, plus a `run_pipeline`
+task chaining all four.
+
+**Rationale.** User call. The marginal cost collapsed once the fetch scripts
+existed — the DAG is a thin wrapper over them, and the story is honest:
+emPOWER refreshes monthly, so a re-runnable fetch-and-verify pipeline is what
+this project would genuinely need in production. $250 GC is the largest
+sponsor prize.
+
+**Scope.** Deploy is dashboard-only (Blueprints don't support the Workflow
+service type yet — verified against Render docs today). Falls back to cut
+ONLY if the core map demo itself is at risk; all remaining stretch (Tiger,
+bootstrap band, dispatch lines, reachability) cuts first.
+
+**Cross-references.** PLAN.md C6 / row 4.3; Render docs: workflows,
+workflows-sdk-python, render-oss/skills.
+
+---
+
 ## 2026-08-12 D-010: `make_mocks.py` uses `zlib.crc32`, not `hash()`
 
 **Decision.** The dark/lit NPU assignment in the mock exposure series keys off
