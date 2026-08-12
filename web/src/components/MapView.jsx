@@ -54,10 +54,14 @@ function boundsOf(geojson) {
   return b
 }
 
-export default function MapView({ npus, exposure }) {
+export default function MapView({ npus, exposure, selectedId, onSelect }) {
   const containerRef = useRef(null)
   const mapRef = useRef(null)
   const hoverIdRef = useRef(null)
+  const prevSelectedRef = useRef(null)
+  // map handlers bind once (source setup) — keep the latest callback reachable
+  const onSelectRef = useRef(onSelect)
+  onSelectRef.current = onSelect
   const [ready, setReady] = useState(false)
   const [tip, setTip] = useState(null)
 
@@ -75,9 +79,10 @@ export default function MapView({ npus, exposure }) {
       zoom: 10.3,
       attributionControl: { compact: true },
     })
+    // bottom-right so the F4 detail panel (top-right) never covers zoom
     map.addControl(
       new maplibregl.NavigationControl({ showCompass: false }),
-      'top-right',
+      'bottom-right',
     )
     map.on('load', () => setReady(true))
     mapRef.current = map
@@ -127,10 +132,22 @@ export default function MapView({ npus, exposure }) {
         type: 'line',
         source: 'npus',
         paint: {
-          'line-color': '#e8f1f2',
-          'line-opacity': 0.25,
+          'line-color': [
+            'case',
+            ['boolean', ['feature-state', 'selected'], false],
+            '#f5b54a',
+            '#e8f1f2',
+          ],
+          'line-opacity': [
+            'case',
+            ['boolean', ['feature-state', 'selected'], false],
+            0.95,
+            0.25,
+          ],
           'line-width': [
             'case',
+            ['boolean', ['feature-state', 'selected'], false],
+            2.5,
             ['boolean', ['feature-state', 'hover'], false],
             2,
             0.75,
@@ -139,6 +156,12 @@ export default function MapView({ npus, exposure }) {
       },
       firstSymbol,
     )
+
+    // F4: click a polygon → select; click empty basemap → deselect
+    map.on('click', (e) => {
+      const hits = map.queryRenderedFeatures(e.point, { layers: ['npu-fill'] })
+      onSelectRef.current(hits.length ? hits[0].id : null)
+    })
 
     map.on('mousemove', 'npu-fill', (e) => {
       const f = e.features?.[0]
@@ -168,6 +191,25 @@ export default function MapView({ npus, exposure }) {
 
     map.fitBounds(boundsOf(npus), { padding: 48, duration: 900 })
   }, [ready, npus])
+
+  // F4: selected outline via feature-state (same pattern as hover)
+  useEffect(() => {
+    const map = mapRef.current
+    if (!ready || !map || !map.getSource('npus')) return
+    if (prevSelectedRef.current && prevSelectedRef.current !== selectedId) {
+      map.setFeatureState(
+        { source: 'npus', id: prevSelectedRef.current },
+        { selected: false },
+      )
+    }
+    if (selectedId) {
+      map.setFeatureState(
+        { source: 'npus', id: selectedId },
+        { selected: true },
+      )
+    }
+    prevSelectedRef.current = selectedId
+  }, [ready, npus, selectedId])
 
   // F2/F3: push the current hour's tier into feature-state — instant recolor.
   useEffect(() => {
