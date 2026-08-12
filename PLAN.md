@@ -25,6 +25,36 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:35 PM — Vinh: 6:30 CHECKPOINT — read this, it has your next 70 minutes
+
+**Pull state: zero new commits since 6:30.** Niko has no commits all day;
+Guttu nothing since 5:53. ~70 min to the 7:45 submit target. Where Core
+stands: C1 code landed awaiting sign-off · C2 ✅ (+F4 panel) · **C3 NOT
+deployed** · C4 not started · C5 not started.
+
+- **Guttu — drop everything else, in this order:** ① **Devpost 1.6 — the DQ
+  condition, 10 minutes, nothing else matters if this is missing.** ② Render
+  deploy 2.4. ③ Skip the tier-threshold rescale (your blocker #3): verified
+  just now, hour 6 is **17 critical / 8 warning** — Kareem's staggered
+  ETA + restoration profile plus the within-tier fill ramp already fixed the
+  monochrome scrub. Don't spend deploy time on it. Blocker #2 is also
+  **closed** — `stats.json` (17 / 1,752) matches hour-6 exposure exactly.
+- **Per pre-decided D-012:** not everything is green at 6:30 (no deploy, no
+  sign-off), so **Workflows S1 does not get pulled**. No new cuts beyond
+  that — 4.1 sites is unblocked and stays in scope.
+- **Niko — sign-off 2.3/3.2 by ~7:00** or we ship with the softened README
+  claim ("Designed to conserve…", already in) and the video script avoids
+  "conserves exactly." If you can't get to D-004, say so and Vinh or Kareem
+  will run the containment check instead — silence is the only bad option.
+- **Kareem — video setup now** (5.1 owns the last hour): lock Guttu's
+  corrected 1:35 architecture line into the script, plan the scrub take
+  **with the F4 panel open** (the gap number drains and recovers on your
+  restoration arc — it reads great on camera), re-capture `docs/demo.png`
+  after 4.2 polish lands.
+- **Vinh — starting 4.1 F5 sites + dispatch now** (your dispatch data
+  verified: 83/90 assigned, 7 transit deserts), then 4.2 polish to ~7:15
+  freeze.
+
 ### 2026-08-12 ~6:30 PM — Vinh: PLAN.md conflict markers stripped (again) + README conservation claim softened
 
 - **Stripped a committed stash-conflict block** (`Updated upstream`/`Stashed
