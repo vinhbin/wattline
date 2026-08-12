@@ -4033,19 +4033,19 @@
       "properties": {
         "npu_id": "NPU-A",
         "name": "NPU-A",
-        "dme_estimate": 215,
-        "dme_low": 194,
-        "dme_high": 237,
+        "dme_estimate": 70,
+        "dme_low": 65,
+        "dme_high": 76,
         "device_mix": {
-          "oxygen_concentrator": 95,
-          "bipap": 43,
-          "ventilator": 26,
-          "electric_bed": 26,
-          "power_wheelchair": 17,
-          "iv_pump": 8
+          "ventilator": 7,
+          "oxygen_concentrator": 39,
+          "bipap": 7,
+          "iv_pump": 8,
+          "power_wheelchair": 9,
+          "electric_bed": 14
         },
-        "no_vehicle_rate": 0.1,
-        "zip_source_count": 8
+        "no_vehicle_rate": 0.04,
+        "zip_source_count": 5
       }
     },
     {
@@ -6408,19 +6408,19 @@
       "properties": {
         "npu_id": "NPU-B",
         "name": "NPU-B",
-        "dme_estimate": 186,
-        "dme_low": 167,
-        "dme_high": 205,
+        "dme_estimate": 291,
+        "dme_low": 268,
+        "dme_high": 314,
         "device_mix": {
-          "oxygen_concentrator": 82,
-          "bipap": 37,
-          "ventilator": 22,
-          "electric_bed": 22,
-          "power_wheelchair": 15,
-          "iv_pump": 8
+          "ventilator": 34,
+          "oxygen_concentrator": 170,
+          "bipap": 35,
+          "iv_pump": 36,
+          "power_wheelchair": 36,
+          "electric_bed": 56
         },
-        "no_vehicle_rate": 0.18,
-        "zip_source_count": 9
+        "no_vehicle_rate": 0.16,
+        "zip_source_count": 7
       }
     },
     {
@@ -9259,19 +9259,19 @@
       "properties": {
         "npu_id": "NPU-C",
         "name": "NPU-C",
-        "dme_estimate": 102,
-        "dme_low": 92,
-        "dme_high": 112,
+        "dme_estimate": 60,
+        "dme_low": 56,
+        "dme_high": 65,
         "device_mix": {
-          "oxygen_concentrator": 45,
-          "bipap": 20,
-          "ventilator": 12,
-          "electric_bed": 12,
-          "power_wheelchair": 8,
-          "iv_pump": 5
+          "ventilator": 6,
+          "oxygen_concentrator": 34,
+          "bipap": 6,
+          "iv_pump": 6,
+          "power_wheelchair": 7,
+          "electric_bed": 11
         },
-        "no_vehicle_rate": 0.22,
-        "zip_source_count": 6
+        "no_vehicle_rate": 0.06,
+        "zip_source_count": 4
       }
     },
     {
@@ -11586,19 +11586,19 @@
       "properties": {
         "npu_id": "NPU-D",
         "name": "NPU-D",
-        "dme_estimate": 96,
-        "dme_low": 86,
-        "dme_high": 106,
+        "dme_estimate": 9,
+        "dme_low": 8,
+        "dme_high": 10,
         "device_mix": {
-          "oxygen_concentrator": 42,
-          "bipap": 19,
-          "ventilator": 12,
-          "electric_bed": 12,
-          "power_wheelchair": 8,
-          "iv_pump": 3
+          "ventilator": 0,
+          "oxygen_concentrator": 5,
+          "bipap": 0,
+          "iv_pump": 0,
+          "power_wheelchair": 1,
+          "electric_bed": 1
         },
-        "no_vehicle_rate": 0.21,
-        "zip_source_count": 9
+        "no_vehicle_rate": 0.08,
+        "zip_source_count": 2
       }
     },
     {
@@ -12777,19 +12777,19 @@
       "properties": {
         "npu_id": "NPU-E",
         "name": "NPU-E",
-        "dme_estimate": 75,
-        "dme_low": 68,
-        "dme_high": 82,
+        "dme_estimate": 94,
+        "dme_low": 77,
+        "dme_high": 101,
         "device_mix": {
-          "oxygen_concentrator": 33,
-          "bipap": 15,
-          "ventilator": 9,
-          "electric_bed": 9,
-          "power_wheelchair": 6,
-          "iv_pump": 3
+          "ventilator": 11,
+          "oxygen_concentrator": 58,
+          "bipap": 22,
+          "iv_pump": 11,
+          "power_wheelchair": 11,
+          "electric_bed": 13
         },
-        "no_vehicle_rate": 0.14,
-        "zip_source_count": 10
+        "no_vehicle_rate": 0.09,
+        "zip_source_count": 8
       }
     },
     {
@@ -17372,19 +17372,19 @@
       "properties": {
         "npu_id": "NPU-F",
         "name": "NPU-F",
-        "dme_estimate": 66,
-        "dme_low": 59,
-        "dme_high": 73,
+        "dme_estimate": 79,
+        "dme_low": 72,
+        "dme_high": 85,
         "device_mix": {
-          "oxygen_concentrator": 29,
-          "bipap": 13,
-          "ventilator": 8,
-          "electric_bed": 8,
-          "power_wheelchair": 5,
-          "iv_pump": 3
+          "ventilator": 11,
+          "oxygen_concentrator": 43,
+          "bipap": 11,
+          "iv_pump": 11,
+          "power_wheelchair": 12,
+          "electric_bed": 13
         },
-        "no_vehicle_rate": 0.06,
-        "zip_source_count": 12
+        "no_vehicle_rate": 0.1,
+        "zip_source_count": 9
       }
     },
     {
@@ -18891,19 +18891,19 @@
       "properties": {
         "npu_id": "NPU-G",
         "name": "NPU-G",
-        "dme_estimate": 57,
-        "dme_low": 51,
-        "dme_high": 63,
+        "dme_estimate": 54,
+        "dme_low": 50,
+        "dme_high": 59,
         "device_mix": {
-          "oxygen_concentrator": 25,
-          "bipap": 11,
-          "ventilator": 7,
-          "electric_bed": 7,
-          "power_wheelchair": 5,
-          "iv_pump": 2
+          "ventilator": 3,
+          "oxygen_concentrator": 33,
+          "bipap": 3,
+          "iv_pump": 3,
+          "power_wheelchair": 6,
+          "electric_bed": 9
         },
-        "no_vehicle_rate": 0.05,
-        "zip_source_count": 4
+        "no_vehicle_rate": 0.24,
+        "zip_source_count": 2
       }
     },
     {
@@ -20714,19 +20714,19 @@
       "properties": {
         "npu_id": "NPU-H",
         "name": "NPU-H",
-        "dme_estimate": 67,
-        "dme_low": 60,
-        "dme_high": 74,
+        "dme_estimate": 105,
+        "dme_low": 97,
+        "dme_high": 114,
         "device_mix": {
-          "oxygen_concentrator": 29,
-          "bipap": 13,
-          "ventilator": 8,
-          "electric_bed": 8,
-          "power_wheelchair": 5,
-          "iv_pump": 4
+          "ventilator": 4,
+          "oxygen_concentrator": 62,
+          "bipap": 6,
+          "iv_pump": 5,
+          "power_wheelchair": 9,
+          "electric_bed": 26
         },
-        "no_vehicle_rate": 0.05,
-        "zip_source_count": 6
+        "no_vehicle_rate": 0.2,
+        "zip_source_count": 4
       }
     },
     {
@@ -22813,19 +22813,19 @@
       "properties": {
         "npu_id": "NPU-I",
         "name": "NPU-I",
-        "dme_estimate": 112,
-        "dme_low": 101,
-        "dme_high": 123,
+        "dme_estimate": 258,
+        "dme_low": 237,
+        "dme_high": 278,
         "device_mix": {
-          "oxygen_concentrator": 49,
-          "bipap": 22,
-          "ventilator": 13,
-          "electric_bed": 13,
-          "power_wheelchair": 9,
-          "iv_pump": 6
+          "ventilator": 12,
+          "oxygen_concentrator": 165,
+          "bipap": 14,
+          "iv_pump": 11,
+          "power_wheelchair": 26,
+          "electric_bed": 50
         },
-        "no_vehicle_rate": 0.05,
-        "zip_source_count": 7
+        "no_vehicle_rate": 0.22,
+        "zip_source_count": 5
       }
     },
     {
@@ -24104,19 +24104,19 @@
       "properties": {
         "npu_id": "NPU-J",
         "name": "NPU-J",
-        "dme_estimate": 60,
-        "dme_low": 54,
-        "dme_high": 66,
+        "dme_estimate": 83,
+        "dme_low": 76,
+        "dme_high": 89,
         "device_mix": {
-          "oxygen_concentrator": 26,
-          "bipap": 12,
-          "ventilator": 7,
-          "electric_bed": 7,
-          "power_wheelchair": 5,
-          "iv_pump": 3
+          "ventilator": 5,
+          "oxygen_concentrator": 51,
+          "bipap": 5,
+          "iv_pump": 5,
+          "power_wheelchair": 11,
+          "electric_bed": 17
         },
-        "no_vehicle_rate": 0.1,
-        "zip_source_count": 5
+        "no_vehicle_rate": 0.28,
+        "zip_source_count": 3
       }
     },
     {
@@ -25087,19 +25087,19 @@
       "properties": {
         "npu_id": "NPU-K",
         "name": "NPU-K",
-        "dme_estimate": 40,
-        "dme_low": 36,
-        "dme_high": 44,
+        "dme_estimate": 52,
+        "dme_low": 48,
+        "dme_high": 56,
         "device_mix": {
-          "oxygen_concentrator": 18,
-          "bipap": 8,
-          "ventilator": 5,
-          "electric_bed": 5,
-          "power_wheelchair": 3,
-          "iv_pump": 1
+          "ventilator": 4,
+          "oxygen_concentrator": 32,
+          "bipap": 4,
+          "iv_pump": 4,
+          "power_wheelchair": 7,
+          "electric_bed": 12
         },
-        "no_vehicle_rate": 0.18,
-        "zip_source_count": 4
+        "no_vehicle_rate": 0.3,
+        "zip_source_count": 3
       }
     },
     {
@@ -25663,18 +25663,18 @@
         "npu_id": "NPU-L",
         "name": "NPU-L",
         "dme_estimate": 40,
-        "dme_low": 36,
-        "dme_high": 44,
+        "dme_low": 37,
+        "dme_high": 43,
         "device_mix": {
-          "oxygen_concentrator": 18,
-          "bipap": 8,
-          "ventilator": 5,
-          "electric_bed": 5,
-          "power_wheelchair": 3,
-          "iv_pump": 1
+          "ventilator": 3,
+          "oxygen_concentrator": 25,
+          "bipap": 3,
+          "iv_pump": 3,
+          "power_wheelchair": 5,
+          "electric_bed": 9
         },
-        "no_vehicle_rate": 0.22,
-        "zip_source_count": 9
+        "no_vehicle_rate": 0.34,
+        "zip_source_count": 5
       }
     },
     {
@@ -26633,19 +26633,19 @@
       "properties": {
         "npu_id": "NPU-M",
         "name": "NPU-M",
-        "dme_estimate": 71,
-        "dme_low": 64,
-        "dme_high": 78,
+        "dme_estimate": 95,
+        "dme_low": 79,
+        "dme_high": 103,
         "device_mix": {
-          "oxygen_concentrator": 31,
-          "bipap": 14,
-          "ventilator": 9,
-          "electric_bed": 9,
-          "power_wheelchair": 6,
-          "iv_pump": 2
+          "ventilator": 12,
+          "oxygen_concentrator": 66,
+          "bipap": 12,
+          "iv_pump": 23,
+          "power_wheelchair": 37,
+          "electric_bed": 26
         },
-        "no_vehicle_rate": 0.2,
-        "zip_source_count": 11
+        "no_vehicle_rate": 0.38,
+        "zip_source_count": 8
       }
     },
     {
@@ -27632,19 +27632,19 @@
       "properties": {
         "npu_id": "NPU-N",
         "name": "NPU-N",
-        "dme_estimate": 64,
-        "dme_low": 58,
-        "dme_high": 70,
+        "dme_estimate": 65,
+        "dme_low": 60,
+        "dme_high": 71,
         "device_mix": {
-          "oxygen_concentrator": 28,
-          "bipap": 13,
-          "ventilator": 8,
-          "electric_bed": 8,
-          "power_wheelchair": 5,
-          "iv_pump": 2
+          "ventilator": 10,
+          "oxygen_concentrator": 36,
+          "bipap": 10,
+          "iv_pump": 10,
+          "power_wheelchair": 10,
+          "electric_bed": 12
         },
-        "no_vehicle_rate": 0.14,
-        "zip_source_count": 9
+        "no_vehicle_rate": 0.07,
+        "zip_source_count": 6
       }
     },
     {
@@ -29119,19 +29119,19 @@
       "properties": {
         "npu_id": "NPU-O",
         "name": "NPU-O",
-        "dme_estimate": 69,
-        "dme_low": 62,
-        "dme_high": 76,
+        "dme_estimate": 76,
+        "dme_low": 70,
+        "dme_high": 82,
         "device_mix": {
-          "oxygen_concentrator": 30,
-          "bipap": 14,
-          "ventilator": 8,
-          "electric_bed": 8,
-          "power_wheelchair": 6,
-          "iv_pump": 3
+          "ventilator": 13,
+          "oxygen_concentrator": 52,
+          "bipap": 13,
+          "iv_pump": 13,
+          "power_wheelchair": 13,
+          "electric_bed": 14
         },
-        "no_vehicle_rate": 0.06,
-        "zip_source_count": 7
+        "no_vehicle_rate": 0.12,
+        "zip_source_count": 5
       }
     },
     {
@@ -30434,19 +30434,19 @@
       "properties": {
         "npu_id": "NPU-P",
         "name": "NPU-P",
-        "dme_estimate": 150,
-        "dme_low": 135,
-        "dme_high": 165,
+        "dme_estimate": 180,
+        "dme_low": 166,
+        "dme_high": 194,
         "device_mix": {
-          "oxygen_concentrator": 66,
-          "bipap": 30,
-          "ventilator": 18,
-          "electric_bed": 18,
-          "power_wheelchair": 12,
-          "iv_pump": 6
+          "ventilator": 7,
+          "oxygen_concentrator": 105,
+          "bipap": 11,
+          "iv_pump": 8,
+          "power_wheelchair": 15,
+          "electric_bed": 44
         },
-        "no_vehicle_rate": 0.05,
-        "zip_source_count": 6
+        "no_vehicle_rate": 0.16,
+        "zip_source_count": 3
       }
     },
     {
@@ -32083,19 +32083,19 @@
       "properties": {
         "npu_id": "NPU-Q",
         "name": "NPU-Q",
-        "dme_estimate": 40,
-        "dme_low": 36,
-        "dme_high": 44,
+        "dme_estimate": 15,
+        "dme_low": 14,
+        "dme_high": 16,
         "device_mix": {
-          "oxygen_concentrator": 18,
-          "bipap": 8,
-          "ventilator": 5,
-          "electric_bed": 5,
-          "power_wheelchair": 3,
-          "iv_pump": 1
+          "ventilator": 1,
+          "oxygen_concentrator": 9,
+          "bipap": 1,
+          "iv_pump": 1,
+          "power_wheelchair": 1,
+          "electric_bed": 4
         },
-        "no_vehicle_rate": 0.05,
-        "zip_source_count": 2
+        "no_vehicle_rate": 0.09,
+        "zip_source_count": 1
       }
     },
     {
@@ -33730,19 +33730,19 @@
       "properties": {
         "npu_id": "NPU-R",
         "name": "NPU-R",
-        "dme_estimate": 64,
-        "dme_low": 58,
-        "dme_high": 70,
+        "dme_estimate": 150,
+        "dme_low": 138,
+        "dme_high": 162,
         "device_mix": {
-          "oxygen_concentrator": 28,
-          "bipap": 13,
-          "ventilator": 8,
-          "electric_bed": 8,
-          "power_wheelchair": 5,
-          "iv_pump": 2
+          "ventilator": 7,
+          "oxygen_concentrator": 93,
+          "bipap": 8,
+          "iv_pump": 6,
+          "power_wheelchair": 13,
+          "electric_bed": 34
         },
-        "no_vehicle_rate": 0.05,
-        "zip_source_count": 6
+        "no_vehicle_rate": 0.22,
+        "zip_source_count": 3
       }
     },
     {
@@ -34585,19 +34585,19 @@
       "properties": {
         "npu_id": "NPU-S",
         "name": "NPU-S",
-        "dme_estimate": 41,
-        "dme_low": 37,
-        "dme_high": 45,
+        "dme_estimate": 128,
+        "dme_low": 118,
+        "dme_high": 138,
         "device_mix": {
-          "oxygen_concentrator": 18,
+          "ventilator": 6,
+          "oxygen_concentrator": 82,
           "bipap": 8,
-          "ventilator": 5,
-          "electric_bed": 5,
-          "power_wheelchair": 3,
-          "iv_pump": 2
+          "iv_pump": 6,
+          "power_wheelchair": 15,
+          "electric_bed": 23
         },
-        "no_vehicle_rate": 0.11,
-        "zip_source_count": 4
+        "no_vehicle_rate": 0.31,
+        "zip_source_count": 3
       }
     },
     {
@@ -35368,19 +35368,19 @@
       "properties": {
         "npu_id": "NPU-T",
         "name": "NPU-T",
-        "dme_estimate": 40,
-        "dme_low": 36,
-        "dme_high": 44,
+        "dme_estimate": 134,
+        "dme_low": 123,
+        "dme_high": 145,
         "device_mix": {
-          "oxygen_concentrator": 18,
-          "bipap": 8,
-          "ventilator": 5,
-          "electric_bed": 5,
-          "power_wheelchair": 3,
-          "iv_pump": 1
+          "ventilator": 8,
+          "oxygen_concentrator": 86,
+          "bipap": 11,
+          "iv_pump": 8,
+          "power_wheelchair": 19,
+          "electric_bed": 24
         },
-        "no_vehicle_rate": 0.18,
-        "zip_source_count": 8
+        "no_vehicle_rate": 0.37,
+        "zip_source_count": 4
       }
     },
     {
@@ -36035,19 +36035,19 @@
       "properties": {
         "npu_id": "NPU-V",
         "name": "NPU-V",
-        "dme_estimate": 40,
-        "dme_low": 36,
-        "dme_high": 44,
+        "dme_estimate": 100,
+        "dme_low": 92,
+        "dme_high": 108,
         "device_mix": {
-          "oxygen_concentrator": 18,
+          "ventilator": 8,
+          "oxygen_concentrator": 63,
           "bipap": 8,
-          "ventilator": 5,
-          "electric_bed": 5,
-          "power_wheelchair": 3,
-          "iv_pump": 1
+          "iv_pump": 8,
+          "power_wheelchair": 18,
+          "electric_bed": 17
         },
-        "no_vehicle_rate": 0.2,
-        "zip_source_count": 6
+        "no_vehicle_rate": 0.33,
+        "zip_source_count": 5
       }
     },
     {
@@ -38522,19 +38522,19 @@
       "properties": {
         "npu_id": "NPU-W",
         "name": "NPU-W",
-        "dme_estimate": 260,
-        "dme_low": 234,
-        "dme_high": 286,
+        "dme_estimate": 60,
+        "dme_low": 55,
+        "dme_high": 65,
         "device_mix": {
-          "oxygen_concentrator": 114,
-          "bipap": 52,
-          "ventilator": 31,
-          "electric_bed": 31,
-          "power_wheelchair": 21,
-          "iv_pump": 11
+          "ventilator": 4,
+          "oxygen_concentrator": 36,
+          "bipap": 4,
+          "iv_pump": 4,
+          "power_wheelchair": 7,
+          "electric_bed": 12
         },
-        "no_vehicle_rate": 0.14,
-        "zip_source_count": 7
+        "no_vehicle_rate": 0.16,
+        "zip_source_count": 5
       }
     },
     {
@@ -39411,19 +39411,19 @@
       "properties": {
         "npu_id": "NPU-X",
         "name": "NPU-X",
-        "dme_estimate": 72,
-        "dme_low": 65,
-        "dme_high": 79,
+        "dme_estimate": 116,
+        "dme_low": 106,
+        "dme_high": 125,
         "device_mix": {
-          "oxygen_concentrator": 32,
-          "bipap": 14,
-          "ventilator": 9,
-          "electric_bed": 9,
-          "power_wheelchair": 6,
-          "iv_pump": 2
+          "ventilator": 6,
+          "oxygen_concentrator": 72,
+          "bipap": 7,
+          "iv_pump": 6,
+          "power_wheelchair": 18,
+          "electric_bed": 21
         },
-        "no_vehicle_rate": 0.06,
-        "zip_source_count": 9
+        "no_vehicle_rate": 0.28,
+        "zip_source_count": 6
       }
     },
     {
@@ -39974,19 +39974,19 @@
       "properties": {
         "npu_id": "NPU-Y",
         "name": "NPU-Y",
-        "dme_estimate": 60,
-        "dme_low": 54,
-        "dme_high": 66,
+        "dme_estimate": 49,
+        "dme_low": 45,
+        "dme_high": 52,
         "device_mix": {
-          "oxygen_concentrator": 26,
-          "bipap": 12,
-          "ventilator": 7,
-          "electric_bed": 7,
-          "power_wheelchair": 5,
-          "iv_pump": 3
+          "ventilator": 2,
+          "oxygen_concentrator": 30,
+          "bipap": 2,
+          "iv_pump": 2,
+          "power_wheelchair": 8,
+          "electric_bed": 10
         },
-        "no_vehicle_rate": 0.05,
-        "zip_source_count": 4
+        "no_vehicle_rate": 0.27,
+        "zip_source_count": 3
       }
     },
     {
@@ -40933,19 +40933,19 @@
       "properties": {
         "npu_id": "NPU-Z",
         "name": "NPU-Z",
-        "dme_estimate": 197,
-        "dme_low": 177,
-        "dme_high": 217,
+        "dme_estimate": 150,
+        "dme_low": 138,
+        "dme_high": 162,
         "device_mix": {
-          "oxygen_concentrator": 87,
-          "bipap": 39,
-          "ventilator": 24,
-          "electric_bed": 24,
-          "power_wheelchair": 16,
-          "iv_pump": 7
+          "ventilator": 12,
+          "oxygen_concentrator": 96,
+          "bipap": 12,
+          "iv_pump": 12,
+          "power_wheelchair": 19,
+          "electric_bed": 29
         },
-        "no_vehicle_rate": 0.05,
-        "zip_source_count": 8
+        "no_vehicle_rate": 0.22,
+        "zip_source_count": 5
       }
     }
   ]
