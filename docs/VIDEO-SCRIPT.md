@@ -115,6 +115,47 @@ Same beats, same lines, same numbers. What changes is mechanics:
 2. Record Vinh's VO straight through, then screen-capture at 1080p+ (multiple takes of the scrub, it is the money shot)
 3. Collect Niko/Guttu/Kareem voice lines (or invoke the fallback)
 4. Cut to ≤1:58, export
-5. Upload to YouTube **PUBLIC** — not unlisted
+5. Upload to YouTube **PUBLIC** — not unlisted — with the title + description below
 6. Open the URL in an incognito window and watch 10 seconds — if it plays logged-out, it counts
 7. Paste the URL into Devpost (5.2) + README, Guttu submits — target 7:45, hard stop 8:00
+
+## YouTube upload metadata (copy-paste)
+
+**Title:**
+```
+WATTLINE — When the power goes out, some people are on a clock | Hack RenderATL 2026 Demo
+```
+
+**Description** (chapter timestamps match the beat sheet — nudge them to the actual take before saving):
+```
+A portable oxygen concentrator runs under an hour on battery. Georgia Power tells customers to prepare for three days. WATTLINE is the map of who's caught in between.
+
+Built in one day at Hack RenderATL 2026, WATTLINE turns federal HHS emPOWER data (92,233 Georgians on electricity-dependent medical equipment) into a live, neighborhood-level outage exposure map for Atlanta:
+
+• IDENTIFY — disaggregates ZIP-level federal counts onto Atlanta's official NPU boundaries, weighted census tract by census tract with age, disability, and housing data from Atlanta regional open data. Every number sums back to the 92,233 state total.
+• EXPOSURE GAP — utility restoration ETA minus each device's published minimum battery runtime. A subtraction, not a prediction.
+• REACH — charging sites at libraries, fire stations, and rec centers, assigned to the highest-gap neighborhoods and constrained by MARTA transit reachability. Seven sites grey out because no bus reaches them.
+
+⚡ Live demo: https://wattline-web.onrender.com
+💻 Code: https://github.com/vinhbin/wattline
+📚 API docs: https://wattline-api.onrender.com/docs
+
+CHAPTERS
+0:00 The clock
+0:08 The problem
+0:22 What the $912M record measures
+0:38 The disaggregation (and the proof it conserves)
+1:00 Live: scrub the outage, dispatch the sites
+1:25 What we learned
+1:40 The missing join
+
+DATA SOURCES
+HHS emPOWER Program · Atlanta Regional Commission Open Data · City of Atlanta DPCD (NPU boundaries) · MARTA GTFS · Census ACS · GA PSC Docket 44280
+
+Team: Vinh Le · Niko · Guttu · Kareem
+Tracks: Best Use of Atlanta Open Data · Best Hack for Good
+
+WATTLINE computes an exposure gap — the window between when batteries run out and when power returns. It does not predict clinical outcomes, and it does not locate individuals: ZIP-level federal data stays ZIP-level private; we map neighborhoods, not people.
+```
+
+**Tags (optional):** hackathon, atlanta, open data, civic tech, public health, maplibre, gis, emergency management
