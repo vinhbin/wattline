@@ -1,0 +1,5752 @@
+{
+  "0": {
+    "hour": 0,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      }
+    ]
+  },
+  "1": {
+    "hour": 1,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 11.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.9,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 12.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 11.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.9,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 12.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.9,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "2": {
+    "hour": 2,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 11.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.6,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 12.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.6,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 12.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 11.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 11.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.6,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 12.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": false,
+        "utility_eta_hours": 0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 0.0,
+        "tier": "safe",
+        "people_at_risk": 0
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 12.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.6,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "3": {
+    "hour": 3,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 11.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.3,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 12.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.3,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 11.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.3,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 12.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 11.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 12.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.3,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 11.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.3,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 12.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 11.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 12.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.3,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "4": {
+    "hour": 4,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 11.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.1,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 12.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.1,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 11.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.1,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 12.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 11.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 12.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.1,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 11.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.1,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 12.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 11.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 12.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 11.1,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "5": {
+    "hour": 5,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 11.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.9,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 11.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 11.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.9,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 11.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 11.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.9,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "6": {
+    "hour": 6,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 11.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.6,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 11.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 11.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.6,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 11.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 11.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.6,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "7": {
+    "hour": 7,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 11.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.3,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 11.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 11.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.3,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 11.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 11.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.3,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "8": {
+    "hour": 8,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 11.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.1,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 11.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 11.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.1,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 11.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 11.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 10.1,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "9": {
+    "hour": 9,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 10.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.9,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "10": {
+    "hour": 10,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 10.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.6,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "11": {
+    "hour": 11,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 10.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.3,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "12": {
+    "hour": 12,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 10.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 9.1,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "13": {
+    "hour": 13,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 9.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.9,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "14": {
+    "hour": 14,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 9.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.6,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "15": {
+    "hour": 15,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 9.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.3,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "16": {
+    "hour": 16,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 215
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 66
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 150
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 9.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 8.1,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "17": {
+    "hour": 17,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 4.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.9,
+        "tier": "warning",
+        "people_at_risk": 129
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 4.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.9,
+        "tier": "warning",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 4.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.9,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 4.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.9,
+        "tier": "warning",
+        "people_at_risk": 90
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 4.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.9,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 8.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.9,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "18": {
+    "hour": 18,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 4.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.6,
+        "tier": "warning",
+        "people_at_risk": 129
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 4.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.6,
+        "tier": "warning",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 4.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.6,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 4.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.6,
+        "tier": "warning",
+        "people_at_risk": 90
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 4.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.6,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 8.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.6,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "19": {
+    "hour": 19,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 4.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.3,
+        "tier": "warning",
+        "people_at_risk": 129
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 4.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.3,
+        "tier": "warning",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 4.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.3,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 4.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.3,
+        "tier": "warning",
+        "people_at_risk": 90
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 4.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.3,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 8.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.3,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "20": {
+    "hour": 20,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 4.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.1,
+        "tier": "warning",
+        "people_at_risk": 129
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 186
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 4.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.1,
+        "tier": "warning",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 57
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 4.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.1,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 4.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.1,
+        "tier": "warning",
+        "people_at_risk": 90
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 4.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.1,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 260
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 8.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 7.1,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "21": {
+    "hour": 21,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 3.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.9,
+        "tier": "warning",
+        "people_at_risk": 129
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 4.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.9,
+        "tier": "warning",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 3.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.9,
+        "tier": "warning",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 4.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.9,
+        "tier": "warning",
+        "people_at_risk": 34
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 3.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.9,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 4.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.9,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 3.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.9,
+        "tier": "warning",
+        "people_at_risk": 90
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 4.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.9,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 3.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.9,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 4.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.9,
+        "tier": "warning",
+        "people_at_risk": 156
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 5.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.9,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 6.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.9,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 7.8,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.9,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "22": {
+    "hour": 22,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 3.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.6,
+        "tier": "warning",
+        "people_at_risk": 129
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 4.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.6,
+        "tier": "warning",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 3.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.6,
+        "tier": "warning",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 4.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.6,
+        "tier": "warning",
+        "people_at_risk": 34
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 3.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.6,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 4.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.6,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 3.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.6,
+        "tier": "warning",
+        "people_at_risk": 90
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 4.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.6,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 3.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.6,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 4.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.6,
+        "tier": "warning",
+        "people_at_risk": 156
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 5.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.6,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 6.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.6,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 7.5,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.6,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "23": {
+    "hour": 23,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 3.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.3,
+        "tier": "warning",
+        "people_at_risk": 129
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 4.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.3,
+        "tier": "warning",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 3.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.3,
+        "tier": "warning",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 4.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.3,
+        "tier": "warning",
+        "people_at_risk": 34
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 3.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.3,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 4.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.3,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 3.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.3,
+        "tier": "warning",
+        "people_at_risk": 90
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 4.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.3,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 3.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.3,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 4.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.3,
+        "tier": "warning",
+        "people_at_risk": 156
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 5.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.3,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 6.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.3,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 7.2,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.3,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  },
+  "24": {
+    "hour": 24,
+    "npus": [
+      {
+        "npu_id": "NPU-A",
+        "is_dark": true,
+        "utility_eta_hours": 3.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.1,
+        "tier": "warning",
+        "people_at_risk": 129
+      },
+      {
+        "npu_id": "NPU-B",
+        "is_dark": true,
+        "utility_eta_hours": 4.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.1,
+        "tier": "warning",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-C",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 102
+      },
+      {
+        "npu_id": "NPU-D",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 96
+      },
+      {
+        "npu_id": "NPU-E",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 75
+      },
+      {
+        "npu_id": "NPU-F",
+        "is_dark": true,
+        "utility_eta_hours": 3.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.1,
+        "tier": "warning",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-G",
+        "is_dark": true,
+        "utility_eta_hours": 4.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.1,
+        "tier": "warning",
+        "people_at_risk": 34
+      },
+      {
+        "npu_id": "NPU-H",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 67
+      },
+      {
+        "npu_id": "NPU-I",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 112
+      },
+      {
+        "npu_id": "NPU-J",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-K",
+        "is_dark": true,
+        "utility_eta_hours": 3.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.1,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-L",
+        "is_dark": true,
+        "utility_eta_hours": 4.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.1,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-M",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 71
+      },
+      {
+        "npu_id": "NPU-N",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-O",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 69
+      },
+      {
+        "npu_id": "NPU-P",
+        "is_dark": true,
+        "utility_eta_hours": 3.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.1,
+        "tier": "warning",
+        "people_at_risk": 90
+      },
+      {
+        "npu_id": "NPU-Q",
+        "is_dark": true,
+        "utility_eta_hours": 4.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.1,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-R",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 64
+      },
+      {
+        "npu_id": "NPU-S",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 41
+      },
+      {
+        "npu_id": "NPU-T",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 40
+      },
+      {
+        "npu_id": "NPU-V",
+        "is_dark": true,
+        "utility_eta_hours": 3.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 2.1,
+        "tier": "warning",
+        "people_at_risk": 24
+      },
+      {
+        "npu_id": "NPU-W",
+        "is_dark": true,
+        "utility_eta_hours": 4.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 3.1,
+        "tier": "warning",
+        "people_at_risk": 156
+      },
+      {
+        "npu_id": "NPU-X",
+        "is_dark": true,
+        "utility_eta_hours": 5.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 4.1,
+        "tier": "critical",
+        "people_at_risk": 72
+      },
+      {
+        "npu_id": "NPU-Y",
+        "is_dark": true,
+        "utility_eta_hours": 6.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 5.1,
+        "tier": "critical",
+        "people_at_risk": 60
+      },
+      {
+        "npu_id": "NPU-Z",
+        "is_dark": true,
+        "utility_eta_hours": 7.0,
+        "shortest_runtime_hours": 0.9,
+        "exposure_gap_hours": 6.1,
+        "tier": "critical",
+        "people_at_risk": 197
+      }
+    ]
+  }
+}

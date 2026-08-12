@@ -30,3 +30,16 @@ export const fetchStats = () => withFallback('/api/stats', mockStats)
 export const fetchSites = () => withFallback('/api/sites', mockSites)
 export const fetchExposure = (hour) =>
   withFallback(`/api/exposure?hour=${hour}`, mockExposure[String(hour)])
+
+// F3 prefetch: try Guttu's one-payload /api/exposure/all (keyed "0".."24"),
+// fall back to 25 per-hour fetches, which themselves fall back to the mock.
+export async function fetchExposureSeries(hours) {
+  try {
+    const all = await tryApi('/api/exposure/all')
+    const series = Array.from({ length: hours }, (_, h) => all[String(h)])
+    if (series.every(Boolean)) return series
+    throw new Error('unexpected /api/exposure/all shape')
+  } catch {
+    return Promise.all(Array.from({ length: hours }, (_, h) => fetchExposure(h)))
+  }
+}

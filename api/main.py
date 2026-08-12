@@ -16,11 +16,22 @@ from fastapi.middleware.cors import CORSMiddleware
 ROOT = Path(__file__).resolve().parent.parent
 
 
+SOURCES: dict[str, str] = {}
+
+
 def load(name: str):
+    """First readable source wins. A malformed data/processed/ drop falls back
+    to mocks rather than killing the service mid-demo (D-007)."""
     for base in (ROOT / "data" / "processed", ROOT / "mocks"):
         p = base / f"{name}.json"
-        if p.exists():
-            return json.loads(p.read_text(encoding="utf-8"))
+        if not p.exists():
+            continue
+        try:
+            data = json.loads(p.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        SOURCES[name] = base.name
+        return data
     raise RuntimeError(f"no data source for '{name}' — run scripts/make_mocks.py")
 
 
@@ -34,6 +45,23 @@ SITES = load("sites")
 STATS = load("stats")
 
 
+@app.get("/")
+def root():
+    return {"service": "WATTLINE API", "docs": "/docs", "health": "/api/health",
+            "endpoints": ["/api/npus", "/api/exposure?hour=N",
+                          "/api/exposure/all", "/api/sites", "/api/stats"]}
+
+
+@app.get("/api/health")
+def health():
+    """Render health check target. Proves the payloads actually loaded, and
+    reports whether each is real (data/processed) or mock."""
+    return {"status": "ok", "sources": SOURCES,
+            "npu_features": len(NPUS.get("features", [])),
+            "exposure_hours": len(EXPOSURE),
+            "sites": len(SITES.get("sites", []))}
+
+
 @app.get("/api/npus")
 def npus():
     return NPUS
@@ -43,7 +71,17 @@ def npus():
 def exposure(hour: int = 0):
     if not 0 <= hour <= 24:
         raise HTTPException(status_code=422, detail="hour must be in 0..24")
-    return EXPOSURE[str(hour)]
+    try:
+        return EXPOSURE[str(hour)]
+    except KeyError:
+        raise HTTPException(status_code=404, detail=f"no series for hour {hour}")
+
+
+@app.get("/api/exposure/all")
+def exposure_all():
+    """All 25 hours in one response — the scrubber prefetches on mount and a
+    laggy scrub costs Design points. Same precomputed payload, one round trip."""
+    return EXPOSURE
 
 
 @app.get("/api/sites")

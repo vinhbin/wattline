@@ -1,3 +1,17 @@
-"""WATTLINE pipeline — precompute stages (rule D-007: each stage writes its own
-table). Deps are pipeline-only (requirements-pipeline.txt), never in the API build.
 """
+WATTLINE Pipeline Package — Ingest, spatial transforms, disaggregation, exposure series, and site routing.
+"""
+
+from .atlanta_layers import (
+    load_npu_boundaries,
+    load_facilities,
+    load_tract_demographics,
+    export_processed_layers,
+)
+
+__all__ = [
+    "load_npu_boundaries",
+    "load_facilities",
+    "load_tract_demographics",
+    "export_processed_layers",
+]

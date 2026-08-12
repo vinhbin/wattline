@@ -1,6 +1,11 @@
 const fmt = (n) => (n == null ? '—' : n.toLocaleString('en-US'))
 
-export default function Header({ stats, mock }) {
+export default function Header({ stats, mock, exposure }) {
+  // Live count at the scrubbed hour once the series is loaded; the static
+  // /api/stats number is the pre-load fallback.
+  const npusCritical = exposure
+    ? exposure.npus.filter((n) => n.tier === 'critical').length
+    : stats?.npus_critical
   return (
     <header className="header">
       <div className="brand">
@@ -20,7 +25,7 @@ export default function Header({ stats, mock }) {
           <div className="label">metro Atlanta</div>
         </div>
         <div className="stat">
-          <div className="num critical">{fmt(stats?.npus_critical)}</div>
+          <div className="num critical">{fmt(npusCritical)}</div>
           <div className="label">NPUs critical</div>
         </div>
       </div>
