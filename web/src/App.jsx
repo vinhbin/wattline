@@ -4,6 +4,7 @@ import Header from './components/Header.jsx'
 import Sidebar from './components/Sidebar.jsx'
 import MapView from './components/MapView.jsx'
 import Scrubber from './components/Scrubber.jsx'
+import NpuDetailPanel from './components/NpuDetailPanel.jsx'
 
 const HOURS = 25 // hour 0–24 inclusive (frozen contract)
 const PLAY_STEP_MS = 600
@@ -16,6 +17,8 @@ export default function App() {
   const [series, setSeries] = useState(null)
   const [hour, setHour] = useState(0)
   const [playing, setPlaying] = useState(false)
+  // F4: selected NPU (map click or sidebar row) → detail panel
+  const [selectedId, setSelectedId] = useState(null)
 
   useEffect(() => {
     let alive = true
@@ -48,7 +51,20 @@ export default function App() {
     if (hour >= HOURS - 1) setPlaying(false)
   }, [hour])
 
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && setSelectedId(null)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
+
   const exposure = series?.[hour] ?? null
+  const selectedNpu = selectedId
+    ? npus?.features.find((f) => f.properties.npu_id === selectedId)?.properties
+    : null
+  const selectedExp =
+    selectedNpu && exposure
+      ? exposure.npus.find((e) => e.npu_id === selectedId)
+      : null
 
   const togglePlay = () => {
     if (!series) return
@@ -60,8 +76,26 @@ export default function App() {
     <div className="app">
       <Header stats={stats} mock={mock} exposure={exposure} />
       <div className="main">
-        <Sidebar npus={npus} exposure={exposure} />
-        <MapView npus={npus} exposure={exposure} />
+        <Sidebar
+          npus={npus}
+          exposure={exposure}
+          selectedId={selectedId}
+          onSelect={setSelectedId}
+        />
+        <MapView
+          npus={npus}
+          exposure={exposure}
+          selectedId={selectedId}
+          onSelect={setSelectedId}
+        />
+        {selectedNpu && (
+          <NpuDetailPanel
+            npu={selectedNpu}
+            exp={selectedExp}
+            hour={hour}
+            onClose={() => setSelectedId(null)}
+          />
+        )}
       </div>
       <Scrubber
         hour={hour}

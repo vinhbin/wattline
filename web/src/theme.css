@@ -134,6 +134,7 @@ body {
   flex: 1;
   display: flex;
   min-height: 0;
+  position: relative; /* anchors the F4 detail panel overlay */
 }
 
 /* ---------- sidebar ---------- */
@@ -365,6 +366,228 @@ body {
 
 .map-tooltip .t-gap b {
   font-weight: 600;
+}
+
+/* ---------- NPU detail panel (F4) ---------- */
+
+.npu-panel {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 326px;
+  max-height: calc(100% - 28px);
+  overflow-y: auto;
+  background: var(--bg-overlay);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 16px;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+  animation: panel-in 200ms ease;
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+}
+
+.npu-panel.panel-safe {
+  border-left: 3px solid var(--safe);
+}
+
+.npu-panel.panel-warning {
+  border-left: 3px solid var(--warning);
+}
+
+.npu-panel.panel-critical {
+  border-left: 3px solid var(--critical);
+}
+
+.npu-panel .p-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.npu-panel .p-head .npu-chip {
+  min-width: 34px;
+  margin-top: 2px;
+}
+
+.npu-panel .p-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.npu-panel .p-title h2 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.npu-panel .p-tier {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.npu-panel .p-close {
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: color 120ms ease;
+}
+
+.npu-panel .p-close:hover {
+  color: var(--text);
+}
+
+.npu-panel .p-gap {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(232, 241, 242, 0.03);
+}
+
+.npu-panel .g-big {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.npu-panel .g-unit {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.npu-panel .g-sub {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.npu-panel .g-sub b {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.npu-panel .p-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.npu-panel .p-card {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.npu-panel .c-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  font-variant-numeric: tabular-nums;
+}
+
+.npu-panel .c-band {
+  font-size: 10px;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.npu-panel .c-label {
+  margin-top: 4px;
+  font-size: 10px;
+  line-height: 1.35;
+  color: var(--text-dim);
+}
+
+.npu-panel .p-devices {
+  margin-top: 14px;
+}
+
+.npu-panel .d-head {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+
+.npu-panel .d-row {
+  display: grid;
+  grid-template-columns: 118px 1fr 30px;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+}
+
+.npu-panel .d-name {
+  font-size: 11px;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.npu-panel .d-bar {
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(232, 241, 242, 0.08);
+  overflow: hidden;
+}
+
+.npu-panel .d-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 300ms ease;
+}
+
+.npu-panel .d-bar > .d-critical {
+  background: #e06a57;
+}
+
+.npu-panel .d-bar > .d-mobility {
+  background: rgba(245, 181, 74, 0.55);
+}
+
+.npu-panel .d-num {
+  font-size: 11px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-dim);
+}
+
+.npu-panel .p-note {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  line-height: 1.45;
+  color: var(--text-faint);
+}
+
+.npu-row.is-active {
+  background: rgba(245, 181, 74, 0.08);
+  box-shadow: inset 2px 0 0 var(--accent);
 }
 
 /* ---------- scrubber (F3) ---------- */

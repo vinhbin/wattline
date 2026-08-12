@@ -1,6 +1,6 @@
 // NPU list. Once the exposure feed is live it sorts by exposure gap (the
 // layout spec: "sorted by gap") and the bars show gap share, tier-colored.
-export default function Sidebar({ npus, exposure }) {
+export default function Sidebar({ npus, exposure, selectedId, onSelect }) {
   const byId = {}
   if (exposure) for (const e of exposure.npus) byId[e.npu_id] = e
 
@@ -36,7 +36,14 @@ export default function Sidebar({ npus, exposure }) {
           const gap = r.ex?.exposure_gap_hours ?? 0
           const tier = r.ex?.tier
           return (
-            <button className="npu-row" key={r.npu_id} title={r.name}>
+            <button
+              className={`npu-row${selectedId === r.npu_id ? ' is-active' : ''}`}
+              key={r.npu_id}
+              title={r.name}
+              onClick={() =>
+                onSelect?.(selectedId === r.npu_id ? null : r.npu_id)
+              }
+            >
               <span className={`npu-chip${tier ? ` chip-${tier}` : ''}`}>
                 {r.npu_id.replace('NPU-', '')}
               </span>
