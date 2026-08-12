@@ -25,6 +25,22 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~5:30 PM — 1.1 done: F1 map on screen (Vinh)
+
+- Done: **`web/` scaffold + F1** (`2101e00`) — Vite + React + MapLibre, CARTO
+  dark-matter basemap (no token), NPU choropleth by `dme_estimate`, fitBounds
+  Atlanta, hover tooltip + highlight, header wired to `/api/stats`, sidebar
+  sorted by estimate with low–high bands.
+- Seam for 3.1 already in place: `web/src/api.js` tries `/api/*` (Vite proxy →
+  :8000) and falls back to importing `mocks/` directly — an honest **MOCK DATA**
+  chip shows in the header when the fallback is engaged. Verified both paths
+  headless (Playwright): 0 console errors with API up; clean mock render with
+  API down. Geometry code handles Polygon + MultiPolygon (ready for real NPUs).
+- Note for Guttu: mock NPU polygons are the hand-drawn rectangles — if B3 slips,
+  regenerating `mocks/npus.json` with real `data/npu_boundaries.geojson` shapes
+  would make the mock demo look real. Contract shapes unchanged.
+- Next: Vinh → 2.1 (F2 tier coloring) + 2.2 (F3 scrubber).
+
 ### 2026-08-12 ~4:40 PM — Prerequisites: all data + seams in repo, everyone unblocked
 
 - Done: **emPOWER GA pulled from HHS REST and verified — all 6 anchor checks
@@ -85,7 +101,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 1.1 | Vite + MapLibre scaffold, F1 map renders NPUs from mocks | `web/` | **Vinh** | 🟡 5:17 PM | 0.1 | checkpoint: looks like a product |
+| 1.1 | Vite + MapLibre scaffold, F1 map renders NPUs from mocks | `web/` | **Vinh** | ✅ 5:30 PM | 0.1 | checkpoint hit — verified headless, API up & down |
 | 1.2 | B1 emPOWER → PostGIS (reproject 3857→4326, suppression intervals) | `pipeline/` | **Niko** | ⬜ | — | rules D-001..D-005 |
 | 1.3 | FastAPI serving the four endpoints straight from `mocks/` | `api/` | **Guttu** | ⬜ | 0.1 | CORS open, read-only |
 | 1.4 | **Verify PostGIS on Render vs Tiger Data** (15 min, then decide) | — | **Guttu** | ⬜ | — | Q-004; if missing → Render Postgres, drop Tiger prize |
