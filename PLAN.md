@@ -25,6 +25,28 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~4:40 PM — Prerequisites: all data + seams in repo, everyone unblocked
+
+- Done: **emPOWER GA pulled from HHS REST and verified — all 6 anchor checks
+  pass exactly** (92,233 state; 711 ZIPs; Richmond 1,647/39,254; ZIP sum
+  92,567; 67 suppressed cells). `scripts/fetch_empower.py` reproduces it.
+- Done: **NPU boundaries** (`data/npu_boundaries.geojson`) — official DPCD
+  layer, 25 NPUs (A–Z, no U), EPSG:4326. ⚠️ Gotchas: the NPU letter is in the
+  `NAME` property (the `NPU` field is null on every feature), and geometries
+  mix Polygon + MultiPolygon — handle both.
+- Done: **API stub** (`api/main.py`) — all four endpoints serve the frozen
+  contract from `mocks/` (or `data/processed/` once real data lands, same
+  shapes). Smoke-tested: 4/4 endpoints OK, hour validation 422s.
+- Done: **MARTA GTFS** — `scripts/fetch_gtfs.py` pulls 7,057 stops into
+  `data/gtfs/` (gitignored, each person runs it locally, ~30s).
+- ⚠️ **Census API now requires a key** (302s to missing_key.html — keyless
+  access is gone). `scripts/fetch_acs.py` works with a free instant key in
+  `CENSUS_API_KEY`; ARC open-data tract demographics being pulled as the
+  keyless (and more on-track) alternative.
+- In progress: facilities (libraries/fire/rec) + ARC tract demographics
+  downloads.
+- Next milestone: build phases start — everyone can work fully in parallel.
+
 ### 2026-08-12 ~4:00 PM — Pre-build scaffolding done, ~4h to deadline
 
 - Done: repo restructured to contract layout (`mocks/`, `data/`, `scripts/`);
@@ -51,7 +73,13 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | 0.2 | Device runtime floors | `data/device_runtimes.json` | Kareem | ✅ | verify vs vendor sheets before pitch (Q-005) |
 | 0.3 | README (judge-facing draft) | `README.md` | Guttu | ✅ | 3 TODOs left: URL, video, screenshot |
 | 0.4 | Plan + decision log | `PLAN.md`, `docs/decision-log.md` | Vinh | ✅ | this file |
-| 0.5 | First commit + push (repo must be public) | — | Vinh | ⬜ | do immediately; proves day-of work |
+| 0.5 | First commit + push (repo public, verified via API) | — | Vinh | ✅ | `071108e`, repo returns 200 unauthenticated |
+| 0.6 | emPOWER GA data, 6/6 anchor checks | `data/empower_ga*.json`, `scripts/fetch_empower.py` | Vinh | ✅ | unblocks Niko B1/B3 |
+| 0.7 | NPU boundaries (official DPCD, 25 NPUs, 4326) | `data/npu_boundaries.geojson` | Vinh | ✅ | unblocks Kareem D1 + Niko B3 target geography |
+| 0.8 | API stub serving frozen contract + smoke test | `api/main.py`, `requirements.txt` | Vinh | ✅ | Guttu can deploy to Render NOW |
+| 0.9 | MARTA GTFS fetch script (data gitignored) | `scripts/fetch_gtfs.py` | Vinh | ✅ | run locally: 7,057 stops |
+| 0.10 | ACS demographics (Census needs key now; ARC fallback) | `scripts/fetch_acs.py`, `data/arc_tract_demographics.json` | Vinh | 🟡 | ARC pull in flight; Census path needs free key |
+| 0.11 | Facilities: libraries / fire stations / rec centers | `data/facilities.geojson` | Vinh | 🟡 | pull in flight |
 
 ### Phase 1 — Unblock (4:00–4:40 PM)
 
@@ -144,6 +172,14 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | Pipeline column names (parcels, npu, ACS tables) | Kareem | Niko | agree at Phase 1 start, write into this row |
 | Device runtime floors + tier mapping | Kareem | Niko, Vinh | `data/device_runtimes.json` |
 | Tier thresholds | Guttu | Vinh, Kareem | safe ≤ 0 < warning ≤ 4 < critical (gap hours) |
+
+**Data gotchas (read before touching `data/`):**
+- `npu_boundaries.geojson`: NPU letter is in **`NAME`** (the `NPU` field is
+  null everywhere); geometries mix Polygon and MultiPolygon.
+- `empower_ga_zip.json`: already **EPSG:4326** (converted at ingest via
+  `outSR=4326` — satisfies D-001, do NOT reproject again). Suppressed cells
+  arrive as literal `11` (D-004).
+- Census API requires `CENSUS_API_KEY` since ~2026; ARC layers are keyless.
 
 ---
 
