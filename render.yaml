@@ -18,7 +18,8 @@ services:
   - type: web
     name: wattline-web
     runtime: static
-    region: ohio
+    # no region — static sites are served from Render's global CDN and the
+    # blueprint is rejected outright if you give them one.
     autoDeploy: true
     buildCommand: cd web && npm ci && npm run build
     staticPublishPath: web/dist
