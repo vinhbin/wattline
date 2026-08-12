@@ -25,6 +25,46 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:00 PM — TEAM HANDOFF: B1 emPOWER ingest done (Niko)
+
+**Pushed to `main`** — `f859574 feat(pipeline): B1 emPOWER ingest`. `git pull`
+to get it. Additive only (`pipeline/`, `tests/`, `requirements-pipeline.txt`) —
+touches nobody else's files.
+
+**Row 1.2 ✅ — what landed:**
+- `pipeline/` normalizes the raw 711-ZIP dump into clean per-ZIP records:
+  population = `Power_Dependent_Devices_DME` only (D-002), suppressed `11` →
+  `[1,11]` intervals (D-004), `Power_De_1` + `_Any_DME` unions excluded (D-003),
+  CRS guard rejects any non-4326 leak (D-001 — **no reproject, data is already
+  4326**).
+- Prints the conservation check:
+  ```
+  zips: 711 rows | pop sum 92,567 | suppressed 67
+  state anchor 92,233 in suppression band [91,897, 92,567]  [OK]
+  ```
+- 12 TDD tests green. Setup: `py -m venv .venv` →
+  `.venv/Scripts/python -m pip install -r requirements-pipeline.txt` →
+  `.venv/Scripts/python -m pytest tests/`. Run stage: `python -m pipeline.empower`.
+
+**PostGIS is confirmed STRETCH, not a blocker.** B1 runs fully file-based; the
+PostGIS load engages only if `DATABASE_URL` is set. Core is NOT blocked on Q-004
+/ Tiger — that only matters if we pull S1/S2.
+
+**Next — B3 disaggregation (2.3), the track-winner.** Produces the ship-critical
+`data/processed/npus.json` + `stats.json` (resolves Q-006). Approach: dasymetric
+**ZIP → census tract → NPU**, weighted by `housing_units · senior_rate ·
+disability_rate`. Needs one new fetch — TIGER 2020 tract geometry for Fulton
+(13121) + DeKalb (13089); the ARC demographics file has the weights but no
+geometry.
+
+**Kareem — 5-min confirm before I start B3:** I'll key tracts by 11-digit
+`GEOID` and read `senior_rate`, `disability_rate`, `no_vehicle_rate`,
+`housing_units` from `arc_tract_demographics.json`; NPU letter from `NAME` in
+`npu_boundaries.geojson`. Shout if any of that changed.
+
+**Guttu — no action.** When B3 lands, `npus.json`/`stats.json` drop into
+`data/processed/` and `api/main.py` serves them automatically (D-006).
+
 ### 2026-08-12 ~5:41 PM — Reconciliation: Guttu's API work is stranded on HIS machine (Vinh)
 
 Verified against `origin/main` after Guttu's status message — two of its claims
@@ -188,7 +228,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
 | 1.1 | Vite + MapLibre scaffold, F1 map renders NPUs from mocks | `web/` | **Vinh** | ✅ 5:30 PM | 0.1 | checkpoint hit — verified headless, API up & down |
-| 1.2 | B1 emPOWER → PostGIS (reproject 3857→4326, suppression intervals) | `pipeline/` | **Niko** | ⬜ | — | rules D-001..D-005 |
+| 1.2 | B1 emPOWER ingest → `zips` (no reproject — already 4326; suppression intervals; PostGIS optional) | `pipeline/` | Niko | ✅ 6:00 PM | — | `f859574`; 12 tests green; rules D-001..D-005; conservation check prints vs 92,233 |
 | 1.3 | FastAPI serving the four endpoints straight from `mocks/` | `api/` | **Guttu** | ⬜ | 0.1 | CORS open, read-only |
 | 1.4 | **Verify PostGIS on Render vs Tiger Data** (15 min, then decide) | — | **Guttu** | ⬜ | — | Q-004; if missing → Render Postgres, drop Tiger prize |
 | 1.5 | D1 Atlanta layers: NPU boundaries, parcels, facilities | `pipeline/` | **Kareem** | ⬜ | — | agree column names with Niko FIRST |
@@ -200,7 +240,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 |---|-----------|---------|-------|--------|------|-------|
 | 2.1 | F2 tier coloring + header stats | `web/` | **Vinh** | 🟡 5:39 PM | 1.1 | palette in §4 |
 | 2.2 | **F3 scrubber + autoplay** (THE demo moment) | `web/` | **Vinh** | 🟡 5:39 PM | 2.1 | prefetch all 25 hours; must be instant |
-| 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | Niko | ⬜ | 1.2, 1.5 | conserve vs 92,233; print the check |
+| 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | **Niko** | ⬜ next | 1.2 ✅, 1.5 | ZIP→tract→NPU dasymetric; needs TIGER tract geom + Kareem col-name confirm; conserve vs 92,233 |
 | 2.4 | C3 deploy to Render (API + static site) | — | Guttu | ⬜ | 1.3 | live URL = Completion evidence |
 | 2.5 | D2 sites + transit reachability (honest heuristic, no RAPTOR) | `pipeline/` | Kareem | ⬜ | 1.5 | `transit_reachable:false` is the demo beat |
 
@@ -363,4 +403,4 @@ https://credits-portal-mmdm.onrender.com/claim/renderatlhackathon
 
 ---
 
-_Last updated: 2026-08-12 ~4:00 PM EDT by Vinh (via Claude)._
+_Last updated: 2026-08-12 ~6:00 PM EDT by Niko (via Claude) — B1 done, row 1.2 ✅._
