@@ -1,0 +1,337 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "uniqueIdField": {
+    "name": "OBJECTID",
+    "isSystemMaintained": true
+  },
+  "globalIdFieldName": "",
+  "geometryProperties": {
+    "shapeAreaFieldName": "Shape__Area",
+    "shapeLengthFieldName": "Shape__Length",
+    "units": "esriMeters"
+  },
+  "geometryType": "esriGeometryPolygon",
+  "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+  },
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "alias": "OBJECTID",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "REGION",
+      "type": "esriFieldTypeString",
+      "alias": "REGION",
+      "sqlType": "sqlTypeOther",
+      "length": 2,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "NAME",
+      "type": "esriFieldTypeString",
+      "alias": "NAME",
+      "sqlType": "sqlTypeOther",
+      "length": 100,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "State_FIPS_recode",
+      "type": "esriFieldTypeString",
+      "alias": "State_FIPS_recode",
+      "sqlType": "sqlTypeOther",
+      "length": 2,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "State_FIPS_Code",
+      "type": "esriFieldTypeString",
+      "alias": "State_FIPS_Code",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "State",
+      "type": "esriFieldTypeString",
+      "alias": "State",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Power_Dependent_Devices_DME",
+      "type": "esriFieldTypeInteger",
+      "alias": "Power_Dependent_Devices_DME",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Medicare_Benes",
+      "type": "esriFieldTypeInteger",
+      "alias": "Medicare_Benes",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Medicare_FFS_Benes",
+      "type": "esriFieldTypeInteger",
+      "alias": "Medicare_FFS_Benes",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Medicare_Advantage_Benes",
+      "type": "esriFieldTypeInteger",
+      "alias": "Medicare_Advantage_Benes",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Facility_ESRD_Dialysis_3mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "Facility_ESRD_Dialysis_3mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "O2_Services_13mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "O2_Services_13mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Home_Health_Services_3mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "Home_Health_Services_3mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Power_Dependent_Card_Dvcs_5yrs",
+      "type": "esriFieldTypeInteger",
+      "alias": "Power_Dependent_Card_Dvcs_5yrs",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Mobility_DME_13mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "Mobility_DME_13mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Ventilators_13mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "Ventilators_13mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "BiPAPs_13mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "BiPAPs_13mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "O2_Concentrators_36mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "O2_Concentrators_36mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Enteral_Feeding_13mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "Enteral_Feeding_13mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "IV_Infusion_Pumps_13mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "IV_Infusion_Pumps_13mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Suction_Pumps_13mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "Suction_Pumps_13mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "AtHome_Dialysis_3mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "AtHome_Dialysis_3mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Power_Wheelchairs_Scooters_13mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "Power_Wheelchairs_Scooters_13mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Electric_Beds_13mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "Electric_Beds_13mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "AtHome_Hospice_3mo",
+      "type": "esriFieldTypeInteger",
+      "alias": "AtHome_Hospice_3mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Vents_13mo_BiPAPs_13mo_O2_Conc_",
+      "type": "esriFieldTypeInteger",
+      "alias": "Vents_13mo_BiPAPs_13mo_O2_Conc_36mo",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Power_De_1",
+      "type": "esriFieldTypeInteger",
+      "alias": "Power_Dependent_Card_Dvcs_5yrs",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Facility_ESRD_Dialysis_Any_DME",
+      "type": "esriFieldTypeInteger",
+      "alias": "Facility_ESRD_Dialysis_Any_DME",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "O2_Services_Any_DME",
+      "type": "esriFieldTypeInteger",
+      "alias": "O2_Services_Any_DME",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Home_Health_Services_Any_DME",
+      "type": "esriFieldTypeInteger",
+      "alias": "Home_Health_Services_Any_DME",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "AtHome_Hospice_Any_DME",
+      "type": "esriFieldTypeInteger",
+      "alias": "AtHome_Hospice_Any_DME",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Any_Healthcare_Srvc_Any_DME",
+      "type": "esriFieldTypeInteger",
+      "alias": "Any_Healthcare_Srvc_Any_DME",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "alias": "Shape__Area",
+      "sqlType": "sqlTypeDouble",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "alias": "Shape__Length",
+      "sqlType": "sqlTypeDouble",
+      "domain": null,
+      "defaultValue": null
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 29,
+        "REGION": "3",
+        "NAME": "Georgia",
+        "State_FIPS_recode": "13",
+        "State_FIPS_Code": "13",
+        "State": "GA",
+        "Power_Dependent_Devices_DME": 92233,
+        "Medicare_Benes": 2014841,
+        "Medicare_FFS_Benes": 880619,
+        "Medicare_Advantage_Benes": 1134222,
+        "Facility_ESRD_Dialysis_3mo": 14347,
+        "O2_Services_13mo": 25730,
+        "Home_Health_Services_3mo": 47330,
+        "Power_Dependent_Card_Dvcs_5yrs": 1211,
+        "Mobility_DME_13mo": 16576,
+        "Ventilators_13mo": 3378,
+        "BiPAPs_13mo": 4503,
+        "O2_Concentrators_36mo": 66084,
+        "Enteral_Feeding_13mo": 1874,
+        "IV_Infusion_Pumps_13mo": 4336,
+        "Suction_Pumps_13mo": 852,
+        "AtHome_Dialysis_3mo": 2097,
+        "Power_Wheelchairs_Scooters_13mo": 4701,
+        "Electric_Beds_13mo": 12392,
+        "AtHome_Hospice_3mo": 9034,
+        "Vents_13mo_BiPAPs_13mo_O2_Conc_": 70456,
+        "Power_De_1": 1211,
+        "Facility_ESRD_Dialysis_Any_DME": 2746,
+        "O2_Services_Any_DME": 25567,
+        "Home_Health_Services_Any_DME": 12235,
+        "AtHome_Hospice_Any_DME": 2216,
+        "Any_Healthcare_Srvc_Any_DME": 36971,
+        "Shape__Area": 217792991715.74023,
+        "Shape__Length": 2534376.120897993
+      }
+    }
+  ]
+}
