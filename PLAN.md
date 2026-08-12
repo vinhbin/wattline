@@ -25,6 +25,19 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:30 PM — Vinh: PLAN.md conflict markers stripped (again) + README conservation claim softened
+
+- **Stripped a committed stash-conflict block** (`Updated upstream`/`Stashed
+  changes`) around row 4.4 — came in with the 6:07 merge. Resolved to ✅
+  (demo.png exists, README line uncommented) with a **re-capture after 4.2**
+  caveat, since the shot predates the F4 panel and polish. Protocol reminder
+  stands: never commit a file containing `<<<<<<<` — grep before you push.
+- **README line 38 softened:** "Conserves exactly against the 92,233 state
+  total" → "**Designed to conserve** against the 92,233 state total". The
+  strong claim is embargoed until Niko signs off 2.3/3.2 (D-004). **Niko:
+  when you sign off, flip it back to "Conserves exactly" — one-word edit.**
+  Guttu FYI — hotfix per protocol rule 5, logged here.
+
 ### 2026-08-12 ~6:25 PM — Vinh: 3.3 F4 detail panel SHIPPED + stale-uvicorn warning (all: restart local API)
 
 - **✅ DONE — 3.3 F4 NPU detail panel (`4f04912`).** Kareem's salvage panel
@@ -469,11 +482,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ⬜ | 3.4 | Kareem's `SitesPanel.jsx` is salvage; dispatch data NOW POPULATED (83/90 `assigned_npus`, 7 transit deserts — verified 6:25 PM) |
 | 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
 | 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ⬜ | 3.1 | dashboard → New → Workflow (Blueprints unsupported); trigger `run_pipeline` once, screenshot the passing run |
-<<<<<<< Updated upstream
-| 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ⬜ | 4.2 | judges scroll on mobile |
-=======
-| 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ✅ | 4.2 | judges scroll on mobile |
->>>>>>> Stashed changes
+| 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ✅ 6:07 PM | 4.2 | shipped, but current shot predates F4 panel + 4.2 polish — **re-capture after 4.2** (judges scroll on mobile) |
 
 ### Phase 5 — Submission (7:15–8:00 PM) — no new features
 

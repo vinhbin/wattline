@@ -35,7 +35,7 @@ zero times.
 **1. Identify.** Federal emPOWER data publishes at ZIP level — a ZIP can span a
 senior tower and a golf course. We disaggregate onto Atlanta parcels and NPU
 boundaries, weighted by housing units and tract-level age and disability rates.
-Conserves exactly against the 92,233 state total.
+Designed to conserve against the 92,233 state total.
 
 **2. Exposure gap.** Not a prediction — a subtraction. Utility restoration ETA
 minus the manufacturer's published minimum runtime for the devices counted in
