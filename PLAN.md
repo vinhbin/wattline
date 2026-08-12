@@ -25,6 +25,40 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:04 PM — Vinh: gap ramp SHIPPED, threshold rescale ACKED, PLAN.md verified clean
+
+**TEAM UPDATE (read this one, then go):**
+
+- **✅ ACK — CONTRACT: tier threshold rescale (Guttu's blocker #3, his half).**
+  Vinh acks; Guttu, pick the numbers and go. The frontend consumes `tier`
+  as-is — no `web/` edit needed, no re-ack. Note the tiers are *assigned* in
+  `pipeline/exposure.py`, so the rescale = update Shared Contracts row +
+  regenerate `data/processed/exposure.json` — **regenerate `stats.json`
+  (`npus_critical`/`people_critical`) in the same pass**, which closes
+  blocker #2 too.
+- **✅ DONE — within-tier gap ramp (`49fc9c9`), Vinh's half of "do both."**
+  Fill brightness now carries `exposure_gap_hours` inside each tier (3–12h
+  window; real gaps 6.6–10.6 sit right in it). Verified headless vs real
+  data, 19/19 checks incl. a pixel-spread check at hour 12 — the choropleth
+  is no longer monochrome mid-scrub, and it animates continuously during
+  autoplay. With Guttu's rescale on top (amber vs red mix) the scrub gets
+  its arc back.
+- **✅ ACK — video line fix.** Guttu's replacement for the 1:35 "Postgres
+  with PostGIS" line is right and a better Design answer. **Kareem: lock it
+  into the script before capture.**
+- **PLAN.md integrity: verified clean** after the 5:45–6:00 push race —
+  0 conflict markers (two committed marker blocks stripped), all status
+  blocks preserved newest-first, dashboard corrections intact. Protocol
+  reminder: `git pull` before push, and never commit a file containing
+  `<<<<<<<`.
+- **Still the gates:** ① Niko — D-004/conservation sign-off on
+  `pipeline/disaggregation.py` (2.3/3.2) is the track; nothing else matters
+  if this is wrong. ② Guttu — Devpost 1.6 (DQ) + Render deploy 2.4.
+  ③ Kareem — dispatch `assigned_npus` are empty (0/90), 4.4 screenshot after
+  polish; a staggered *restoration* profile in `exposure.py` would give the
+  scrub a recovery arc (red receding) even post-rescale.
+- **Vinh next:** 3.3 F4 detail panel → 4.1 sites → 4.2 polish.
+
 ### 2026-08-12 ~5:55 PM — 2.1+2.2 DONE + merge reconciliation: ONE frontend on main (Vinh)
 
 **Done: F2 tier coloring + F3 scrubber (`a785893`), verified headless 3×18
