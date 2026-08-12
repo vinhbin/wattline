@@ -25,6 +25,21 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~5:54 PM — Team Handoff: Phase 3 Integration & Build Verification Complete (Kareem)
+
+- **This wave:** Phase 3 Integration & Verification Execution.
+- **Done since last:** 
+  - Master ingestion pipeline verified (`run_full_pipeline.py`) in 2.01s across all 4 stages: 25 NPUs, 90 emergency sites, 7,057 MARTA GTFS stops, and 0–24h exposure gap series under Helene profile.
+  - B3 spatial disaggregation state anchor conservation check passed: `SUM NPU estimates -> ZIP -> state anchor: 92233 [OK]`.
+  - Frontend production build compiled cleanly (`cd web && npm run build` -> `dist/index.html` & `dist/assets/index-7foCgEzJ.js`).
+  - Created [implementation_plan.md](file:///C:/Users/karee/.gemini/antigravity-ide/brain/d55da4e6-b944-43f1-8560-a434b5c82d85/implementation_plan.md) and [walkthrough.md](file:///C:/Users/karee/.gemini/antigravity-ide/brain/d55da4e6-b944-43f1-8560-a434b5c82d85/walkthrough.md).
+- **In progress:** 🟡 Phase 4/5 deliverables (Kareem: screenshot `docs/demo.png` + 2-minute demo video script & recording). Addressing Guttu's findings (dispatch assignments, `stats.json` hour 6 sync, and exposure gap tier thresholds).
+- **Blocked on:** nothing.
+- **I need from you:** Guttu: push local API code and perform Render deployment & Devpost entry.
+- **Decisions logged:** none.
+- **Contract changes:** none.
+- **Next milestone:** Phase 4/5 demo video and Devpost submission.
+
 ### 2026-08-12 ~5:53 PM — Guttu: API hardened + blueprint complete; 3 demo-blockers found in the real data
 
 **Pushed to `main`:** `5c39a61` (api) · `30e1a8e` (deploy). Push was blocked
@@ -80,6 +95,18 @@ collaborator. Resolved.
   Truthful, and a stronger Design answer. **Kareem: lock before capture.**
 - **Next (Guttu):** Render deploy (unblocked), then correct the `/api/*`
   rewrite destination once the real hostname exists.
+
+### 2026-08-12 ~5:51 PM — Team Handoff: Phase 3 Planning & Integration Verification Initiated (Kareem)
+
+- **This wave:** Phase 3 Integration & Verification planning and pipeline validation.
+- **Done since last:** Implementation Plan created for Phase 3 integration and verification (`implementation_plan.md`). Verified data layers, B3 disaggregation conservation (92,233 state anchor), GTFS reachability, and 0–24h exposure gap calculations.
+- **In progress:** 🟡 Phase 3 verification of API payloads and UI panels (`web/src/components/NpuDetailPanel.jsx`), plus preparation for Phase 4/5 deliverables (demo screenshot `docs/demo.png` & demo video recording setup).
+- **Blocked on:** User approval of Phase 3 implementation plan before execution.
+- **I need from you:** User review & approval of `implementation_plan.md`.
+- **Decisions logged:** none.
+- **Contract changes:** none.
+- **Next milestone:** Phase 3 execution and Phase 4/5 demo assets (screenshot + 2-minute video).
+>>>>>>> e1d148b (docs(plan): update Phase 3 completion status and handoff)
 
 ### 2026-08-12 ~5:48 PM — Team Handoff: Phase 1–4 Core Pipeline & Interactive Web Frontend Landed on main
 
