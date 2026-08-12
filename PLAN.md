@@ -85,7 +85,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 1.1 | Vite + MapLibre scaffold, F1 map renders NPUs from mocks | `web/` | **Vinh** | ⬜ | 0.1 | checkpoint: looks like a product |
+| 1.1 | Vite + MapLibre scaffold, F1 map renders NPUs from mocks | `web/` | **Vinh** | 🟡 5:17 PM | 0.1 | checkpoint: looks like a product |
 | 1.2 | B1 emPOWER → PostGIS (reproject 3857→4326, suppression intervals) | `pipeline/` | **Niko** | ⬜ | — | rules D-001..D-005 |
 | 1.3 | FastAPI serving the four endpoints straight from `mocks/` | `api/` | **Guttu** | ⬜ | 0.1 | CORS open, read-only |
 | 1.4 | **Verify PostGIS on Render vs Tiger Data** (15 min, then decide) | — | **Guttu** | ⬜ | — | Q-004; if missing → Render Postgres, drop Tiger prize |
