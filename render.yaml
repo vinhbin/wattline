@@ -1,8 +1,6 @@
-# API web service. (The Workflow service is created via the Dashboard —
-# Blueprints don't support the Workflow type yet. See workflows/main.py.)
-#
-# The static site is added here once web/ lands — it cannot be declared
-# before the build directory exists or the whole blueprint fails to apply.
+# API web service + React static site. (The Workflow service is created via
+# the Dashboard — Blueprints don't support the Workflow type yet. See
+# workflows/main.py.)
 services:
   - type: web
     name: wattline-api
@@ -16,3 +14,23 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: "3.12.7"
+
+  - type: web
+    name: wattline-web
+    runtime: static
+    region: ohio
+    autoDeploy: true
+    buildCommand: cd web && npm ci && npm run build
+    staticPublishPath: web/dist
+    routes:
+      # web/src/api.js fetches relative /api/* — proxy those to the API
+      # service so the frontend needs no build-time base URL.
+      # ⚠️ If Render assigns the API a suffixed host (name collision), the
+      # destination below must be updated to the real .onrender.com URL.
+      - type: rewrite
+        source: /api/*
+        destination: https://wattline-api.onrender.com/api/*
+      # SPA fallback — must stay last, it matches everything.
+      - type: rewrite
+        source: /*
+        destination: /index.html
