@@ -422,6 +422,144 @@ body {
   color: #e06a57;
 }
 
+/* ---------- legend (F6) ---------- */
+
+.legend {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  z-index: 8;
+  width: 208px;
+  background: var(--bg-overlay);
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.legend.collapsed {
+  width: auto;
+}
+
+.legend-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 120ms ease;
+}
+
+.legend-toggle:hover {
+  color: var(--text-dim);
+}
+
+.legend-caret {
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+.legend-body {
+  padding: 2px 12px 12px;
+}
+
+.legend-group + .legend-group {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.legend-head {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 7px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 3px 0;
+}
+
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+/* swatches use the bright end of each within-tier ramp — what fills the map */
+.legend-swatch.swatch-critical {
+  background: #e2553f;
+}
+
+.legend-swatch.swatch-warning {
+  background: #e8a52c;
+}
+
+.legend-swatch.swatch-safe {
+  background: var(--safe);
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--bg);
+  margin: 0 1px;
+}
+
+.legend-dot.dot-reachable {
+  background: var(--accent);
+}
+
+.legend-dot.dot-desert {
+  background: #8a9698;
+  opacity: 0.55;
+}
+
+.legend-line {
+  width: 14px;
+  height: 0;
+  flex-shrink: 0;
+  border-top: 1.5px dashed var(--accent);
+  margin: 0 0 0 1px;
+}
+
+.legend-label {
+  font-size: 11px;
+  color: var(--text);
+  flex: 1;
+}
+
+.legend-hint {
+  font-size: 10px;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.legend-note {
+  margin-top: 7px;
+  font-size: 9px;
+  line-height: 1.4;
+  color: var(--text-faint);
+}
+
 /* ---------- NPU detail panel (F4) ---------- */
 
 .npu-panel {

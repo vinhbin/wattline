@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
+import Legend from './Legend.jsx'
 
 // CARTO dark-matter: vector basemap, no token (D-008: no Mapbox).
 const BASEMAP = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json'
@@ -203,7 +204,9 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
             'case',
             ['boolean', ['feature-state', 'selected'], false],
             0.95,
-            0.25,
+            // base boundaries lifted for projector legibility (F6) so NPU
+            // shapes stay separable and the choropleth never reads as one blob
+            0.4,
           ],
           'line-width': [
             'case',
@@ -211,7 +214,7 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
             2.5,
             ['boolean', ['feature-state', 'hover'], false],
             2,
-            0.75,
+            1,
           ],
         },
       },
@@ -385,6 +388,7 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
   return (
     <div className="map-wrap">
       <div ref={containerRef} className="map" />
+      {npus && <Legend />}
       {sites && (
         <div className="map-controls">
           <button
