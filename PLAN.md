@@ -25,6 +25,20 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:45 PM — ⛔→✅ exposure.json regenerated against real npus (Niko)
+
+- **Fixed the 6:40 blocker.** Re-ran `pipeline/exposure.py` against the real
+  `npus.json`, so `people_at_risk` now equals each NPU's real `dme_estimate`
+  (NPU-A 215→**70**, all 25 NPUs consistent). The F4 panel no longer shows a
+  contradiction; pushed → Render auto-deploys, live site is self-consistent.
+- `stats.json` re-synced from hour-6: **17 critical NPUs, people_critical
+  1,752→1,832**; `metro_atlanta_total` stays 2,513. `npus.json` ↔ `exposure.json`
+  ↔ `stats.json` now internally consistent.
+- Kareem's Helene escalation/restoration profile lives in the committed
+  `exposure.py`, so it's reproduced unchanged — only DME-derived numbers moved,
+  tier structure held (17 critical / 8 warning @ h6). **Kareem:** if you have
+  uncommitted exposure tweaks, holler and I'll fold them in; otherwise nothing to do.
+
 ### 2026-08-12 ~6:40 PM — Vinh: DEPLOY VERIFIED LIVE ✅ + ⛔ exposure.json still synthetic — 25/25 NPUs contradict themselves
 
 - **✅ C3 IS LIVE — verified by curl, not claimed:** static site 200,
@@ -552,9 +566,9 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | 1.1 | Vite + MapLibre scaffold, F1 map renders NPUs from mocks | `web/` | **Vinh** | ✅ | 0.1 | checkpoint: looks like a product |
 | 1.2 | B1 emPOWER → PostGIS (reproject 3857→4326, suppression intervals) | `pipeline/` | **Niko** | ✅ | — | rules D-001..D-005 |
 | 1.3 | FastAPI serving the four endpoints straight from `mocks/` | `api/` | **Guttu** | ✅ | 0.1 | CORS open, read-only |
-| 1.4 | **Verify PostGIS on Render vs Tiger Data** (15 min, then decide) | — | **Guttu** | ⬜ | — | Q-004; if missing → Render Postgres, drop Tiger prize |
+| 1.4 | **Verify PostGIS on Render vs Tiger Data** (15 min, then decide) | — | **Guttu** | ✂️ | — | Q-004 **moot**: no DB was ever provisioned. `pipeline/db.py` + `empower.py` carry a real PostGIS loader but it is gated on `DATABASE_URL` and there is no evidence it ever ran (Niko to confirm). Deployed API has no database — `geopandas`/`sqlalchemy` are deliberately out of `requirements.txt`. Tiger dropped. |
 | 1.5 | D1 Atlanta layers: NPU boundaries, parcels, facilities | `pipeline/` | **Kareem** | ✅ | — | `pipeline/atlanta_layers.py`, output in `data/processed/` |
-| 1.6 | Complete Devpost registration + create project entry | Devpost | **Guttu** | ⬜ | — | ⚠️ DQ condition |
+| 1.6 | Complete Devpost registration + create project entry | Devpost | **Guttu** | 🟡 3/5 | — | submission `1135217-wattline`, status DRAFT. ✅ Manage team · ✅ Project overview · ✅ Additional info. **Blocked: Project details needs ONLY a public video URL** (5.2). Live/repo/API-docs links + `docs/demo.png` uploaded 6:5x PM. |
 
 ### Phase 2 — Core build (4:40–5:45 PM)
 
@@ -563,14 +577,14 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | 2.1 | F2 tier coloring + header stats | `web/` | Vinh | ✅ 5:53 PM | 1.1 | feature-state tier fill; header critical count live per hour; verified headless |
 | 2.2 | **F3 scrubber + autoplay** (THE demo moment) | `web/` | Vinh | ✅ 5:53 PM | 2.1 | prefetch `/api/exposure/all` → per-hour → mock; verified 0 fetches during scrub |
 | 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | Niko | ✅ 6:15 PM | 1.2, 1.5 | **rewritten real** on B1 — dasymetric ZIP→tract→NPU (TIGER + ARC weights), was synthetic; D-002/D-003/D-004 all real; 18 tests green |
-| 2.4 | C3 deploy to Render (API + static site) | — | Guttu | ✅ verified 6:40 PM | 1.3 | LIVE — static 200 + API `/api/health` ok (all 4 payloads `processed`), `/api/*` proxy works; verified by Vinh via curl. Guttu: post your own status block |
+| 2.4 | C3 deploy to Render (API + static site) | `render.yaml` | Guttu | ✅ 6:05 PM, independently verified by Vinh 6:40 PM | 1.3 | **LIVE: https://wattline-web.onrender.com** · API https://wattline-api.onrender.com (`/docs`). Blueprint `wattline`, both services **autoDeploy from `main`** — no manual step before submit. Static site rewrites `/api/*` → API (`web/src/api.js` uses relative paths, which 404 on a static host). All four payloads report `processed`. ⚠️ free tier spins down ~15 min idle, cold start 50s+ — hit the URL before judging. |
 | 2.5 | D2 sites + transit reachability (honest heuristic, no RAPTOR) | `pipeline/` | Kareem | ✅ | 1.5 | `transit_reachable:false` is the demo beat |
 
 ### Phase 3 — Integration (5:45–6:30 PM) ← convergence point
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 3.1 | Swap mock → real API; **if real data not ready, ship on mock** | `web/`, `api/` | Guttu + Vinh | ✅ local 5:53 PM | 2.3, 2.4 | verified headless vs fresh API on real `data/processed/` (25 real NPUs render); deployed URL still pending 2.4 |
+| 3.1 | Swap mock → real API; **if real data not ready, ship on mock** | `web/`, `api/` | Guttu + Vinh | ✅ local 5:53 PM | 2.3, 2.4 | verified headless vs fresh API on real `data/processed/` (25 real NPUs render); **deployed and verified 6:05 PM** — live API serves `sources: processed` on all four payloads, and Niko's 6:15 B3 auto-deployed (live `/api/stats` = metro 2,513 / 17 critical / 1,752 people) |
 | 3.2 | B3 conservation check printed + committed | `pipeline/` | Niko | ✅ 6:15 PM | 2.3 | real check prints (711/92,567/67, anchor in band; metro=2,513); asserted in `tests/test_disaggregation.py` |
 | 3.3 | F4 NPU detail panel | `web/` | Vinh | ✅ 6:25 PM | 2.2 | `4f04912` — rebuilt salvage panel onto canonical theme, click-select via map/sidebar; verified 19/19 real + 5/5 mock |
 | 3.4 | D3 exposure series per NPU × hour 0–24 | `pipeline/` | Kareem | ✅ | 2.3, 2.5 | Helene profile: ETA 9h |
@@ -581,7 +595,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 |---|-----------|---------|-------|--------|------|-------|
 | 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | 🟡 6:45 PM | 3.4 | in progress — site dots + grey unreachable + dispatch-lines toggle in canonical MapView (dispatch data 83/90 verified) |
 | 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
-| 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ⬜ | 3.1 | dashboard → New → Workflow (Blueprints unsupported); trigger `run_pipeline` once, screenshot the passing run |
+| 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ✅ 6:33 PM | 3.1 | **`wattline-ingest` deployed** (`wfl-d9uf9g61egvs73ed3i50`, Python 3, Ohio, autoDeploy). Required a card on file — $50 hackathon credit alone did not satisfy it. Sponsor checkbox is now honest to tick. Remaining: trigger `run_pipeline` once + screenshot the passing run. ⚠️ `run_pipeline` calls `_run_script` inline, bypassing the retry-decorated tasks — the DAG's main entrypoint has **no retries**, against the exact ArcGIS-timeout risk the prize story cites. |
 | 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ✅ 6:07 PM | 4.2 | shipped, but current shot predates F4 panel + 4.2 polish — **re-capture after 4.2** (judges scroll on mobile) |
 
 ### Phase 5 — Submission (7:15–8:00 PM) — no new features
@@ -590,7 +604,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 |---|-----------|---------|-------|--------|------|-------|
 | 5.1 | D4 video: Vinh narrates script (§10), Kareem captures + edits | — | Kareem | ⬜ | 4.2 | ≤2:00; opens "Hey, I'm Vinh, and this is my demo for Hack RenderATL"; multiple takes of the scrub |
 | 5.2 | Upload video **PUBLIC** (unlisted ≠ public) | — | Kareem | ⬜ | 5.1 | created today — DQ condition |
-| 5.3 | README final: live URL + video URL, delete TODO comment | `README.md` | Guttu | ⬜ | 5.2 | |
+| 5.3 | README final: live URL + video URL, delete TODO comment | `README.md` | Guttu | 🟡 | 5.2 | live URL ✅ in; `docs/demo.png` ✅ rendering. Also corrected Architecture: it claimed "Postgres + PostGIS" and "Running locally" referenced `DATABASE_URL` + a non-existent `python -m pipeline.ingest`. Left: video URL, then delete the TODO block. |
 | 5.4 | Devpost submit: both tracks, all 4 members, links pasted | Devpost | Guttu | ⬜ | 5.3 | **target 7:45 PM, not 7:59** |
 
 ---
