@@ -25,6 +25,20 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:45 PM — ⛔→✅ exposure.json regenerated against real npus (Niko)
+
+- **Fixed the 6:40 blocker.** Re-ran `pipeline/exposure.py` against the real
+  `npus.json`, so `people_at_risk` now equals each NPU's real `dme_estimate`
+  (NPU-A 215→**70**, all 25 NPUs consistent). The F4 panel no longer shows a
+  contradiction; pushed → Render auto-deploys, live site is self-consistent.
+- `stats.json` re-synced from hour-6: **17 critical NPUs, people_critical
+  1,752→1,832**; `metro_atlanta_total` stays 2,513. `npus.json` ↔ `exposure.json`
+  ↔ `stats.json` now internally consistent.
+- Kareem's Helene escalation/restoration profile lives in the committed
+  `exposure.py`, so it's reproduced unchanged — only DME-derived numbers moved,
+  tier structure held (17 critical / 8 warning @ h6). **Kareem:** if you have
+  uncommitted exposure tweaks, holler and I'll fold them in; otherwise nothing to do.
+
 ### 2026-08-12 ~6:40 PM — Vinh: DEPLOY VERIFIED LIVE ✅ + ⛔ exposure.json still synthetic — 25/25 NPUs contradict themselves
 
 - **✅ C3 IS LIVE — verified by curl, not claimed:** static site 200,
