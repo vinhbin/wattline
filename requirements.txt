@@ -1,0 +1,7 @@
+# API runtime — this is all Render needs to serve the app
+fastapi
+uvicorn[standard]
+
+# Pipeline-only deps (disaggregation / exposure series) — install locally,
+# NOT needed by the deployed API, keep them out of the Render build:
+#   pip install geopandas shapely pandas

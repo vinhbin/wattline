@@ -11,6 +11,9 @@ web/dist/
 # Secrets
 .env
 
+# Big local data — regenerate with scripts/fetch_gtfs.py
+data/gtfs/
+
 # OS / editor
 .DS_Store
 Thumbs.db
