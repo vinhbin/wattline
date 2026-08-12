@@ -25,6 +25,62 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~5:53 PM — Guttu: API hardened + blueprint complete; 3 demo-blockers found in the real data
+
+**Pushed to `main`:** `5c39a61` (api) · `30e1a8e` (deploy). Push was blocked
+until ~5:45 by repo permissions, not by a bad commit — `00goop` was not a
+collaborator. Resolved.
+
+- **API (done).** New: `GET /api/exposure/all` (all 25 hours, one payload —
+  **Vinh: point the F3 prefetch here**, 25 round trips to a free-tier service
+  is a laggy scrub and Design points); `GET /api/health` (Render
+  healthCheckPath target, reports `processed` vs `mocks` per payload + feature
+  counts); `GET /` (service index — Render's probe was hitting a 404).
+  Hardening: out-of-series `?hour=N` → 404 not a 500; malformed
+  `data/processed/` JSON falls back to mocks instead of failing boot (D-007).
+  Smoke: 11/11 endpoints pass against real data.
+- **Blueprint (done).** `render.yaml` now declares both services: API
+  (healthCheckPath, region, autoDeploy, PYTHON_VERSION pin) and the React
+  static site. `web/src/api.js` fetches relative `/api/*`, which 404s on a
+  static host, so the blueprint **proxies `/api/*` → the API service** rather
+  than editing frontend files (single-owner rule). ⚠️ If Render assigns the
+  API a suffixed hostname, that rewrite destination must be updated.
+  `npm ci` + `vite build` verified locally.
+- **3.1 mock→real swap has already happened**, silently — `data/processed/`
+  wins in `load()`, so the API is serving Kareem's real payloads now
+  (25 NPUs, 90 sites). All four shapes still valid against the frozen contract.
+
+**Three demo-blockers found while verifying the real payloads:**
+
+1. ⛔ **Dispatch is empty (Kareem).** 0 of 90 sites have `assigned_npus`; every
+   site has `people_served: 0`. The Dispatch beat — lines from site to NPU —
+   has nothing to draw. The grey-out beat survives (7 sites
+   `transit_reachable: false`).
+2. ⛔ **`stats.json` is half-stale (Kareem).** `metro_atlanta_total` updated to
+   2,284, but `npus_critical: 9` and `people_critical: 1323` are still the old
+   **mock** values. Real hour 6 is **25 critical / 2,284 people**. The header
+   will read "9 critical" while the map shows 25 red — a judge catches that
+   immediately.
+3. ⛔ **Tier thresholds saturate the choropleth (Guttu's contract → needs
+   Vinh's ack).** Real `exposure_gap_hours` span **6.6–10.6**, but `critical`
+   is any gap > 4. Every NPU pins to critical from hour 3 and holds until
+   ~hour 20 — the map is monochrome red for ~17 of 25 frames. The data
+   underneath is fine (ETAs stagger across 5 values; NPUs first go critical at
+   hours 1/2/3) — the *tiers* hide it. Fix: rescale thresholds to the real
+   distribution (`CONTRACT:` commit) **and/or** Vinh ramps fill within tier by
+   `exposure_gap_hours`. The scrubber is 45s of a 2:00 video and currently
+   snaps once, then holds still.
+
+- **Answers Q-006:** Σ `dme_estimate` over 25 NPUs = **2,284**
+  (`metro_atlanta_total`).
+- ⚠️ **Video script correction (all).** Guttu's 1:35 line says "Postgres with
+  PostGIS" — there is no database; the API serves precomputed JSON. Replacement:
+  *"…precomputed tables served by FastAPI on Render, with React and MapLibre.
+  Nothing computes while you watch — that was a deliberate design rule."*
+  Truthful, and a stronger Design answer. **Kareem: lock before capture.**
+- **Next (Guttu):** Render deploy (unblocked), then correct the `/api/*`
+  rewrite destination once the real hostname exists.
+
 ### 2026-08-12 ~5:48 PM — Team Handoff: Phase 1–4 Core Pipeline & Interactive Web Frontend Landed on main
 
 - **Done / Shipped on `main`**:
