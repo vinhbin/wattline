@@ -398,7 +398,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 |---|-----------|---------|-------|--------|------|-------|
 | 3.1 | Swap mock → real API; **if real data not ready, ship on mock** | `web/`, `api/` | Guttu + Vinh | ✅ local 5:53 PM | 2.3, 2.4 | verified headless vs fresh API on real `data/processed/` (25 real NPUs render); deployed URL still pending 2.4 |
 | 3.2 | B3 conservation check printed + committed | `pipeline/` | Niko | 🟡 NOT verified | 2.3 | runtime print exists in code; no committed output; blocked on 2.3 sign-off |
-| 3.3 | F4 NPU detail panel | `web/` | Vinh | ⬜ | 2.2 | **NOT in canonical frontend** — Kareem's `NpuDetailPanel.jsx` is salvage material, needs adapting + wiring |
+| 3.3 | F4 NPU detail panel | `web/` | Vinh | 🟡 6:08 PM | 2.2 | in progress — rewriting Kareem's salvage panel to canonical conventions + wiring click-select |
 | 3.4 | D3 exposure series per NPU × hour 0–24 | `pipeline/` | Kareem | ✅ | 2.3, 2.5 | Helene profile: ETA 9h |
 
 ### Phase 4 — Sites + polish (6:30–7:15 PM)
