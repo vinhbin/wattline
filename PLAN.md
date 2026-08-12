@@ -78,8 +78,8 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | 0.7 | NPU boundaries (official DPCD, 25 NPUs, 4326) | `data/npu_boundaries.geojson` | Vinh | ✅ | unblocks Kareem D1 + Niko B3 target geography |
 | 0.8 | API stub serving frozen contract + smoke test | `api/main.py`, `requirements.txt` | Vinh | ✅ | Guttu can deploy to Render NOW |
 | 0.9 | MARTA GTFS fetch script (data gitignored) | `scripts/fetch_gtfs.py` | Vinh | ✅ | run locally: 7,057 stops |
-| 0.10 | ACS demographics (Census needs key now; ARC fallback) | `scripts/fetch_acs.py`, `data/arc_tract_demographics.json` | Vinh | 🟡 | ARC pull in flight; Census path needs free key |
-| 0.11 | Facilities: libraries / fire stations / rec centers | `data/facilities.geojson` | Vinh | 🟡 | pull in flight |
+| 0.10 | ARC tract demographics (senior/disability/no-vehicle/housing), 530 tracts Fulton+DeKalb, cross-checked vs ARC's own percent fields | `data/arc_tract_demographics.json`, `scripts/fetch_arc_tracts.py` | Vinh | ✅ | keyless — better track story than Census API; 4 null tracts are zero-pop (airport etc.), zero-weight naturally |
+| 0.11 | Facilities: 22 libraries + 37 fire stations + 31 rec centers, official sources | `data/facilities.geojson` | Vinh | ✅ | one library name truncated at source; a couple of branches may be historical — sanity-pass during D2 |
 
 ### Phase 1 — Unblock (4:00–4:40 PM)
 
