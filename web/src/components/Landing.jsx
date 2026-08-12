@@ -17,8 +17,8 @@ const METHOD = [
     key: 'identify',
     title: 'Identify',
     lead: 'A ZIP can span a senior tower and a golf course.',
-    body: 'Federal emPOWER data publishes counts at ZIP level. We disaggregate them onto Atlanta parcels and NPU boundaries — weighted by housing units and tract-level age and disability rates. The result conserves against the 92,233 state total.',
-    tag: 'emPOWER → parcels → NPU',
+    body: 'Federal emPOWER data publishes counts at ZIP level. We disaggregate them onto the city’s official NPU boundaries, weighted census-tract by census-tract with housing units, age 65+, and disability rates from Atlanta regional open data. The result conserves against the 92,233 state total.',
+    tag: 'emPOWER → tracts → NPU',
   },
   {
     n: '02',
@@ -72,8 +72,8 @@ const QUOTES = [
 
 const SOURCES = [
   ['HHS emPOWER', 'De-identified counts of electricity-dependent Medicare beneficiaries'],
-  ['ARC Open Data', 'Parcels & building footprints'],
-  ['City of Atlanta DPCD', 'NPU boundaries & public facilities'],
+  ['ARC Open Data', 'Tract demographics — seniors, disability, vehicles, housing'],
+  ['City of Atlanta DPCD', 'Official NPU boundaries & public facilities'],
   ['MARTA GTFS', 'Transit reachability'],
   ['Census ACS', 'B01001 · B18101 · B08201'],
   ['GA PSC Docket 44280', '$912M storm cost recovery record'],
@@ -256,9 +256,19 @@ export default function Landing({ onEnter }) {
         <div className="lp-brand">
           WATT<span className="line">LINE</span>
         </div>
-        <button className="lp-nav-cta" onClick={onEnter}>
-          Live map →
-        </button>
+        <div className="lp-nav">
+          <a
+            className="lp-nav-link"
+            href="https://github.com/vinhbin/wattline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <button className="lp-nav-cta" onClick={onEnter}>
+            Live map →
+          </button>
+        </div>
       </div>
 
       {/* HERO */}
@@ -420,6 +430,16 @@ export default function Landing({ onEnter }) {
           </button>
           <div className="lp-credits">
             HHS emPOWER · ARC · City of Atlanta DPCD · MARTA GTFS · Census ACS
+          </div>
+          <div className="lp-team">
+            Built at Hack RenderATL by Vinh · Niko · Guttu · Kareem ·{' '}
+            <a
+              href="https://github.com/vinhbin/wattline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              github.com/vinhbin/wattline
+            </a>
           </div>
         </div>
       </section>

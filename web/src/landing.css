@@ -82,6 +82,22 @@
   letter-spacing: 0.16em;
 }
 .lp-brand .line { color: var(--accent); }
+.lp-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.lp-nav-link {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+.lp-nav-link:hover {
+  color: var(--accent);
+}
 .lp-nav-cta {
   font-family: var(--font-display);
   font-size: 12px;
@@ -705,6 +721,22 @@
   font-size: 11px;
   letter-spacing: 0.12em;
   color: var(--text-faint);
+}
+.lp-team {
+  margin-top: 12px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+}
+.lp-team a {
+  color: var(--text-dim);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.lp-team a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* ---------- responsive ---------- */
