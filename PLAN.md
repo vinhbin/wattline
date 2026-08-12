@@ -25,6 +25,37 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~7:15 PM — Vinh: 4.2 F6 polish SHIPPED — Phase 4 frontend is DONE, video is the only Core gap
+
+- **✅ DONE — 4.2 F6 polish (`dd09e94`).** Added the **map legend**
+  (bottom-left, collapsible) — the one polish item that was actually
+  missing; skeletons and the mock-fallback chip were already in from
+  earlier phases. It keys the three encodings a judge sees but nothing
+  labeled: **exposure tier** (Critical/Warning/Safe with the `>4h` / `0–4h`
+  / `within runtime` gap thresholds + the "brighter fill = larger gap
+  within a tier" note that explains the within-tier ramp), and **charging
+  sites** (MARTA-reachable amber dot, "No transit access" grey dot, dashed
+  Dispatch→NPU line). Legend sits clear of the top-left Dispatch controls,
+  top-right F4 panel, and bottom-right zoom.
+- **Projector-contrast pass:** lifted base NPU boundary opacity 0.25→0.4
+  and width 0.75→1 so NPU shapes stay separable on a washed-out projector —
+  the choropleth no longer risks reading as one red blob mid-scrub. This is
+  the §4 F6 "test on a projector-brightness screen" note.
+- **Verified 23/23 headless** (Playwright, real `data/processed/` via
+  fresh uvicorn + vite proxy): legend renders all encodings, collapse/expand
+  works, no overlap with dispatch controls, **no regressions** to
+  npu-fill/line/site-dots/dispatch-lines layers or the scrub recolor, dispatch
+  toggle still flips, zero console errors. Prod build clean. Playwright was a
+  throwaway dev-dep — **not** added to `web/package.json` (kept the deployed
+  static build lean).
+- **Vinh: frontend Core (C2 + C4/F6) is complete.** All that's left before
+  we're DQ-safe is the **video (5.1/5.2)** — Devpost is 3/5, blocked purely
+  on a public video URL. Everything the video needs to film is on `main` and
+  live, now with the legend for the "what am I looking at" beat. **Kareem:
+  the map is camera-ready — the legend makes the tier/grey-out/dispatch
+  beats self-explanatory on screen.** I can re-capture `docs/demo.png`
+  (Q-003) off this build if you want a fresh judge-facing shot.
+
 ### 2026-08-12 ~6:55 PM — Vinh: 4.1 F5 sites + dispatch SHIPPED + both my flagged blockers cleared
 
 - **✅ DONE — 4.1 F5 sites + dispatch (`793f38e`).** Site dots on the map
@@ -620,7 +651,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
 | 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ✅ 6:55 PM | 3.4 | `793f38e` — site dots (grey unreachable + "No transit access" tooltip), Dispatch toggle draws site→NPU lines, 83/7 caption; verified 11/11 headless |
-| 4.2 | **F6 polish — never cut** | `web/` | **Vinh** | 🟡 7:05 PM | 4.1 | skeletons ✅ + mock fallback ✅ already in; remaining = **map legend** (tiers + site states + dispatch) + projector-contrast pass |
+| 4.2 | **F6 polish — never cut** | `web/` | Vinh | ✅ 7:15 PM | 4.1 | `dd09e94` — legend (tiers + gap thresholds + within-tier-ramp note + site states + dispatch), boundary contrast lifted for projector; skeletons + mock fallback already in. Verified 23/23 headless on real data |
 | 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ✅ 6:33 PM | 3.1 | **`wattline-ingest` deployed** (`wfl-d9uf9g61egvs73ed3i50`, Python 3, Ohio, autoDeploy). Required a card on file — $50 hackathon credit alone did not satisfy it. Sponsor checkbox is now honest to tick. Remaining: trigger `run_pipeline` once + screenshot the passing run. ⚠️ `run_pipeline` calls `_run_script` inline, bypassing the retry-decorated tasks — the DAG's main entrypoint has **no retries**, against the exact ArcGIS-timeout risk the prize story cites. |
 | 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ✅ 6:07 PM | 4.2 | shipped, but current shot predates F4 panel + 4.2 polish — **re-capture after 4.2** (judges scroll on mobile) |
 
@@ -765,4 +796,4 @@ https://credits-portal-mmdm.onrender.com/claim/renderatlhackathon
 
 ---
 
-_Last updated: 2026-08-12 ~6:40 PM EDT by Vinh (via Claude) — deploy verified live (2.4 ✅, Q-001), ⛔ exposure.json regen needed (synthetic people_at_risk, 25/25 mismatch)._
+_Last updated: 2026-08-12 ~7:15 PM EDT by Vinh (via Claude) — 4.2 F6 polish ✅ (legend + projector contrast, 23/23 headless). Frontend Core done; video (5.1/5.2) is the only remaining Core gap + DQ item._
