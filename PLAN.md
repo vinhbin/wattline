@@ -25,6 +25,35 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:40 PM — Vinh: DEPLOY VERIFIED LIVE ✅ + ⛔ exposure.json still synthetic — 25/25 NPUs contradict themselves
+
+- **✅ C3 IS LIVE — verified by curl, not claimed:** static site 200,
+  `wattline-api.onrender.com/api/health` reports all four payloads from
+  `data/processed/` (25 NPUs, 25 hours, 90 sites), and the static site's
+  `/api/*` proxy returns real stats — **no mock chip on the live site.**
+  Row 2.4 flipped ✅, Q-001 checked. Guttu: the deploy appeared with zero
+  PLAN.md updates from you — post a block; **Devpost 1.6 is now the ONLY
+  unconfirmed DQ item.**
+- ⛔ **NEW demo-blocker (Kareem, ~10 min): exposure.json still carries the
+  synthetic estimates.** Niko's real `npus.json` (metro 2,513) landed, but
+  `people_at_risk` in `exposure.json` is the OLD numbers — mismatched on
+  **25/25 NPUs**, e.g. NPU-A "215 people at risk" vs **70** residents,
+  NPU-D 96 vs **9**. The F4 panel shows both numbers side by side, so a
+  judge catches it in one click — **and it's live on the deployed site
+  right now.** Fix: re-run `pipeline/exposure.py` against the new
+  `npus.json`, re-sync `stats.json` `npus_critical`/`people_critical` in
+  the same pass, commit → Render auto-deploys. If you're deep in video
+  setup, say so and Vinh hotfixes it — silence wastes the clock.
+- **Niko's rewrite acked.** The old B3 was synthetic end-to-end (trig
+  function of NPU area/letter, hardcoded `92233 [OK]` print, hardcoded
+  device_mix) — good catch, and the track claim is real now (containment
+  band [91,897–92,567] ∋ 92,233, 18 tests green). README "Conserves
+  exactly" restored legitimately. This is also why the exposure regen
+  above is mandatory, not cosmetic.
+- **Vinh next:** 4.1 F5 sites + dispatch → 4.2 polish → freeze ~7:15.
+  **Kareem:** exposure regen first, then video setup + re-shoot
+  `docs/demo.png` after 4.2.
+
 ### 2026-08-12 ~6:15 PM — B1 ✅ + B3 REAL: disaggregation now uses the actual DME (Niko)
 
 **Rows 2.3 + 3.2 signed off ✅.** The prior `pipeline/disaggregation.py` was not
@@ -534,7 +563,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | 2.1 | F2 tier coloring + header stats | `web/` | Vinh | ✅ 5:53 PM | 1.1 | feature-state tier fill; header critical count live per hour; verified headless |
 | 2.2 | **F3 scrubber + autoplay** (THE demo moment) | `web/` | Vinh | ✅ 5:53 PM | 2.1 | prefetch `/api/exposure/all` → per-hour → mock; verified 0 fetches during scrub |
 | 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | Niko | ✅ 6:15 PM | 1.2, 1.5 | **rewritten real** on B1 — dasymetric ZIP→tract→NPU (TIGER + ARC weights), was synthetic; D-002/D-003/D-004 all real; 18 tests green |
-| 2.4 | C3 deploy to Render (API + static site) | — | Guttu | ⬜ | 1.3 | live URL = Completion evidence |
+| 2.4 | C3 deploy to Render (API + static site) | — | Guttu | ✅ verified 6:40 PM | 1.3 | LIVE — static 200 + API `/api/health` ok (all 4 payloads `processed`), `/api/*` proxy works; verified by Vinh via curl. Guttu: post your own status block |
 | 2.5 | D2 sites + transit reachability (honest heuristic, no RAPTOR) | `pipeline/` | Kareem | ✅ | 1.5 | `transit_reachable:false` is the demo beat |
 
 ### Phase 3 — Integration (5:45–6:30 PM) ← convergence point
@@ -666,7 +695,7 @@ Every cut is a dated entry in `docs/decision-log.md`. No silent removal.
 
 ## Open Questions
 
-- [ ] **Q-001 — Live URL:** paste into README after 2.4. **Owner: Guttu.**
+- [x] **Q-001 — Live URL:** https://wattline-web.onrender.com — in README, verified 200 (Vinh, 6:40 PM). **Owner: Guttu.**
 - [ ] **Q-002 — Video URL (public):** paste after 5.2. **Owner: Kareem.**
 - [ ] **Q-003 — Screenshot `docs/demo.png`:** capture after polish. **Owner: Kareem.**
 - [ ] **Q-004 — PostGIS on Render vs Tiger Data:** verify in first 15 min; decides S2. **Owner: Guttu.**
@@ -696,4 +725,4 @@ https://credits-portal-mmdm.onrender.com/claim/renderatlhackathon
 
 ---
 
-_Last updated: 2026-08-12 ~6:15 PM EDT by Niko (via Claude) — B3 rewritten real, rows 2.3/3.2 ✅, Q-006 answered._
+_Last updated: 2026-08-12 ~6:40 PM EDT by Vinh (via Claude) — deploy verified live (2.4 ✅, Q-001), ⛔ exposure.json regen needed (synthetic people_at_risk, 25/25 mismatch)._
