@@ -25,6 +25,33 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:25 PM — Vinh: 3.3 F4 detail panel SHIPPED + stale-uvicorn warning (all: restart local API)
+
+- **✅ DONE — 3.3 F4 NPU detail panel (`4f04912`).** Kareem's salvage panel
+  rebuilt onto the canonical theme: no `lucide-react` dep, and his fabricated
+  fallbacks removed (`dme_estimate || 142`, invented device-mix percentages —
+  never show a judge a made-up number). Click a polygon or a sidebar row →
+  panel; Escape / × / empty-basemap click closes; selected NPU gets an accent
+  outline; the gap number re-derives per scrubbed hour, so it drains live
+  during autoplay (h6 4.6 → h12 4.9 → h22 "within runtime" on Kareem's new
+  restoration arc — the arc reads great in the panel). Verified headless:
+  **19/19 vs fresh uvicorn on real data** (panel content cross-checked against
+  the API per hour) + **5/5 mock fallback with API down**; prod build clean.
+- **The panel does NOT say "conserves 92,233"** — that claim stays embargoed
+  until Niko signs off 2.3/3.2 (D-004 still absent per 5:55 block).
+- ⚠️ **ALL — restart any local uvicorn after pulling.** Found and killed
+  **three** stale processes on :8000/:8001 (started 5:29/5:51 PM, before
+  Guttu's API landed): they serve the old four-endpoint app, so
+  `/api/exposure/all` 404s and payloads are stale *silently* (frontend
+  falls back per-hour and hides it). If your local test says "no /all
+  endpoint," it's a stale process, not the code.
+- **Kareem's dispatch fix verified in the data:** 83/90 sites have
+  `assigned_npus` + `people_served>0`, 7 transit deserts intact — 4.1 row
+  updated, F5 dispatch lines are unblocked.
+- **Vinh next:** 4.1 F5 sites + dispatch → 4.2 polish.
+- **Still the gates:** ① Niko 2.3/3.2 sign-off (the track). ② Guttu
+  Devpost 1.6 (DQ) + Render deploy 2.4.
+
 ### 2026-08-12 ~6:07 PM — Team Handoff: Phase 4 Sites Polish, Pipeline Hardening & Asset Sync (Kareem)
 
 - **This wave:** Phase 4 Sites Polish, Pipeline Hardening & Assets Push (Kareem).
@@ -432,14 +459,14 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 |---|-----------|---------|-------|--------|------|-------|
 | 3.1 | Swap mock → real API; **if real data not ready, ship on mock** | `web/`, `api/` | Guttu + Vinh | ✅ local 5:53 PM | 2.3, 2.4 | verified headless vs fresh API on real `data/processed/` (25 real NPUs render); deployed URL still pending 2.4 |
 | 3.2 | B3 conservation check printed + committed | `pipeline/` | Niko | 🟡 NOT verified | 2.3 | runtime print exists in code; no committed output; blocked on 2.3 sign-off |
-| 3.3 | F4 NPU detail panel | `web/` | Vinh | 🟡 6:08 PM | 2.2 | in progress — rewriting Kareem's salvage panel to canonical conventions + wiring click-select |
+| 3.3 | F4 NPU detail panel | `web/` | Vinh | ✅ 6:25 PM | 2.2 | `4f04912` — rebuilt salvage panel onto canonical theme, click-select via map/sidebar; verified 19/19 real + 5/5 mock |
 | 3.4 | D3 exposure series per NPU × hour 0–24 | `pipeline/` | Kareem | ✅ | 2.3, 2.5 | Helene profile: ETA 9h |
 
 ### Phase 4 — Sites + polish (6:30–7:15 PM)
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ⬜ | 3.4 | **NOT in canonical frontend** — Kareem's `SitesPanel.jsx` is salvage; also dispatch data is empty (0/90 `assigned_npus`, see Guttu 5:53) |
+| 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ⬜ | 3.4 | Kareem's `SitesPanel.jsx` is salvage; dispatch data NOW POPULATED (83/90 `assigned_npus`, 7 transit deserts — verified 6:25 PM) |
 | 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
 | 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ⬜ | 3.1 | dashboard → New → Workflow (Blueprints unsupported); trigger `run_pipeline` once, screenshot the passing run |
 <<<<<<< Updated upstream
