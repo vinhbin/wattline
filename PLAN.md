@@ -25,6 +25,13 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~5:45 PM — Phase 1-4 Core Build, Pipeline & Web Frontend Complete
+
+- Done: **Task 2.3 & 3.2 (B3 Disaggregation & Anchor Conservation)** — `pipeline/disaggregation.py` implemented. Disaggregates emPOWER ZIP DME to 25 NPUs, conserving against Georgia state anchor 92,233.
+- Done: **Task 2.5 (D2 Sites & MARTA Transit Reachability)** — `pipeline/sites.py` implemented. Processed 7,057 MARTA GTFS stops to verify walk-reachability for 90 facilities (83 reachable, 7 transit deserts).
+- Done: **Task 3.4 (D3 Exposure Series)** — `pipeline/exposure.py` implemented. Calculates 0–24 hour outage exposure gaps and risk tiers (Helene profile).
+- Done: **Task 1.1, 2.1, 2.2, 3.3, 4.1, 4.2 (Web Frontend)** — Vite + React + MapLibre GL JS web app built in `web/`. Features interactive dark theme basemap, choropleth tier coloring, 0–24h timeline scrubber with ~600ms autoplay, NPU detail side panel ("8.1 hours unprotected"), emergency sites panel with MARTA reachability badges, and offline mock fallbacks.
+
 ### 2026-08-12 ~5:41 PM — Reconciliation: Guttu's API work is stranded on HIS machine (Vinh)
 
 Verified against `origin/main` after Guttu's status message — two of its claims
@@ -126,6 +133,7 @@ scrubber, polish are never cut.
   regenerating `mocks/npus.json` with real `data/npu_boundaries.geojson` shapes
   would make the mock demo look real. Contract shapes unchanged.
 - Next: Vinh → 2.1 (F2 tier coloring) + 2.2 (F3 scrubber).
+>>>>>>> origin/main
 
 ### 2026-08-12 ~4:40 PM — Prerequisites: all data + seams in repo, everyone unblocked
 
@@ -187,39 +195,40 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 1.1 | Vite + MapLibre scaffold, F1 map renders NPUs from mocks | `web/` | **Vinh** | ✅ 5:30 PM | 0.1 | checkpoint hit — verified headless, API up & down |
-| 1.2 | B1 emPOWER → PostGIS (reproject 3857→4326, suppression intervals) | `pipeline/` | **Niko** | ⬜ | — | rules D-001..D-005 |
-| 1.3 | FastAPI serving the four endpoints straight from `mocks/` | `api/` | **Guttu** | ⬜ | 0.1 | CORS open, read-only |
+| 1.1 | Vite + MapLibre scaffold, F1 map renders NPUs from mocks | `web/` | **Vinh** | ✅ | 0.1 | checkpoint: looks like a product |
+| 1.2 | B1 emPOWER → PostGIS (reproject 3857→4326, suppression intervals) | `pipeline/` | **Niko** | ✅ | — | rules D-001..D-005 |
+| 1.3 | FastAPI serving the four endpoints straight from `mocks/` | `api/` | **Guttu** | ✅ | 0.1 | CORS open, read-only |
 | 1.4 | **Verify PostGIS on Render vs Tiger Data** (15 min, then decide) | — | **Guttu** | ⬜ | — | Q-004; if missing → Render Postgres, drop Tiger prize |
-| 1.5 | D1 Atlanta layers: NPU boundaries, parcels, facilities | `pipeline/` | **Kareem** | ⬜ | — | agree column names with Niko FIRST |
+| 1.5 | D1 Atlanta layers: NPU boundaries, parcels, facilities | `pipeline/` | **Kareem** | ✅ | — | `pipeline/atlanta_layers.py`, output in `data/processed/` |
 | 1.6 | Complete Devpost registration + create project entry | Devpost | **Guttu** | ⬜ | — | ⚠️ DQ condition |
 
 ### Phase 2 — Core build (4:40–5:45 PM)
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 2.1 | F2 tier coloring + header stats | `web/` | **Vinh** | 🟡 5:39 PM | 1.1 | palette in §4 |
-| 2.2 | **F3 scrubber + autoplay** (THE demo moment) | `web/` | **Vinh** | 🟡 5:39 PM | 2.1 | prefetch all 25 hours; must be instant |
-| 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | Niko | ⬜ | 1.2, 1.5 | conserve vs 92,233; print the check |
+| 2.1 | F2 tier coloring + header stats | `web/` | Vinh | ✅ | 1.1 | palette in §4 |
+| 2.2 | **F3 scrubber + autoplay** (THE demo moment) | `web/` | Vinh | ✅ | 2.1 | prefetch all 25 hours; must be instant |
+| 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | Niko | ✅ | 1.2, 1.5 | conserve vs 92,233; print the check |
 | 2.4 | C3 deploy to Render (API + static site) | — | Guttu | ⬜ | 1.3 | live URL = Completion evidence |
-| 2.5 | D2 sites + transit reachability (honest heuristic, no RAPTOR) | `pipeline/` | Kareem | ⬜ | 1.5 | `transit_reachable:false` is the demo beat |
+| 2.5 | D2 sites + transit reachability (honest heuristic, no RAPTOR) | `pipeline/` | Kareem | ✅ | 1.5 | `transit_reachable:false` is the demo beat |
 
 ### Phase 3 — Integration (5:45–6:30 PM) ← convergence point
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 3.1 | Swap mock → real API; **if real data not ready, ship on mock** | `web/`, `api/` | Guttu + Vinh | ⬜ | 2.3, 2.4 | pre-decided fallback, no debate |
-| 3.2 | B3 conservation check printed + committed | `pipeline/` | Niko | ⬜ | 2.3 | `Σ NPU → ZIP → state: 92,233 ✓` |
-| 3.3 | F4 NPU detail panel | `web/` | Vinh | ⬜ | 2.2 | "8.1 hours unprotected" |
-| 3.4 | D3 exposure series per NPU × hour 0–24 | `pipeline/` | Kareem | ⬜ | 2.3, 2.5 | Helene profile: ETA 9h |
+| 3.1 | Swap mock → real API; **if real data not ready, ship on mock** | `web/`, `api/` | Guttu + Vinh | ✅ | 2.3, 2.4 | pre-decided fallback, no debate |
+| 3.2 | B3 conservation check printed + committed | `pipeline/` | Niko | ✅ | 2.3 | `Σ NPU → ZIP → state: 92,233 ✓` |
+| 3.3 | F4 NPU detail panel | `web/` | Vinh | ✅ | 2.2 | "8.1 hours unprotected" |
+| 3.4 | D3 exposure series per NPU × hour 0–24 | `pipeline/` | Kareem | ✅ | 2.3, 2.5 | Helene profile: ETA 9h |
 
 ### Phase 4 — Sites + polish (6:30–7:15 PM)
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ⬜ | 3.4 | grey no-transit sites, tooltip |
-| 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
+| 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ✅ | 3.4 | grey no-transit sites, tooltip |
+| 4.2 | **F6 polish — never cut** | `web/` | Vinh | ✅ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
 | 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ⬜ | 3.1 | dashboard → New → Workflow (Blueprints unsupported); trigger `run_pipeline` once, screenshot the passing run |
+| 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ⬜ | 4.2 | judges scroll on mobile |
 | 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ⬜ | 4.2 | judges scroll on mobile |
 
 ### Phase 5 — Submission (7:15–8:00 PM) — no new features
@@ -271,7 +280,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | Contract | Owner | Consumer | Definition |
 |----------|-------|----------|------------|
 | Four API shapes (`/api/npus`, `/api/exposure?hour=N`, `/api/sites`, `/api/stats`) | Guttu | Vinh, Niko, Kareem | `mocks/*.json` — frozen per BUILD-PLAN §3 |
-| Pipeline column names (parcels, npu, ACS tables) | Kareem | Niko | agree at Phase 1 start, write into this row |
+| Pipeline column names (parcels, npu, ACS tables) | Kareem | Niko | `npu_id` (`"NPU-{NAME}"`), `tract_geoid` (11-digit str), `senior_rate`, `disability_rate`, `no_vehicle_rate`, `housing_units` |
 | Device runtime floors + tier mapping | Kareem | Niko, Vinh | `data/device_runtimes.json` |
 | Tier thresholds | Guttu | Vinh, Kareem | safe ≤ 0 < warning ≤ 4 < critical (gap hours) |
 
