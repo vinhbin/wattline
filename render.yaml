@@ -1,9 +1,18 @@
 # API web service. (The Workflow service is created via the Dashboard —
 # Blueprints don't support the Workflow type yet. See workflows/main.py.)
+#
+# The static site is added here once web/ lands — it cannot be declared
+# before the build directory exists or the whole blueprint fails to apply.
 services:
   - type: web
     name: wattline-api
     runtime: python
     plan: free
+    region: ohio
+    autoDeploy: true
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
