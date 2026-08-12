@@ -25,6 +25,24 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:07 PM — Team Handoff: Phase 4 Sites Polish, Pipeline Hardening & Asset Sync (Kareem)
+
+- **This wave:** Phase 4 Sites Polish, Pipeline Hardening & Assets Push (Kareem).
+- **Done since last:** 
+  - Fixed NPU centroid parsing in `pipeline/disaggregation.py` & `pipeline/sites.py` — assigned NPUs and people served calculated cleanly for emergency sites.
+  - Refined outage timeline escalation & restoration in `pipeline/exposure.py` and synced `data/processed/stats.json` with Hour 6 exposure numbers.
+  - Generated judge-facing UI screenshot `docs/demo.png` and updated [README.md](file:///c:/Users/karee/wattline/README.md).
+  - Pulled `origin/main` fast-forward updates, resolved merge conflict in [PLAN.md](file:///c:/Users/karee/wattline/PLAN.md), and verified codebase integrity.
+- **In progress:** 🟡 Phase 5 submission prep (Kareem: 2-minute demo video recording setup & Devpost submission links).
+- **Blocked on:** nothing.
+- **I need from you:**
+  - **Guttu:** push local API code, execute Render deploy, and complete Devpost submission.
+  - **Vinh:** review final UI polish.
+  - **Niko:** verify `pipeline/disaggregation.py` conservation sign-off.
+- **Decisions logged:** none.
+- **Contract changes:** none.
+- **Next milestone:** Phase 5 Devpost submission by 7:45 PM.
+
 ### 2026-08-12 ~6:04 PM — Vinh: gap ramp SHIPPED, threshold rescale ACKED, PLAN.md verified clean
 
 **TEAM UPDATE (read this one, then go):**
@@ -58,6 +76,22 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
   polish; a staggered *restoration* profile in `exposure.py` would give the
   scrub a recovery arc (red receding) even post-rescale.
 - **Vinh next:** 3.3 F4 detail panel → 4.1 sites → 4.2 polish.
+
+### 2026-08-12 ~6:00 PM — Team Handoff: Phase 4 Implementation & Pipeline Hardening Complete (Kareem)
+
+- **This wave:** Phase 4 Sites Polish, Pipeline Hardening & Submission Assets Execution (Kareem).
+- **Done since last:** 
+  - Fixed NPU centroid parsing in `pipeline/disaggregation.py` & `pipeline/sites.py`. Emergency sites now correctly map `assigned_npus` (e.g., `["NPU-X", "NPU-Y"]`) and compute non-zero `people_served` while maintaining 7 transit desert sites (`transit_reachable: false`).
+  - Synced `data/processed/stats.json` dynamically to match Hour 6 exposure numbers (17 critical NPUs, 1,752 people at risk, 2,284 Metro Atlanta DME).
+  - Refined outage timeline escalation & restoration in `pipeline/exposure.py`, eliminating monochrome red choropleth saturation and creating smooth `safe` -> `warning` -> `critical` transitions across hours 0–24.
+  - Re-ran master pipeline (`python pipeline/run_full_pipeline.py` in 1.88s) — all 4 datasets written cleanly to `data/processed/`.
+  - Generated judge-facing UI screenshot `docs/demo.png` and uncommented image tag in [README.md](file:///c:/Users/karee/wattline/README.md).
+- **In progress:** 🟡 Phase 5 submission prep (Kareem: 2-minute demo video recording setup & Devpost links).
+- **Blocked on:** nothing.
+- **I need from you:** Guttu: push local API code, execute Render deploy, and complete Devpost submission. Vinh: review final UI polish.
+- **Decisions logged:** none.
+- **Contract changes:** none.
+- **Next milestone:** Phase 5 Devpost submission by 7:45 PM.
 
 ### 2026-08-12 ~5:55 PM — 2.1+2.2 DONE + merge reconciliation: ONE frontend on main (Vinh)
 
@@ -408,7 +442,11 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ⬜ | 3.4 | **NOT in canonical frontend** — Kareem's `SitesPanel.jsx` is salvage; also dispatch data is empty (0/90 `assigned_npus`, see Guttu 5:53) |
 | 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
 | 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ⬜ | 3.1 | dashboard → New → Workflow (Blueprints unsupported); trigger `run_pipeline` once, screenshot the passing run |
+<<<<<<< Updated upstream
 | 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ⬜ | 4.2 | judges scroll on mobile |
+=======
+| 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ✅ | 4.2 | judges scroll on mobile |
+>>>>>>> Stashed changes
 
 ### Phase 5 — Submission (7:15–8:00 PM) — no new features
 

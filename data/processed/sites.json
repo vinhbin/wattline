@@ -8,8 +8,11 @@
       "lon": -84.41131,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-X",
+        "NPU-Y"
+      ],
+      "people_served": 59
     },
     {
       "site_id": "lib-002",
@@ -19,8 +22,11 @@
       "lon": -84.395179,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-Y",
+        "NPU-X"
+      ],
+      "people_served": 59
     },
     {
       "site_id": "lib-003",
@@ -30,8 +36,11 @@
       "lon": -84.354886,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-Y",
+        "NPU-W"
+      ],
+      "people_served": 100
     },
     {
       "site_id": "lib-004",
@@ -41,8 +50,11 @@
       "lon": -84.462448,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-R",
+        "NPU-S"
+      ],
+      "people_served": 46
     },
     {
       "site_id": "lib-005",
@@ -52,8 +64,11 @@
       "lon": -84.379542,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-V",
+        "NPU-Y"
+      ],
+      "people_served": 45
     },
     {
       "site_id": "lib-006",
@@ -63,8 +78,11 @@
       "lon": -84.420619,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-T",
+        "NPU-V"
+      ],
+      "people_served": 36
     },
     {
       "site_id": "lib-007",
@@ -74,8 +92,11 @@
       "lon": -84.347091,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-W",
+        "NPU-N"
+      ],
+      "people_served": 100
     },
     {
       "site_id": "lib-008",
@@ -85,8 +106,11 @@
       "lon": -84.395509,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-V",
+        "NPU-M"
+      ],
+      "people_served": 49
     },
     {
       "site_id": "lib-009",
@@ -96,8 +120,11 @@
       "lon": -84.321497,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-O",
+        "NPU-N"
+      ],
+      "people_served": 59
     },
     {
       "site_id": "lib-010",
@@ -107,8 +134,11 @@
       "lon": -84.371773,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-M",
+        "NPU-N"
+      ],
+      "people_served": 59
     },
     {
       "site_id": "lib-011",
@@ -118,8 +148,11 @@
       "lon": -84.424549,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-T",
+        "NPU-K"
+      ],
+      "people_served": 36
     },
     {
       "site_id": "lib-012",
@@ -129,8 +162,11 @@
       "lon": -84.384089,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-M",
+        "NPU-V"
+      ],
+      "people_served": 49
     },
     {
       "site_id": "lib-013",
@@ -140,8 +176,11 @@
       "lon": -84.500127,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-H",
+        "NPU-I"
+      ],
+      "people_served": 80
     },
     {
       "site_id": "lib-014",
@@ -151,8 +190,11 @@
       "lon": -84.388415,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-M",
+        "NPU-L"
+      ],
+      "people_served": 49
     },
     {
       "site_id": "lib-015",
@@ -162,8 +204,11 @@
       "lon": -84.446715,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-J",
+        "NPU-K"
+      ],
+      "people_served": 45
     },
     {
       "site_id": "lib-016",
@@ -173,8 +218,11 @@
       "lon": -84.363714,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-N",
+        "NPU-E"
+      ],
+      "people_served": 61
     },
     {
       "site_id": "lib-017",
@@ -184,8 +232,11 @@
       "lon": -84.482079,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-G",
+        "NPU-H"
+      ],
+      "people_served": 55
     },
     {
       "site_id": "lib-018",
@@ -195,8 +246,11 @@
       "lon": -84.384883,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-E",
+        "NPU-M"
+      ],
+      "people_served": 64
     },
     {
       "site_id": "lib-019",
@@ -217,8 +271,11 @@
       "lon": -84.476857,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-G",
+        "NPU-D"
+      ],
+      "people_served": 68
     },
     {
       "site_id": "lib-021",
@@ -228,8 +285,11 @@
       "lon": -84.378812,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-B",
+        "NPU-C"
+      ],
+      "people_served": 100
     },
     {
       "site_id": "lib-022",
@@ -239,8 +299,11 @@
       "lon": -84.427311,
       "capacity": 100,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-A",
+        "NPU-C"
+      ],
+      "people_served": 100
     },
     {
       "site_id": "fire-001",
@@ -250,8 +313,11 @@
       "lon": -84.398374,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-M",
+        "NPU-L"
+      ],
+      "people_served": 49
     },
     {
       "site_id": "fire-002",
@@ -261,8 +327,11 @@
       "lon": -84.381369,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-Y",
+        "NPU-V"
+      ],
+      "people_served": 45
     },
     {
       "site_id": "fire-003",
@@ -272,8 +341,11 @@
       "lon": -84.362814,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-B",
+        "NPU-A"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "fire-004",
@@ -283,8 +355,11 @@
       "lon": -84.37765,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-M",
+        "NPU-V"
+      ],
+      "people_served": 49
     },
     {
       "site_id": "fire-005",
@@ -294,8 +369,11 @@
       "lon": -84.481083,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-R",
+        "NPU-P"
+      ],
+      "people_served": 95
     },
     {
       "site_id": "fire-006",
@@ -305,8 +383,11 @@
       "lon": -84.435681,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-D",
+        "NPU-C"
+      ],
+      "people_served": 88
     },
     {
       "site_id": "fire-007",
@@ -316,8 +397,11 @@
       "lon": -84.502003,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-H",
+        "NPU-I"
+      ],
+      "people_served": 80
     },
     {
       "site_id": "fire-008",
@@ -327,8 +411,11 @@
       "lon": -84.368478,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-V",
+        "NPU-M"
+      ],
+      "people_served": 49
     },
     {
       "site_id": "fire-009",
@@ -338,8 +425,11 @@
       "lon": -84.392786,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-E",
+        "NPU-M"
+      ],
+      "people_served": 64
     },
     {
       "site_id": "fire-010",
@@ -349,8 +439,11 @@
       "lon": -84.345328,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-N",
+        "NPU-O"
+      ],
+      "people_served": 59
     },
     {
       "site_id": "fire-011",
@@ -360,8 +453,11 @@
       "lon": -84.347718,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-W",
+        "NPU-N"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "fire-012",
@@ -371,8 +467,11 @@
       "lon": -84.423527,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-S",
+        "NPU-T"
+      ],
+      "people_served": 36
     },
     {
       "site_id": "fire-013",
@@ -382,8 +481,11 @@
       "lon": -84.381728,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-E",
+        "NPU-M"
+      ],
+      "people_served": 64
     },
     {
       "site_id": "fire-014",
@@ -393,8 +495,11 @@
       "lon": -84.421937,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-K",
+        "NPU-L"
+      ],
+      "people_served": 36
     },
     {
       "site_id": "fire-015",
@@ -404,8 +509,11 @@
       "lon": -84.436453,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-T",
+        "NPU-S"
+      ],
+      "people_served": 36
     },
     {
       "site_id": "fire-016",
@@ -415,8 +523,11 @@
       "lon": -84.322098,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-O",
+        "NPU-N"
+      ],
+      "people_served": 59
     },
     {
       "site_id": "fire-017",
@@ -426,8 +537,11 @@
       "lon": -84.354267,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-N",
+        "NPU-F"
+      ],
+      "people_served": 57
     },
     {
       "site_id": "fire-018",
@@ -437,8 +551,11 @@
       "lon": -84.406917,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-V",
+        "NPU-Y"
+      ],
+      "people_served": 45
     },
     {
       "site_id": "fire-019",
@@ -448,8 +565,11 @@
       "lon": -84.378431,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-B",
+        "NPU-C"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "fire-020",
@@ -459,8 +579,11 @@
       "lon": -84.450593,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-J",
+        "NPU-K"
+      ],
+      "people_served": 45
     },
     {
       "site_id": "fire-021",
@@ -470,8 +593,11 @@
       "lon": -84.415873,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-E",
+        "NPU-C"
+      ],
+      "people_served": 78
     },
     {
       "site_id": "fire-022",
@@ -481,8 +607,11 @@
       "lon": -84.410259,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-Z",
+        "NPU-X"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "fire-023",
@@ -492,8 +621,11 @@
       "lon": -84.464499,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-S",
+        "NPU-R"
+      ],
+      "people_served": 46
     },
     {
       "site_id": "fire-024",
@@ -503,8 +635,11 @@
       "lon": -84.420886,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-C",
+        "NPU-A"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "fire-025",
@@ -525,8 +660,11 @@
       "lon": -84.471712,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-G",
+        "NPU-D"
+      ],
+      "people_served": 68
     },
     {
       "site_id": "fire-027",
@@ -536,8 +674,11 @@
       "lon": -84.369021,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-E",
+        "NPU-F"
+      ],
+      "people_served": 62
     },
     {
       "site_id": "fire-028",
@@ -547,8 +688,11 @@
       "lon": -84.389355,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-Z",
+        "NPU-X"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "fire-029",
@@ -558,8 +702,11 @@
       "lon": -84.431773,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-X",
+        "NPU-Z"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "fire-030",
@@ -569,8 +716,11 @@
       "lon": -84.374694,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-Z",
+        "NPU-X"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "fire-031",
@@ -580,8 +730,11 @@
       "lon": -84.407105,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-Z",
+        "NPU-X"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "fire-032",
@@ -591,8 +744,11 @@
       "lon": -84.483435,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-G",
+        "NPU-H"
+      ],
+      "people_served": 55
     },
     {
       "site_id": "fire-033",
@@ -613,8 +769,11 @@
       "lon": -84.412437,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-T",
+        "NPU-V"
+      ],
+      "people_served": 36
     },
     {
       "site_id": "fire-035",
@@ -624,8 +783,11 @@
       "lon": -84.448844,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-X",
+        "NPU-Z"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "fire-036",
@@ -635,8 +797,11 @@
       "lon": -84.513035,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-P",
+        "NPU-R"
+      ],
+      "people_served": 95
     },
     {
       "site_id": "fire-037",
@@ -646,8 +811,11 @@
       "lon": -84.536316,
       "capacity": 120,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-P",
+        "NPU-Q"
+      ],
+      "people_served": 85
     },
     {
       "site_id": "rec-001",
@@ -657,8 +825,11 @@
       "lon": -84.369451,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-M",
+        "NPU-N"
+      ],
+      "people_served": 59
     },
     {
       "site_id": "rec-002",
@@ -668,8 +839,11 @@
       "lon": -84.299681,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-O",
+        "NPU-W"
+      ],
+      "people_served": 148
     },
     {
       "site_id": "rec-003",
@@ -679,8 +853,11 @@
       "lon": -84.512838,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-P",
+        "NPU-R"
+      ],
+      "people_served": 95
     },
     {
       "site_id": "rec-004",
@@ -712,8 +889,11 @@
       "lon": -84.374507,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-M",
+        "NPU-N"
+      ],
+      "people_served": 59
     },
     {
       "site_id": "rec-007",
@@ -723,8 +903,11 @@
       "lon": -84.34706,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-W",
+        "NPU-N"
+      ],
+      "people_served": 145
     },
     {
       "site_id": "rec-008",
@@ -734,8 +917,11 @@
       "lon": -84.370394,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-V",
+        "NPU-W"
+      ],
+      "people_served": 135
     },
     {
       "site_id": "rec-009",
@@ -745,8 +931,11 @@
       "lon": -84.428782,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-S",
+        "NPU-T"
+      ],
+      "people_served": 36
     },
     {
       "site_id": "rec-010",
@@ -756,8 +945,11 @@
       "lon": -84.506545,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-H",
+        "NPU-G"
+      ],
+      "people_served": 55
     },
     {
       "site_id": "rec-011",
@@ -778,8 +970,11 @@
       "lon": -84.355316,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-N",
+        "NPU-W"
+      ],
+      "people_served": 145
     },
     {
       "site_id": "rec-013",
@@ -789,8 +984,11 @@
       "lon": -84.35236,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-F",
+        "NPU-E"
+      ],
+      "people_served": 62
     },
     {
       "site_id": "rec-014",
@@ -800,8 +998,11 @@
       "lon": -84.410523,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-X",
+        "NPU-Y"
+      ],
+      "people_served": 59
     },
     {
       "site_id": "rec-015",
@@ -822,8 +1023,11 @@
       "lon": -84.492,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-I",
+        "NPU-R"
+      ],
+      "people_served": 78
     },
     {
       "site_id": "rec-017",
@@ -833,8 +1037,11 @@
       "lon": -84.336677,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-N",
+        "NPU-O"
+      ],
+      "people_served": 59
     },
     {
       "site_id": "rec-018",
@@ -844,8 +1051,11 @@
       "lon": -84.438684,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-K",
+        "NPU-T"
+      ],
+      "people_served": 36
     },
     {
       "site_id": "rec-019",
@@ -855,8 +1065,11 @@
       "lon": -84.395436,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-Y",
+        "NPU-V"
+      ],
+      "people_served": 45
     },
     {
       "site_id": "rec-020",
@@ -866,8 +1079,11 @@
       "lon": -84.399698,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-V",
+        "NPU-T"
+      ],
+      "people_served": 36
     },
     {
       "site_id": "rec-021",
@@ -877,8 +1093,11 @@
       "lon": -84.438503,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-J",
+        "NPU-K"
+      ],
+      "people_served": 45
     },
     {
       "site_id": "rec-022",
@@ -888,8 +1107,11 @@
       "lon": -84.493839,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-G",
+        "NPU-H"
+      ],
+      "people_served": 55
     },
     {
       "site_id": "rec-023",
@@ -899,8 +1121,11 @@
       "lon": -84.376161,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-M",
+        "NPU-V"
+      ],
+      "people_served": 49
     },
     {
       "site_id": "rec-024",
@@ -910,8 +1135,11 @@
       "lon": -84.41303,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-X",
+        "NPU-V"
+      ],
+      "people_served": 50
     },
     {
       "site_id": "rec-025",
@@ -921,8 +1149,11 @@
       "lon": -84.499317,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-H",
+        "NPU-I"
+      ],
+      "people_served": 80
     },
     {
       "site_id": "rec-026",
@@ -932,8 +1163,11 @@
       "lon": -84.491982,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-I",
+        "NPU-H"
+      ],
+      "people_served": 80
     },
     {
       "site_id": "rec-027",
@@ -943,8 +1177,11 @@
       "lon": -84.428782,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-S",
+        "NPU-T"
+      ],
+      "people_served": 36
     },
     {
       "site_id": "rec-028",
@@ -954,8 +1191,11 @@
       "lon": -84.398831,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-V",
+        "NPU-Y"
+      ],
+      "people_served": 45
     },
     {
       "site_id": "rec-029",
@@ -965,8 +1205,11 @@
       "lon": -84.378984,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-Z",
+        "NPU-X"
+      ],
+      "people_served": 120
     },
     {
       "site_id": "rec-030",
@@ -976,8 +1219,11 @@
       "lon": -84.356754,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-Y",
+        "NPU-W"
+      ],
+      "people_served": 144
     },
     {
       "site_id": "rec-031",
@@ -987,8 +1233,11 @@
       "lon": -84.513017,
       "capacity": 150,
       "transit_reachable": true,
-      "assigned_npus": [],
-      "people_served": 0
+      "assigned_npus": [
+        "NPU-P",
+        "NPU-R"
+      ],
+      "people_served": 95
     }
   ]
 }

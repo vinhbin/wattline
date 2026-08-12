@@ -73,14 +73,32 @@ def run_sites_processing(
             npu_geojson = json.load(f)
             for feat in npu_geojson.get("features", []):
                 props = feat.get("properties", {})
-                bbox = props.get("bbox", [0, 0, 0, 0])
-                centroid = props.get("centroid", [0, 0])
+                centroid = props.get("centroid")
+                lon, lat = 0.0, 0.0
+                if centroid and (centroid[0] != 0.0 or centroid[1] != 0.0):
+                    lon, lat = centroid[0], centroid[1]
+                else:
+                    # Fallback: compute centroid from geometry coordinates
+                    pts = []
+                    def extract_pts(lst):
+                        if not lst:
+                            return
+                        if isinstance(lst[0], (int, float)) and len(lst) >= 2:
+                            pts.append((float(lst[0]), float(lst[1])))
+                        elif isinstance(lst, list):
+                            for item in lst:
+                                extract_pts(item)
+                    extract_pts(feat.get("geometry", {}).get("coordinates", []))
+                    if pts:
+                        lon = sum(p[0] for p in pts) / len(pts)
+                        lat = sum(p[1] for p in pts) / len(pts)
+
                 npus_list.append({
                     "npu_id": props.get("npu_id"),
                     "name": props.get("name"),
                     "dme_estimate": props.get("dme_estimate", 100),
-                    "lon": centroid[0] if centroid else 0.0,
-                    "lat": centroid[1] if centroid else 0.0,
+                    "lon": lon,
+                    "lat": lat,
                 })
 
     marta_stops = load_marta_stops(gtfs_stops_path)
@@ -105,7 +123,7 @@ def run_sites_processing(
         people_served = 0
 
         if transit_reachable and npus_list:
-            # Find nearest 1-2 NPUs within ~4km
+            # Find nearest NPUs
             npu_dists = []
             for npu in npus_list:
                 dist = _haversine_distance_meters(lat, lon, npu["lat"], npu["lon"])
@@ -113,11 +131,17 @@ def run_sites_processing(
 
             npu_dists.sort(key=lambda x: x[0])
             for dist, npu in npu_dists[:2]:
-                if dist <= 5000.0:  # 5km radius
+                if dist <= 8000.0:  # 8km radius
                     assigned_npus.append(npu["npu_id"])
                     people_served += int(npu["dme_estimate"] * 0.45)
 
-            people_served = min(people_served, site.get("capacity", 120))
+            # If none within 8km, pick nearest 1 NPU
+            if not assigned_npus and npu_dists:
+                assigned_npus.append(npu_dists[0][1]["npu_id"])
+                people_served += int(npu_dists[0][1]["dme_estimate"] * 0.45)
+
+            capacity = site.get("capacity", 120)
+            people_served = max(15, min(people_served, capacity))
         else:
             transit_reachable = False
             assigned_npus = []
