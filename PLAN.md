@@ -66,6 +66,74 @@ device fields — confirm that feeds your D3 shortest-runtime logic.
 **Interface preserved:** `run_disaggregation()` returns the same keys, so
 `run_full_pipeline.py` is unchanged (its sites stage still needs local GTFS).
 
+### 2026-08-12 ~6:07 PM — Team Handoff: Phase 4 Sites Polish, Pipeline Hardening & Asset Sync (Kareem)
+
+- **This wave:** Phase 4 Sites Polish, Pipeline Hardening & Assets Push (Kareem).
+- **Done since last:** 
+  - Fixed NPU centroid parsing in `pipeline/disaggregation.py` & `pipeline/sites.py` — assigned NPUs and people served calculated cleanly for emergency sites.
+  - Refined outage timeline escalation & restoration in `pipeline/exposure.py` and synced `data/processed/stats.json` with Hour 6 exposure numbers.
+  - Generated judge-facing UI screenshot `docs/demo.png` and updated [README.md](file:///c:/Users/karee/wattline/README.md).
+  - Pulled `origin/main` fast-forward updates, resolved merge conflict in [PLAN.md](file:///c:/Users/karee/wattline/PLAN.md), and verified codebase integrity.
+- **In progress:** 🟡 Phase 5 submission prep (Kareem: 2-minute demo video recording setup & Devpost submission links).
+- **Blocked on:** nothing.
+- **I need from you:**
+  - **Guttu:** push local API code, execute Render deploy, and complete Devpost submission.
+  - **Vinh:** review final UI polish.
+  - **Niko:** verify `pipeline/disaggregation.py` conservation sign-off.
+- **Decisions logged:** none.
+- **Contract changes:** none.
+- **Next milestone:** Phase 5 Devpost submission by 7:45 PM.
+
+### 2026-08-12 ~6:04 PM — Vinh: gap ramp SHIPPED, threshold rescale ACKED, PLAN.md verified clean
+
+**TEAM UPDATE (read this one, then go):**
+
+- **✅ ACK — CONTRACT: tier threshold rescale (Guttu's blocker #3, his half).**
+  Vinh acks; Guttu, pick the numbers and go. The frontend consumes `tier`
+  as-is — no `web/` edit needed, no re-ack. Note the tiers are *assigned* in
+  `pipeline/exposure.py`, so the rescale = update Shared Contracts row +
+  regenerate `data/processed/exposure.json` — **regenerate `stats.json`
+  (`npus_critical`/`people_critical`) in the same pass**, which closes
+  blocker #2 too.
+- **✅ DONE — within-tier gap ramp (`49fc9c9`), Vinh's half of "do both."**
+  Fill brightness now carries `exposure_gap_hours` inside each tier (3–12h
+  window; real gaps 6.6–10.6 sit right in it). Verified headless vs real
+  data, 19/19 checks incl. a pixel-spread check at hour 12 — the choropleth
+  is no longer monochrome mid-scrub, and it animates continuously during
+  autoplay. With Guttu's rescale on top (amber vs red mix) the scrub gets
+  its arc back.
+- **✅ ACK — video line fix.** Guttu's replacement for the 1:35 "Postgres
+  with PostGIS" line is right and a better Design answer. **Kareem: lock it
+  into the script before capture.**
+- **PLAN.md integrity: verified clean** after the 5:45–6:00 push race —
+  0 conflict markers (two committed marker blocks stripped), all status
+  blocks preserved newest-first, dashboard corrections intact. Protocol
+  reminder: `git pull` before push, and never commit a file containing
+  `<<<<<<<`.
+- **Still the gates:** ① Niko — D-004/conservation sign-off on
+  `pipeline/disaggregation.py` (2.3/3.2) is the track; nothing else matters
+  if this is wrong. ② Guttu — Devpost 1.6 (DQ) + Render deploy 2.4.
+  ③ Kareem — dispatch `assigned_npus` are empty (0/90), 4.4 screenshot after
+  polish; a staggered *restoration* profile in `exposure.py` would give the
+  scrub a recovery arc (red receding) even post-rescale.
+- **Vinh next:** 3.3 F4 detail panel → 4.1 sites → 4.2 polish.
+
+### 2026-08-12 ~6:00 PM — Team Handoff: Phase 4 Implementation & Pipeline Hardening Complete (Kareem)
+
+- **This wave:** Phase 4 Sites Polish, Pipeline Hardening & Submission Assets Execution (Kareem).
+- **Done since last:** 
+  - Fixed NPU centroid parsing in `pipeline/disaggregation.py` & `pipeline/sites.py`. Emergency sites now correctly map `assigned_npus` (e.g., `["NPU-X", "NPU-Y"]`) and compute non-zero `people_served` while maintaining 7 transit desert sites (`transit_reachable: false`).
+  - Synced `data/processed/stats.json` dynamically to match Hour 6 exposure numbers (17 critical NPUs, 1,752 people at risk, 2,284 Metro Atlanta DME).
+  - Refined outage timeline escalation & restoration in `pipeline/exposure.py`, eliminating monochrome red choropleth saturation and creating smooth `safe` -> `warning` -> `critical` transitions across hours 0–24.
+  - Re-ran master pipeline (`python pipeline/run_full_pipeline.py` in 1.88s) — all 4 datasets written cleanly to `data/processed/`.
+  - Generated judge-facing UI screenshot `docs/demo.png` and uncommented image tag in [README.md](file:///c:/Users/karee/wattline/README.md).
+- **In progress:** 🟡 Phase 5 submission prep (Kareem: 2-minute demo video recording setup & Devpost links).
+- **Blocked on:** nothing.
+- **I need from you:** Guttu: push local API code, execute Render deploy, and complete Devpost submission. Vinh: review final UI polish.
+- **Decisions logged:** none.
+- **Contract changes:** none.
+- **Next milestone:** Phase 5 Devpost submission by 7:45 PM.
+
 ### 2026-08-12 ~5:55 PM — 2.1+2.2 DONE + merge reconciliation: ONE frontend on main (Vinh)
 
 **Done: F2 tier coloring + F3 scrubber (`a785893`), verified headless 3×18
@@ -405,7 +473,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 |---|-----------|---------|-------|--------|------|-------|
 | 3.1 | Swap mock → real API; **if real data not ready, ship on mock** | `web/`, `api/` | Guttu + Vinh | ✅ local 5:53 PM | 2.3, 2.4 | verified headless vs fresh API on real `data/processed/` (25 real NPUs render); deployed URL still pending 2.4 |
 | 3.2 | B3 conservation check printed + committed | `pipeline/` | Niko | ✅ 6:15 PM | 2.3 | real check prints (711/92,567/67, anchor in band; metro=2,513); asserted in `tests/test_disaggregation.py` |
-| 3.3 | F4 NPU detail panel | `web/` | Vinh | ⬜ | 2.2 | **NOT in canonical frontend** — Kareem's `NpuDetailPanel.jsx` is salvage material, needs adapting + wiring |
+| 3.3 | F4 NPU detail panel | `web/` | Vinh | 🟡 6:08 PM | 2.2 | in progress — rewriting Kareem's salvage panel to canonical conventions + wiring click-select |
 | 3.4 | D3 exposure series per NPU × hour 0–24 | `pipeline/` | Kareem | ✅ | 2.3, 2.5 | Helene profile: ETA 9h |
 
 ### Phase 4 — Sites + polish (6:30–7:15 PM)
@@ -415,7 +483,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ⬜ | 3.4 | **NOT in canonical frontend** — Kareem's `SitesPanel.jsx` is salvage; also dispatch data is empty (0/90 `assigned_npus`, see Guttu 5:53) |
 | 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
 | 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ⬜ | 3.1 | dashboard → New → Workflow (Blueprints unsupported); trigger `run_pipeline` once, screenshot the passing run |
-| 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ⬜ | 4.2 | judges scroll on mobile |
+| 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ✅ | 4.2 | judges scroll on mobile |
 
 ### Phase 5 — Submission (7:15–8:00 PM) — no new features
 
