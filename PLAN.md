@@ -25,6 +25,32 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~6:55 PM — Vinh: 4.1 F5 sites + dispatch SHIPPED + both my flagged blockers cleared
+
+- **✅ DONE — 4.1 F5 sites + dispatch (`793f38e`).** Site dots on the map
+  from `/api/sites`: transit-reachable amber, the **7 transit deserts grey
+  at 40% opacity with a "No transit access" tooltip** — that's the demo beat
+  from §10 (1:00, "three grey out because no bus reaches them"). A
+  **Dispatch** button (map top-left) toggles dashed site→assigned-NPU lines;
+  195 lines draw across the 83 assigned sites. Clicking a site dot does NOT
+  deselect an open NPU panel (verified). Caption chip shows the real 83/7
+  split. Verified **11/11 headless** on real data + prod build clean.
+- **✅ Confirmed both blockers I raised are cleared** (pulled just now):
+  - **Exposure regen (Kareem/Niko `929707c`):** re-checked all 25 hours —
+    `people_at_risk > dme_estimate` is now **0 everywhere** (was 25/25
+    contradictions). stats re-synced to **17 critical / 1,832 people**. The
+    F4 panel and F5 dispatch now show internally consistent numbers.
+  - **Deploy (Guttu `d1f8722`):** 2.4 ✅ live, 4.3 Workflows ✅ deployed,
+    1.4 Tiger ✂️ moot. Good.
+- **⚠️ Devpost is 3/5 and the ONLY thing between us and DQ-safe is the
+  video URL (5.2).** Guttu's row: submission `1135217-wattline` DRAFT,
+  Project-details blocked purely on a **public** video link. **Kareem: the
+  video is now the critical path — nothing else matters more.** Everything
+  it needs to film is on `main` and live.
+- **Vinh next:** 4.2 F6 polish (legend, skeletons already in, API-fail
+  fallback already in — so mainly a legend + a pass over projector
+  contrast), targeting the ~7:15 freeze. Then I hand off and you record.
+
 ### 2026-08-12 ~6:45 PM — ⛔→✅ exposure.json regenerated against real npus (Niko)
 
 - **Fixed the 6:40 blocker.** Re-ran `pipeline/exposure.py` against the real
@@ -593,7 +619,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | 🟡 6:45 PM | 3.4 | in progress — site dots + grey unreachable + dispatch-lines toggle in canonical MapView (dispatch data 83/90 verified) |
+| 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ✅ 6:55 PM | 3.4 | `793f38e` — site dots (grey unreachable + "No transit access" tooltip), Dispatch toggle draws site→NPU lines, 83/7 caption; verified 11/11 headless |
 | 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
 | 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ✅ 6:33 PM | 3.1 | **`wattline-ingest` deployed** (`wfl-d9uf9g61egvs73ed3i50`, Python 3, Ohio, autoDeploy). Required a card on file — $50 hackathon credit alone did not satisfy it. Sponsor checkbox is now honest to tick. Remaining: trigger `run_pipeline` once + screenshot the passing run. ⚠️ `run_pipeline` calls `_run_script` inline, bypassing the retry-decorated tasks — the DAG's main entrypoint has **no retries**, against the exact ArcGIS-timeout risk the prize story cites. |
 | 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ✅ 6:07 PM | 4.2 | shipped, but current shot predates F4 panel + 4.2 polish — **re-capture after 4.2** (judges scroll on mobile) |
