@@ -620,7 +620,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
 | 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ✅ 6:55 PM | 3.4 | `793f38e` — site dots (grey unreachable + "No transit access" tooltip), Dispatch toggle draws site→NPU lines, 83/7 caption; verified 11/11 headless |
-| 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
+| 4.2 | **F6 polish — never cut** | `web/` | **Vinh** | 🟡 7:05 PM | 4.1 | skeletons ✅ + mock fallback ✅ already in; remaining = **map legend** (tiers + site states + dispatch) + projector-contrast pass |
 | 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ✅ 6:33 PM | 3.1 | **`wattline-ingest` deployed** (`wfl-d9uf9g61egvs73ed3i50`, Python 3, Ohio, autoDeploy). Required a card on file — $50 hackathon credit alone did not satisfy it. Sponsor checkbox is now honest to tick. Remaining: trigger `run_pipeline` once + screenshot the passing run. ⚠️ `run_pipeline` calls `_run_script` inline, bypassing the retry-decorated tasks — the DAG's main entrypoint has **no retries**, against the exact ArcGIS-timeout risk the prize story cites. |
 | 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ✅ 6:07 PM | 4.2 | shipped, but current shot predates F4 panel + 4.2 polish — **re-capture after 4.2** (judges scroll on mobile) |
 
