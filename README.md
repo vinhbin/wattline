@@ -12,7 +12,7 @@
 
 [Live demo](#) · [2-minute video](#) · Built at Hack RenderATL, August 2026
 
-<!-- ![screenshot](docs/demo.png) — uncomment once docs/demo.png exists -->
+![Wattline Outage Exposure Map](docs/demo.png)
 
 ## The problem
 

@@ -43,7 +43,7 @@ def run_exposure_processing(
 
     exposure_data: Dict[str, Any] = {}
 
-    for hour in range(25): # Hours 0 to 24
+    for hour in range(25):  # Hours 0 to 24
         hour_npus: List[Dict[str, Any]] = []
 
         for idx, npu in enumerate(npus_list):
@@ -52,20 +52,26 @@ def run_exposure_processing(
 
             # Outage simulation timeline (Helene profile)
             # Hour 0: normal operations (grid alive)
-            # Hour 1+: grid outage spreads across NPUs
-            if hour == 0:
+            # Hours 1–6: outage wave spreads across Atlanta NPUs
+            npu_outage_onset = 1 + (idx % 6)
+
+            if hour == 0 or hour < npu_outage_onset:
                 is_dark = False
                 utility_eta = 0.0
             else:
-                # Deterministic outage wave based on NPU index
-                npu_outage_onset = 1 + (idx % 3)
-                is_dark = hour >= npu_outage_onset
-                if is_dark:
-                    # Utility restoration ETA decays as time passes or stays high during storm
-                    base_eta = 9.0 + (idx % 5)
-                    utility_eta = max(1.0, round(base_eta - (hour * 0.25), 1))
+                is_dark = True
+                elapsed = hour - npu_outage_onset
+                base_peak_eta = 6.0 + (idx % 5) * 1.0  # 6.0 to 10.0 hours
+
+                if elapsed <= 3:
+                    # Initial onset escalation: utility ETA ramps up from ~2.5h to peak
+                    utility_eta = round(2.5 + (elapsed / 3.0) * (base_peak_eta - 2.5), 1)
+                elif hour <= 15:
+                    # Peak storm phase: ETA holds near peak
+                    utility_eta = round(max(2.0, base_peak_eta - ((hour - 4) * 0.15)), 1)
                 else:
-                    utility_eta = 0.0
+                    # Restoration phase: ETA decreases as crews repair grid sectors
+                    utility_eta = max(0.0, round(base_peak_eta - 1.6 - ((hour - 15) * 0.8), 1))
 
             if is_dark and utility_eta > SHORTEST_RUNTIME_HOURS:
                 gap = round(utility_eta - SHORTEST_RUNTIME_HOURS, 1)
@@ -104,12 +110,37 @@ def run_exposure_processing(
     with open(exposure_out_path, "w", encoding="utf-8") as f:
         json.dump(exposure_data, f, indent=2)
 
+    # Sync stats.json for Hour 6 baseline
+    hour_6_npus = exposure_data.get("6", {}).get("npus", [])
+    npus_critical = sum(1 for n in hour_6_npus if n["tier"] == "critical")
+    people_critical = sum(n["people_at_risk"] for n in hour_6_npus if n["tier"] == "critical")
+
+    stats_path = os.path.join(output_dir, "stats.json")
+    stats_json = {}
+    if os.path.exists(stats_path):
+        with open(stats_path, "r", encoding="utf-8") as f:
+            stats_json = json.load(f)
+    else:
+        stats_json = {
+            "georgia_total": 92233,
+            "richmond_county": 1647,
+            "metro_atlanta_total": sum(n["dme_estimate"] for n in npus_list),
+        }
+
+    stats_json["npus_critical"] = npus_critical
+    stats_json["people_critical"] = people_critical
+    with open(stats_path, "w", encoding="utf-8") as f:
+        json.dump(stats_json, f, indent=2)
+
     print(f"Exposure series generated for hours 0–24 across {len(npus_list)} NPUs [OK]")
+    print(f"Synced stats.json for Hour 6: {npus_critical} critical NPUs, {people_critical} people at risk.")
 
     return {
         "hours_processed": 25,
         "npus_count": len(npus_list),
         "exposure_json": exposure_out_path,
+        "npus_critical_h6": npus_critical,
+        "people_critical_h6": people_critical,
     }
 
 

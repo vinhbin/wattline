@@ -168,6 +168,31 @@ def run_disaggregation(
         device_mix = _calculate_device_mix(base_estimate)
         metro_atlanta_dme_total += base_estimate
 
+        # Calculate centroid from geometry
+        pts = []
+        def extract_pts(lst):
+            if not lst:
+                return
+            if isinstance(lst[0], (int, float)) and len(lst) >= 2:
+                pts.append((float(lst[0]), float(lst[1])))
+            elif isinstance(lst, list):
+                for item in lst:
+                    extract_pts(item)
+
+        extract_pts(npu_feat.get("geometry", {}).get("coordinates", []))
+        if pts:
+            c_lon = round(sum(p[0] for p in pts) / len(pts), 6)
+            c_lat = round(sum(p[1] for p in pts) / len(pts), 6)
+            centroid = [c_lon, c_lat]
+            min_x = min(p[0] for p in pts)
+            max_x = max(p[0] for p in pts)
+            min_y = min(p[1] for p in pts)
+            max_y = max(p[1] for p in pts)
+            calc_bbox = [min_x, min_y, max_x, max_y]
+        else:
+            centroid = [0.0, 0.0]
+            calc_bbox = bbox
+
         out_feat = {
             "type": "Feature",
             "geometry": npu_feat.get("geometry", {}),
@@ -180,6 +205,8 @@ def run_disaggregation(
                 "device_mix": device_mix,
                 "no_vehicle_rate": npu_no_vehicle_rate,
                 "zip_source_count": zip_source_count,
+                "centroid": centroid,
+                "bbox": calc_bbox,
             },
         }
         output_features.append(out_feat)
