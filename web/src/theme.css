@@ -1,0 +1,328 @@
+/* WATTLINE theme — palette frozen in BUILD-PLAN §4 (projector-safe dark) */
+:root {
+  --bg: #0b1416;
+  --bg-raised: #101c1f;
+  --bg-overlay: rgba(11, 20, 22, 0.86);
+  --safe: #1f6f5c;
+  --warning: #c77d0a;
+  --critical: #b3392a;
+  --text: #e8f1f2;
+  --text-dim: rgba(232, 241, 242, 0.62);
+  --text-faint: rgba(232, 241, 242, 0.38);
+  --accent: #f5b54a;
+  --line: rgba(232, 241, 242, 0.08);
+  --line-strong: rgba(232, 241, 242, 0.16);
+
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.45;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* faint vignette so the dark theme has depth, not a flat void */
+  background:
+    radial-gradient(1200px 600px at 70% -10%, rgba(31, 111, 92, 0.14), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(245, 181, 74, 0.05), transparent 55%),
+    var(--bg);
+}
+
+/* ---------- header ---------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 20px;
+  height: 60px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-overlay);
+  backdrop-filter: blur(6px);
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.brand h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.14em;
+}
+
+.brand h1 .line {
+  color: var(--accent);
+}
+
+.brand .tagline {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.stat {
+  text-align: right;
+}
+
+.stat .num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.stat .num.critical {
+  color: var(--accent);
+}
+
+.stat .label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.mock-chip {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--warning);
+  border: 1px solid var(--warning);
+  border-radius: 3px;
+  padding: 3px 7px;
+  opacity: 0.85;
+}
+
+/* ---------- layout ---------- */
+
+.main {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+/* ---------- sidebar ---------- */
+
+.sidebar {
+  width: 292px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--line);
+  background: var(--bg-overlay);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.sidebar-head {
+  padding: 14px 16px 10px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.npu-list {
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.npu-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.npu-row:hover {
+  background: rgba(232, 241, 242, 0.05);
+}
+
+.npu-chip {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  padding: 3px 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  color: var(--text-dim);
+}
+
+.npu-name {
+  min-width: 0;
+}
+
+.npu-name .name {
+  font-weight: 500;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.npu-name .bar {
+  margin-top: 5px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(232, 241, 242, 0.09);
+  overflow: hidden;
+}
+
+.npu-name .bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--safe), var(--accent));
+}
+
+.npu-est {
+  text-align: right;
+}
+
+.npu-est .num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.npu-est .band {
+  font-size: 10px;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+/* skeleton rows while loading */
+.skeleton {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.skeleton .sk {
+  height: 10px;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 241, 242, 0.06) 25%,
+    rgba(232, 241, 242, 0.12) 50%,
+    rgba(232, 241, 242, 0.06) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.skeleton .sk + .sk {
+  margin-top: 8px;
+  width: 60%;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* ---------- map ---------- */
+
+.map-wrap {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+.map-wrap .map {
+  position: absolute;
+  inset: 0;
+}
+
+.map-tooltip {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 12px));
+  background: var(--bg-overlay);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  padding: 7px 10px;
+  white-space: nowrap;
+  z-index: 5;
+  backdrop-filter: blur(4px);
+}
+
+.map-tooltip .t-name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.map-tooltip .t-est {
+  font-size: 11px;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.map-tooltip .t-est b {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* maplibre chrome on dark */
+.maplibregl-ctrl-attrib {
+  background: rgba(11, 20, 22, 0.7) !important;
+  color: var(--text-faint);
+  font-size: 10px;
+}
+
+.maplibregl-ctrl-attrib a {
+  color: var(--text-faint) !important;
+}

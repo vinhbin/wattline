@@ -1,0 +1,9 @@
+# API web service. (The Workflow service is created via the Dashboard —
+# Blueprints don't support the Workflow type yet. See workflows/main.py.)
+services:
+  - type: web
+    name: wattline-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT

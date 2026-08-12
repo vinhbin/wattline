@@ -25,21 +25,115 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
-### 2026-08-12 ~5:35 PM — Phase 2, 3, 4 Core Build & Pipeline Complete
+### 2026-08-12 ~5:45 PM — Phase 1-4 Core Build, Pipeline & Web Frontend Complete
 
 - Done: **Task 2.3 & 3.2 (B3 Disaggregation & Anchor Conservation)** — `pipeline/disaggregation.py` implemented. Disaggregates emPOWER ZIP DME to 25 NPUs, conserving against Georgia state anchor 92,233.
 - Done: **Task 2.5 (D2 Sites & MARTA Transit Reachability)** — `pipeline/sites.py` implemented. Processed 7,057 MARTA GTFS stops to verify walk-reachability for 90 facilities (83 reachable, 7 transit deserts).
 - Done: **Task 3.4 (D3 Exposure Series)** — `pipeline/exposure.py` implemented. Calculates 0–24 hour outage exposure gaps and risk tiers (Helene profile).
 - Done: **Task 1.1, 2.1, 2.2, 3.3, 4.1, 4.2 (Web Frontend)** — Vite + React + MapLibre GL JS web app built in `web/`. Features interactive dark theme basemap, choropleth tier coloring, 0–24h timeline scrubber with ~600ms autoplay, NPU detail side panel ("8.1 hours unprotected"), emergency sites panel with MARTA reachability badges, and offline mock fallbacks.
 
-### 2026-08-12 ~5:22 PM — Phase 1 Task 1.5 complete (Atlanta layers + pipeline ingestion)
+### 2026-08-12 ~5:41 PM — Reconciliation: Guttu's API work is stranded on HIS machine (Vinh)
 
-- Done: **Task 1.5 (Atlanta layers ingestion)** — `pipeline/atlanta_layers.py` and `pipeline/run_phase1_layers.py` implemented.
-  - Processed 25 NPUs (`NPU-A` to `NPU-Z`, excluding `NPU-U`) into `data/processed/npu_boundaries_clean.geojson` with EPSG:4326 geometry and bounding box/centroid properties.
-  - Processed 90 facilities (22 libraries, 37 fire stations, 31 rec centers) into `data/processed/facilities_clean.json` with unique IDs and lat/lon coords.
-  - Processed 530 ACS census tracts into `data/processed/tract_demographics_clean.json`.
-  - Column names locked for Niko's B3 disaggregation: `npu_id`, `tract_geoid`, `senior_rate`, `disability_rate`, `no_vehicle_rate`, `housing_units`.
-- Next milestone: Phase 2 Core Build (Niko B3 disaggregation & Kareem D2 sites + transit reachability).
+Verified against `origin/main` after Guttu's status message — two of its claims
+came from a stale checkout:
+
+- **Guttu's uncommitted API + render.yaml work is NOT in this repo or any
+  tree on Vinh's machine.** Main still has only the four contract endpoints;
+  render.yaml has no healthCheckPath/region/autoDeploy. The failed commit
+  (shell quoting) stranded it in **Guttu's own checkout** — ⚠️ **Guttu:
+  re-commit and push from your machine before deploying**, or Render builds
+  the old file. Tip: single-line `git commit -m "..."` or `git commit -F
+  msg.txt` to dodge the quoting issue.
+- **`web/` HAS been on main since 5:30 PM** (`2101e00`) — Guttu's checkout
+  predates it. After `git pull`, the render.yaml static-site entry is safe to
+  add per his own criterion (build `cd web && npm ci && npm run build`,
+  publish `web/dist`).
+- Correction to the 5:35 handoff, accepted from Guttu: Workflows deploy is
+  **Dashboard → New → Workflow** (Blueprints don't support the type);
+  render.yaml carries only the API web service. Row 4.3 already says this.
+- New endpoints coming when Guttu pushes: `/api/health`, `/`,
+  `/api/exposure/all` (all 25 hours in one payload — Vinh will consume this
+  in F3 prefetch, with per-hour + bundled-mock fallback), missing-hour → 404
+  not 500, malformed `data/processed/` JSON → fall back to mocks at load.
+- Note for Guttu (from 5:36 check): mock exposure series flatlines after
+  hour 4 and every dark NPU shares the same gap — fine for building, weak if
+  we demo on mocks (3.1 fallback). Cheap fix in `make_mocks.py`: stagger
+  `utility_eta_hours` per NPU. Kareem's real D3 series makes it moot.
+
+### 2026-08-12 ~5:35 PM — TEAM HANDOFF: wave 2, compressed clock (~2h25m left)
+
+**State:** Phase 0 fully green + 1.1 done. All inputs are in the repo — nobody
+is blocked on data. Every commit so far is Vinh's; Niko/Guttu/Kareem start
+here after `git pull`.
+
+**Compressed clock (old phase times are stale):**
+by 6:00 unblock · by 6:30 core lands (cut-check #1) · 7:15 feature freeze
+(cut-check #2) · 7:45 SUBMIT.
+
+**Niko — start now, critical path (1.2 → 2.3):**
+- Inputs ready: `data/empower_ga_zip.json` (**already EPSG:4326 — do NOT
+  reproject**, D-001 satisfied at fetch; suppressed cells are literal `11` →
+  store `[1,11]` intervals), `data/arc_tract_demographics.json` (530 tracts:
+  senior/disability/no-vehicle/housing-units — ACS fallback not needed),
+  `data/npu_boundaries.geojson` (letter is in `NAME`, `NPU` field is null;
+  Polygon+MultiPolygon mixed).
+- Ship-blocking output = `data/processed/npus.json` + `stats.json` in the
+  frozen mock shapes — the API stub already prefers `data/processed/` over
+  `mocks/`. PostGIS is optional if it costs time (D-007 tables where cheap).
+- Print the conservation check vs **92,233** (containment for suppressed).
+- Ping Kareem for column names FIRST (5-min chat, log in Shared Contracts).
+
+**Guttu — in this order:**
+1. **Devpost registration + project entry (1.6) — DQ condition, 10 min, do
+   before anything technical.** All 4 members added.
+2. 1.3 is already built (`api/main.py` serves the contract; CORS open,
+   hour-validation 422s). Just `pip install -r requirements.txt`, smoke it,
+   flip the row.
+3. 1.4 PostGIS-on-Render check (15 min hard cap) → decides Tiger (S2).
+4. 2.4 deploy: API web service + `web/` static site (`npm run build`,
+   `dist/`). Live URL into README + Q-001. Frontend falls back to bundled
+   mocks with a MOCK DATA chip, so a half-up deploy still demos.
+5. Workflows (S1): code is in `workflows/main.py` + `render.yaml` — deploy
+   ONLY if everything is green at 6:30 (D-012).
+
+**Kareem — D1 is ~done, skip to D2 (2.5) → D3 (3.4):**
+- Already in repo: NPU boundaries, `data/facilities.geojson` (22 libraries +
+  37 fire + 31 rec — sanity-pass names, a couple may be historical),
+  `data/device_runtimes.json` (verify vs vendor sheets, Q-005).
+- Run `python scripts/fetch_gtfs.py` locally (~30s, 7,057 stops, gitignored).
+- D2 honest heuristic only (walk + headway + one transit leg) — NO RAPTOR.
+  Output `data/processed/sites.json` in the mock shape;
+  `transit_reachable:false` is the demo beat.
+- D3 exposure series → `data/processed/exposure.json` **keyed by hour
+  "0"–"24"** like the mock. Helene profile, ETA 9h. Tier by device class,
+  never averaged.
+- You own the video (5.1–5.2) from 7:15 — set up capture early.
+
+**Vinh (me):** F1 shipped + verified. Now 2.1 tier coloring → 2.2 scrubber.
+Fill layer is structured for the tier swap; exposure prefetch pattern matches
+the hour-keyed mock.
+
+**Standing rules:** lock rows 🟡 in PLAN.md before starting (commit PLAN.md
+only, push); conventional commits; push after every commit. Cut order S1→S5
+pre-decided — if behind at 6:30 cut S1+S2, at 7:00 S3–S5. Disaggregation,
+scrubber, polish are never cut.
+
+### 2026-08-12 ~5:30 PM — 1.1 done: F1 map on screen (Vinh)
+
+- Done: **`web/` scaffold + F1** (`2101e00`) — Vite + React + MapLibre, CARTO
+  dark-matter basemap (no token), NPU choropleth by `dme_estimate`, fitBounds
+  Atlanta, hover tooltip + highlight, header wired to `/api/stats`, sidebar
+  sorted by estimate with low–high bands.
+- Seam for 3.1 already in place: `web/src/api.js` tries `/api/*` (Vite proxy →
+  :8000) and falls back to importing `mocks/` directly — an honest **MOCK DATA**
+  chip shows in the header when the fallback is engaged. Verified both paths
+  headless (Playwright): 0 console errors with API up; clean mock render with
+  API down. Geometry code handles Polygon + MultiPolygon (ready for real NPUs).
+- Note for Guttu: mock NPU polygons are the hand-drawn rectangles — if B3 slips,
+  regenerating `mocks/npus.json` with real `data/npu_boundaries.geojson` shapes
+  would make the mock demo look real. Contract shapes unchanged.
+- Next: Vinh → 2.1 (F2 tier coloring) + 2.2 (F3 scrubber).
+>>>>>>> origin/main
 
 ### 2026-08-12 ~4:40 PM — Prerequisites: all data + seams in repo, everyone unblocked
 
@@ -133,7 +227,8 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 |---|-----------|---------|-------|--------|------|-------|
 | 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ✅ | 3.4 | grey no-transit sites, tooltip |
 | 4.2 | **F6 polish — never cut** | `web/` | Vinh | ✅ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
-| 4.3 | C4 Render Workflows DAG (stretch only) | — | Guttu | ⬜ | 3.1 | only if everything green; $250 GC prize |
+| 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ⬜ | 3.1 | dashboard → New → Workflow (Blueprints unsupported); trigger `run_pipeline` once, screenshot the passing run |
+| 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ⬜ | 4.2 | judges scroll on mobile |
 | 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ⬜ | 4.2 | judges scroll on mobile |
 
 ### Phase 5 — Submission (7:15–8:00 PM) — no new features
@@ -211,7 +306,10 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 
 **Stretch (cut without ceremony if Core slips):**
 
-- **S1** Render Workflows DAG · **S2** Tiger Data time-series ·
+- **S1** Render Workflows deploy — code is DONE (`workflows/main.py`, D-011/D-012);
+  remaining cost is ~10 min of dashboard clicks + one triggered run. Pull it
+  only if Core is green at the 6:30 PM check.
+- **S2** Tiger Data time-series ·
   **S3** Bootstrap uncertainty band (→ fixed ±8%) ·
   **S4** Dispatch assignment lines · **S5** Transit reachability (→ straight-line + caveat)
 
@@ -237,6 +335,8 @@ Every cut is a dated entry in `docs/decision-log.md`. No silent removal.
 - **D-008:** MapLibre GL (no Mapbox token) · no Redux · one screen · exposure-gap framing, never prediction naming.
 - **D-009 (2026-08-12):** Repo layout `mocks/` + `data/` + `scripts/`; mocks are the frozen contract.
 - **D-010 (2026-08-12):** `make_mocks.py` uses `zlib.crc32`, not salted `hash()` — mocks must be reproducible.
+- **D-011 (2026-08-12 ~5:15 PM):** Render Workflows promoted from stretch S1 to Core C6. **Superseded by D-012.**
+- **D-012 (2026-08-12 ~5:30 PM):** D-011 reversed — Workflows stays stretch S1; the DAG code stays in the repo so the deploy remains a 10-minute pull if Core is green at 6:30 PM.
 
 ---
 
