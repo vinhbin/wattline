@@ -25,6 +25,34 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~5:41 PM — Reconciliation: Guttu's API work is stranded on HIS machine (Vinh)
+
+Verified against `origin/main` after Guttu's status message — two of its claims
+came from a stale checkout:
+
+- **Guttu's uncommitted API + render.yaml work is NOT in this repo or any
+  tree on Vinh's machine.** Main still has only the four contract endpoints;
+  render.yaml has no healthCheckPath/region/autoDeploy. The failed commit
+  (shell quoting) stranded it in **Guttu's own checkout** — ⚠️ **Guttu:
+  re-commit and push from your machine before deploying**, or Render builds
+  the old file. Tip: single-line `git commit -m "..."` or `git commit -F
+  msg.txt` to dodge the quoting issue.
+- **`web/` HAS been on main since 5:30 PM** (`2101e00`) — Guttu's checkout
+  predates it. After `git pull`, the render.yaml static-site entry is safe to
+  add per his own criterion (build `cd web && npm ci && npm run build`,
+  publish `web/dist`).
+- Correction to the 5:35 handoff, accepted from Guttu: Workflows deploy is
+  **Dashboard → New → Workflow** (Blueprints don't support the type);
+  render.yaml carries only the API web service. Row 4.3 already says this.
+- New endpoints coming when Guttu pushes: `/api/health`, `/`,
+  `/api/exposure/all` (all 25 hours in one payload — Vinh will consume this
+  in F3 prefetch, with per-hour + bundled-mock fallback), missing-hour → 404
+  not 500, malformed `data/processed/` JSON → fall back to mocks at load.
+- Note for Guttu (from 5:36 check): mock exposure series flatlines after
+  hour 4 and every dark NPU shares the same gap — fine for building, weak if
+  we demo on mocks (3.1 fallback). Cheap fix in `make_mocks.py`: stagger
+  `utility_eta_hours` per NPU. Kareem's real D3 series makes it moot.
+
 ### 2026-08-12 ~5:35 PM — TEAM HANDOFF: wave 2, compressed clock (~2h25m left)
 
 **State:** Phase 0 fully green + 1.1 done. All inputs are in the repo — nobody
