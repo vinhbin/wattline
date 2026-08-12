@@ -1,13 +1,22 @@
-// NPU list. Sorted by dme_estimate for now; re-sorts by exposure gap
-// once the exposure feed is wired in (F2/F3).
-export default function Sidebar({ npus }) {
+// NPU list. Once the exposure feed is live it sorts by exposure gap (the
+// layout spec: "sorted by gap") and the bars show gap share, tier-colored.
+export default function Sidebar({ npus, exposure }) {
+  const byId = {}
+  if (exposure) for (const e of exposure.npus) byId[e.npu_id] = e
+
   const rows = npus
     ? [...npus.features]
-        .map((f) => f.properties)
-        .sort((a, b) => b.dme_estimate - a.dme_estimate)
+        .map((f) => ({ ...f.properties, ex: byId[f.properties.npu_id] }))
+        .sort((a, b) => {
+          const gap = (b.ex?.exposure_gap_hours ?? 0) - (a.ex?.exposure_gap_hours ?? 0)
+          return gap !== 0 ? gap : b.dme_estimate - a.dme_estimate
+        })
     : null
 
-  const max = rows ? Math.max(...rows.map((r) => r.dme_estimate), 1) : 1
+  const maxEst = rows ? Math.max(...rows.map((r) => r.dme_estimate), 1) : 1
+  const maxGap = rows
+    ? Math.max(...rows.map((r) => r.ex?.exposure_gap_hours ?? 0), 1)
+    : 1
 
   return (
     <aside className="sidebar">
@@ -23,23 +32,42 @@ export default function Sidebar({ npus }) {
               <div className="sk" />
             </div>
           ))}
-        {rows?.map((r) => (
-          <button className="npu-row" key={r.npu_id} title={r.name}>
-            <span className="npu-chip">{r.npu_id.replace('NPU-', '')}</span>
-            <span className="npu-name">
-              <span className="name">{r.name}</span>
-              <span className="bar">
-                <span style={{ width: `${(r.dme_estimate / max) * 100}%` }} />
+        {rows?.map((r) => {
+          const gap = r.ex?.exposure_gap_hours ?? 0
+          const tier = r.ex?.tier
+          return (
+            <button className="npu-row" key={r.npu_id} title={r.name}>
+              <span className={`npu-chip${tier ? ` chip-${tier}` : ''}`}>
+                {r.npu_id.replace('NPU-', '')}
               </span>
-            </span>
-            <span className="npu-est">
-              <span className="num">{r.dme_estimate}</span>
-              <span className="band">
-                {r.dme_low}–{r.dme_high}
+              <span className="npu-name">
+                <span className="name">{r.name}</span>
+                <span className="bar">
+                  <span
+                    className={tier ? `bar-${tier}` : ''}
+                    style={{
+                      width: r.ex
+                        ? `${(gap / maxGap) * 100}%`
+                        : `${(r.dme_estimate / maxEst) * 100}%`,
+                    }}
+                  />
+                </span>
               </span>
-            </span>
-          </button>
-        ))}
+              <span className="npu-est">
+                <span className="num">{r.dme_estimate}</span>
+                {r.ex && gap > 0 ? (
+                  <span className={`band tier-${tier}`}>
+                    {gap.toFixed(1)}h gap
+                  </span>
+                ) : (
+                  <span className="band">
+                    {r.dme_low}–{r.dme_high}
+                  </span>
+                )}
+              </span>
+            </button>
+          )
+        })}
       </div>
     </aside>
   )

@@ -224,10 +224,49 @@ body {
   height: 100%;
   border-radius: 2px;
   background: linear-gradient(90deg, var(--safe), var(--accent));
+  transition: width 300ms ease, background-color 300ms ease;
+}
+
+.npu-name .bar > span.bar-safe {
+  background: var(--safe);
+}
+
+.npu-name .bar > span.bar-warning {
+  background: var(--warning);
+}
+
+.npu-name .bar > span.bar-critical {
+  background: var(--critical);
+}
+
+.npu-chip.chip-warning {
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.npu-chip.chip-critical {
+  border-color: var(--critical);
+  color: var(--critical);
+}
+
+/* tier text accents (sidebar band, tooltip gap line) */
+.tier-safe {
+  color: var(--safe);
+}
+
+.tier-warning {
+  color: var(--warning);
+}
+
+.tier-critical {
+  color: #e06a57; /* --critical lifted for legibility at 10–11px on dark */
 }
 
 .npu-est {
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
 }
 
 .npu-est .num {
@@ -314,6 +353,162 @@ body {
 .map-tooltip .t-est b {
   color: var(--accent);
   font-weight: 600;
+}
+
+.map-tooltip .t-gap {
+  font-size: 11px;
+  margin-top: 3px;
+  padding-top: 3px;
+  border-top: 1px solid var(--line);
+  font-variant-numeric: tabular-nums;
+}
+
+.map-tooltip .t-gap b {
+  font-weight: 600;
+}
+
+/* ---------- scrubber (F3) ---------- */
+
+.scrubber {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 20px;
+  height: 64px;
+  border-top: 1px solid var(--line);
+  background: var(--bg-overlay);
+  backdrop-filter: blur(6px);
+}
+
+.scrubber .play {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: rgba(232, 241, 242, 0.04);
+  color: var(--accent);
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.scrubber .play:hover:not(:disabled) {
+  background: rgba(245, 181, 74, 0.14);
+  border-color: var(--accent);
+}
+
+.scrubber .play:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.scrubber .track {
+  position: relative;
+  flex: 1;
+  padding-bottom: 14px;
+}
+
+.scrubber input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--accent) var(--fill, 0%),
+    rgba(232, 241, 242, 0.14) var(--fill, 0%)
+  );
+  outline: none;
+  cursor: pointer;
+}
+
+.scrubber input[type='range']:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.scrubber input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--accent), 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 120ms ease;
+}
+
+.scrubber input[type='range']:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+.scrubber input[type='range']::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--accent), 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.scrubber input[type='range']::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(232, 241, 242, 0.14);
+}
+
+.scrubber input[type='range']::-moz-range-progress {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.scrubber .ticks {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 16px;
+  height: 10px;
+  pointer-events: none;
+}
+
+.scrubber .ticks span {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.scrubber .readout {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 92px;
+  justify-content: flex-end;
+}
+
+.scrubber .readout .h-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.scrubber .readout .h-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  min-width: 2ch;
+  text-align: right;
 }
 
 /* maplibre chrome on dark */
