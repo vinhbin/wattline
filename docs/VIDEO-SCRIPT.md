@@ -79,6 +79,30 @@ Atlanta NPU allocation: 2,513 across 25 NPUs (2.7% of the anchor) -> conserves  
 - [ ] Live `/api/sites`: 83 reachable / 7 not — matches "seven sites"
 - [ ] No frame shows the words "predicts," "death," or "time to failure" (framing rule)
 
+## ONE-TAKE ADAPTATION (StreamYard-style, live narration while driving)
+
+Same beats, same lines, same numbers. What changes is mechanics:
+
+**Stage setup BEFORE hitting record (5 min):**
+- [ ] Hit the live URL twice so Render is warm (cold start is ~50s and would eat a third of the take)
+- [ ] Browser tab 1: landing page, scrolled to top
+- [ ] Browser tab 2: the live map already loaded once (basemap tiles cached), then reloaded and left at hour 0 with the F4 panel practiced (know which NPU you'll click)
+- [ ] Terminal window: `python scripts/verify_anchor.py` PRE-TYPED, just press Enter on camera
+- [ ] A visible clock/timer next to your monitor — the cap is hard and there is no trim in post
+- [ ] Close everything else; notifications off
+
+**Transitions:** Beat 4's cut to the terminal is now an alt-tab: say the disaggregation line while switching, press Enter, read the [OK] lines off the screen, alt-tab back. Practice the alt-tab order once.
+
+**Teammate lines (Beat 6):** best case, Niko / Guttu / Kareem join the StreamYard room muted and unmute for their one sentence in order. One flub means a full retake, so decide BEFORE recording: if anyone is shaky on their line, use the fallback (Vinh reads it as "Niko learned that...") — it costs nothing on the rubric.
+
+**Live checkpoints (replaces the trim plan — glance at the timer):**
+- By "Enter the live map" you should be at **≤0:42**. If later: skip the 115,000 sentence in Beat 3.
+- By "Hit dispatch" you should be at **≤1:15**. If later: skip the dispatch sentence, point at the seven indigo dots instead.
+- By the Learning beat you should be at **≤1:30**. If later: only Niko + Vinh lines.
+- The close needs 15 seconds. Protect it.
+
+**Retake rule:** flubbing a word is fine, keep going — judges forgive live imperfection and it reads as authentic. Retake ONLY for: passing 2:00, a dead app, or a wrong number said out loud. Do at most 3 takes, then ship the best one; a shipped 1:58 with a stumble beats a missed deadline.
+
 ## Deadline runbook (owner: Kareem, Guttu on submit)
 1. Hit the live URL now so Render is warm
 2. Record Vinh's VO straight through, then screen-capture at 1080p+ (multiple takes of the scrub, it is the money shot)
