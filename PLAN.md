@@ -67,6 +67,88 @@ or video until 3.2 is real. Atlanta NPU total from pipeline: **2,284**
 - **Vinh (next):** 3.3 F4 detail panel (adapt Kareem's panel to canonical
   App), then 4.1 sites + 4.2 polish.
 
+### 2026-08-12 ~5:54 PM — Team Handoff: Phase 3 Integration & Build Verification Complete (Kareem)
+
+- **This wave:** Phase 3 Integration & Verification Execution.
+- **Done since last:** 
+  - Master ingestion pipeline verified (`run_full_pipeline.py`) in 2.01s across all 4 stages: 25 NPUs, 90 emergency sites, 7,057 MARTA GTFS stops, and 0–24h exposure gap series under Helene profile.
+  - B3 spatial disaggregation state anchor conservation check passed: `SUM NPU estimates -> ZIP -> state anchor: 92233 [OK]`.
+  - Frontend production build compiled cleanly (`cd web && npm run build` -> `dist/index.html` & `dist/assets/index-7foCgEzJ.js`).
+  - Created [implementation_plan.md](file:///C:/Users/karee/.gemini/antigravity-ide/brain/d55da4e6-b944-43f1-8560-a434b5c82d85/implementation_plan.md) and [walkthrough.md](file:///C:/Users/karee/.gemini/antigravity-ide/brain/d55da4e6-b944-43f1-8560-a434b5c82d85/walkthrough.md).
+- **In progress:** 🟡 Phase 4/5 deliverables (Kareem: screenshot `docs/demo.png` + 2-minute demo video script & recording). Addressing Guttu's findings (dispatch assignments, `stats.json` hour 6 sync, and exposure gap tier thresholds).
+- **Blocked on:** nothing.
+- **I need from you:** Guttu: push local API code and perform Render deployment & Devpost entry.
+- **Decisions logged:** none.
+- **Contract changes:** none.
+- **Next milestone:** Phase 4/5 demo video and Devpost submission.
+
+### 2026-08-12 ~5:53 PM — Guttu: API hardened + blueprint complete; 3 demo-blockers found in the real data
+
+**Pushed to `main`:** `5c39a61` (api) · `30e1a8e` (deploy). Push was blocked
+until ~5:45 by repo permissions, not by a bad commit — `00goop` was not a
+collaborator. Resolved.
+
+- **API (done).** New: `GET /api/exposure/all` (all 25 hours, one payload —
+  **Vinh: point the F3 prefetch here**, 25 round trips to a free-tier service
+  is a laggy scrub and Design points); `GET /api/health` (Render
+  healthCheckPath target, reports `processed` vs `mocks` per payload + feature
+  counts); `GET /` (service index — Render's probe was hitting a 404).
+  Hardening: out-of-series `?hour=N` → 404 not a 500; malformed
+  `data/processed/` JSON falls back to mocks instead of failing boot (D-007).
+  Smoke: 11/11 endpoints pass against real data.
+- **Blueprint (done).** `render.yaml` now declares both services: API
+  (healthCheckPath, region, autoDeploy, PYTHON_VERSION pin) and the React
+  static site. `web/src/api.js` fetches relative `/api/*`, which 404s on a
+  static host, so the blueprint **proxies `/api/*` → the API service** rather
+  than editing frontend files (single-owner rule). ⚠️ If Render assigns the
+  API a suffixed hostname, that rewrite destination must be updated.
+  `npm ci` + `vite build` verified locally.
+- **3.1 mock→real swap has already happened**, silently — `data/processed/`
+  wins in `load()`, so the API is serving Kareem's real payloads now
+  (25 NPUs, 90 sites). All four shapes still valid against the frozen contract.
+
+**Three demo-blockers found while verifying the real payloads:**
+
+1. ⛔ **Dispatch is empty (Kareem).** 0 of 90 sites have `assigned_npus`; every
+   site has `people_served: 0`. The Dispatch beat — lines from site to NPU —
+   has nothing to draw. The grey-out beat survives (7 sites
+   `transit_reachable: false`).
+2. ⛔ **`stats.json` is half-stale (Kareem).** `metro_atlanta_total` updated to
+   2,284, but `npus_critical: 9` and `people_critical: 1323` are still the old
+   **mock** values. Real hour 6 is **25 critical / 2,284 people**. The header
+   will read "9 critical" while the map shows 25 red — a judge catches that
+   immediately.
+3. ⛔ **Tier thresholds saturate the choropleth (Guttu's contract → needs
+   Vinh's ack).** Real `exposure_gap_hours` span **6.6–10.6**, but `critical`
+   is any gap > 4. Every NPU pins to critical from hour 3 and holds until
+   ~hour 20 — the map is monochrome red for ~17 of 25 frames. The data
+   underneath is fine (ETAs stagger across 5 values; NPUs first go critical at
+   hours 1/2/3) — the *tiers* hide it. Fix: rescale thresholds to the real
+   distribution (`CONTRACT:` commit) **and/or** Vinh ramps fill within tier by
+   `exposure_gap_hours`. The scrubber is 45s of a 2:00 video and currently
+   snaps once, then holds still.
+
+- **Answers Q-006:** Σ `dme_estimate` over 25 NPUs = **2,284**
+  (`metro_atlanta_total`).
+- ⚠️ **Video script correction (all).** Guttu's 1:35 line says "Postgres with
+  PostGIS" — there is no database; the API serves precomputed JSON. Replacement:
+  *"…precomputed tables served by FastAPI on Render, with React and MapLibre.
+  Nothing computes while you watch — that was a deliberate design rule."*
+  Truthful, and a stronger Design answer. **Kareem: lock before capture.**
+- **Next (Guttu):** Render deploy (unblocked), then correct the `/api/*`
+  rewrite destination once the real hostname exists.
+
+### 2026-08-12 ~5:51 PM — Team Handoff: Phase 3 Planning & Integration Verification Initiated (Kareem)
+
+- **This wave:** Phase 3 Integration & Verification planning and pipeline validation.
+- **Done since last:** Implementation Plan created for Phase 3 integration and verification (`implementation_plan.md`). Verified data layers, B3 disaggregation conservation (92,233 state anchor), GTFS reachability, and 0–24h exposure gap calculations.
+- **In progress:** 🟡 Phase 3 verification of API payloads and UI panels (`web/src/components/NpuDetailPanel.jsx`), plus preparation for Phase 4/5 deliverables (demo screenshot `docs/demo.png` & demo video recording setup).
+- **Blocked on:** User approval of Phase 3 implementation plan before execution.
+- **I need from you:** User review & approval of `implementation_plan.md`.
+- **Decisions logged:** none.
+- **Contract changes:** none.
+- **Next milestone:** Phase 3 execution and Phase 4/5 demo assets (screenshot + 2-minute video).
+
 ### 2026-08-12 ~5:48 PM — Team Handoff: Phase 1–4 Core Pipeline & Interactive Web Frontend Landed on main
 
 - **Done / Shipped on `main`**:
@@ -198,7 +280,6 @@ scrubber, polish are never cut.
   regenerating `mocks/npus.json` with real `data/npu_boundaries.geojson` shapes
   would make the mock demo look real. Contract shapes unchanged.
 - Next: Vinh → 2.1 (F2 tier coloring) + 2.2 (F3 scrubber).
->>>>>>> origin/main
 
 ### 2026-08-12 ~4:40 PM — Prerequisites: all data + seams in repo, everyone unblocked
 
@@ -290,10 +371,9 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ✅ | 3.4 | grey no-transit sites, tooltip |
-| 4.2 | **F6 polish — never cut** | `web/` | Vinh | ✅ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
+| 4.1 | F5 sites layer + dispatch lines | `web/` | Vinh | ⬜ | 3.4 | **NOT in canonical frontend** — Kareem's `SitesPanel.jsx` is salvage; also dispatch data is empty (0/90 `assigned_npus`, see Guttu 5:53) |
+| 4.2 | **F6 polish — never cut** | `web/` | Vinh | ⬜ | 4.1 | legend, skeletons, fallback-to-mock on API failure |
 | 4.3 | C4 Render Workflows deploy (stretch S1 — code ✅, deploy only if green at 6:30) | `workflows/main.py` | Guttu | ⬜ | 3.1 | dashboard → New → Workflow (Blueprints unsupported); trigger `run_pipeline` once, screenshot the passing run |
-| 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ⬜ | 4.2 | judges scroll on mobile |
 | 4.4 | Screenshot → `docs/demo.png`, uncomment README line | `docs/` | Kareem | ⬜ | 4.2 | judges scroll on mobile |
 
 ### Phase 5 — Submission (7:15–8:00 PM) — no new features
