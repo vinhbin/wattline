@@ -682,7 +682,23 @@
   font-weight: 700;
   font-size: clamp(30px, 5vw, 56px);
   letter-spacing: -0.02em;
-  margin: 18px 0 36px;
+  margin: 18px 0 24px;
+}
+.lp-close-monday {
+  max-width: 620px;
+  margin: 0 auto 34px;
+  font-size: clamp(14px, 1.7vw, 17px);
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+.lp-close-monday::before {
+  content: 'THE MONDAY AFTER';
+  display: block;
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  color: var(--accent);
+  margin-bottom: 10px;
 }
 .lp-credits {
   margin-top: 34px;

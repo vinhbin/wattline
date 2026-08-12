@@ -48,7 +48,7 @@ const FINDINGS = [
   {
     stat: '$450',
     label: 'reimbursed',
-    body: 'A funded program pays this for a storm-damaged meter box. There is nothing equivalent for a household that can’t power life-support.',
+    body: 'A funded program pays this for a storm-damaged meter box. No program exists to get a household that can’t power life-support to a charging site.',
   },
   {
     stat: '115,000',
@@ -168,7 +168,7 @@ function DrainClock() {
       <div className={`drain-gap${gap > 0 ? ' live' : ''}`}>
         {gap > 0 ? (
           <>
-            <b>{gap.toFixed(1)} hours</b> unprotected — the exposure gap
+            <b>{gap.toFixed(1)} hours</b> past what the battery can hold
           </>
         ) : (
           <span className="dim">oxygen concentrator · continuous flow</span>
@@ -409,6 +409,12 @@ export default function Landing({ onEnter }) {
             them, or get them to power.
           </p>
           <h2 className="lp-close-title">WATTLINE is the missing join.</h2>
+          <p className="lp-close-monday">
+            Before landfall, a county emergency-management office opens WATTLINE,
+            sees the three highest-gap neighborhoods, and stages a
+            generator-backed charging site at each — a decision no dataset lets
+            them make today.
+          </p>
           <button className="lp-btn primary big" onClick={onEnter}>
             Open the live exposure map
           </button>
