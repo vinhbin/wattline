@@ -25,6 +25,48 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~5:55 PM — 2.1+2.2 DONE + merge reconciliation: ONE frontend on main (Vinh)
+
+**Done: F2 tier coloring + F3 scrubber (`a785893`), verified headless 3×18
+checks (API-up, API-down/mock-chip, and real `data/processed/` via fresh
+uvicorn): tier choropleth flips per hour, scrubber+autoplay instant with ZERO
+network calls during scrub, live header critical count, no console errors.
+Real 25-NPU boundaries render.**
+
+**⚠️ Merge event + resolution (BUILD-PLAN §1: frontend is single-owner):**
+Kareem pushed a parallel web frontend (own App/MapView/TimelineScrubber) that
+overwrote F1 on main, plus the full pipeline. Resolved on `main` (`90e9860`,
+`5237eea`): **Vinh's frontend is canonical** — it's the verified one with the
+mock-fallback seam. Kareem's `NpuDetailPanel.jsx` / `SitesPanel.jsx` are kept
+as salvage for 3.3/4.1. His App/HeaderBar/TimelineScrubber/index.css are dead
+files (his App had a `str(hour)` JS bug and never fetched exposure). **Nobody
+edits `web/src/App.jsx`/`MapView.jsx` except Vinh — hand components instead.**
+
+**Dashboard corrections (rows were over-flipped):** 3.3 is NOT done (no
+detail panel in the shipping app) — back to ⬜. 2.3/3.2 back to 🟡: code
+landed but **Niko must sign off** — grep shows D-002/D-003 respected but
+**D-004 (suppressed `[1,11]` intervals) is absent** from
+`pipeline/disaggregation.py`, so suppressed ZIPs are treated as exact 11s;
+conservation output not committed. Do NOT claim "conserves 92,233" in README
+or video until 3.2 is real. Atlanta NPU total from pipeline: **2,284**
+(answers Q-006 pending sign-off).
+
+**Handoffs:**
+- **Niko:** verify `pipeline/disaggregation.py` (D-004 + conservation) → flip
+  2.3/3.2. This is the track winner; nothing else on your plate.
+- **Guttu:** `/api/exposure/all` + resilient load landed on main ✓ and the
+  frontend already consumes it. **Restart any running uvicorn** (data loads at
+  import — a stale process serves mocks). Deploy 2.4; `data/processed/` is in
+  the repo so Render serves real data. Devpost 1.6 still shows unconfirmed.
+- **Kareem:** exposure series makes ALL 25 NPUs dark+critical from hour ~1 —
+  the map is a solid red blanket, which kills the scrub demo beat ("eleven
+  NPUs flip red"). Stagger `is_dark`/ETAs per NPU in `pipeline/exposure.py`
+  (Helene profile: outage footprint grows, restoration staggers). Also
+  `name` = "NPU-A" in processed npus.json — friendly names would help the
+  sidebar. Then video setup (5.1).
+- **Vinh (next):** 3.3 F4 detail panel (adapt Kareem's panel to canonical
+  App), then 4.1 sites + 4.2 polish.
+
 ### 2026-08-12 ~5:48 PM — Team Handoff: Phase 1–4 Core Pipeline & Interactive Web Frontend Landed on main
 
 - **Done / Shipped on `main`**:
@@ -229,9 +271,9 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 2.1 | F2 tier coloring + header stats | `web/` | Vinh | ✅ | 1.1 | palette in §4 |
-| 2.2 | **F3 scrubber + autoplay** (THE demo moment) | `web/` | Vinh | ✅ | 2.1 | prefetch all 25 hours; must be instant |
-| 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | Niko | ✅ | 1.2, 1.5 | conserve vs 92,233; print the check |
+| 2.1 | F2 tier coloring + header stats | `web/` | Vinh | ✅ 5:53 PM | 1.1 | feature-state tier fill; header critical count live per hour; verified headless |
+| 2.2 | **F3 scrubber + autoplay** (THE demo moment) | `web/` | Vinh | ✅ 5:53 PM | 2.1 | prefetch `/api/exposure/all` → per-hour → mock; verified 0 fetches during scrub |
+| 2.3 | **B3 disaggregation** (THE track winner) | `pipeline/` | Niko | 🟡 needs Niko sign-off | 1.2, 1.5 | code landed via Kareem (`pipeline/disaggregation.py`); D-002/D-003 ok on grep, **D-004 suppression intervals ABSENT** — Niko must verify before we claim conservation |
 | 2.4 | C3 deploy to Render (API + static site) | — | Guttu | ⬜ | 1.3 | live URL = Completion evidence |
 | 2.5 | D2 sites + transit reachability (honest heuristic, no RAPTOR) | `pipeline/` | Kareem | ✅ | 1.5 | `transit_reachable:false` is the demo beat |
 
@@ -239,9 +281,9 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 
 | # | Component | File(s) | Owner | Status | Deps | Notes |
 |---|-----------|---------|-------|--------|------|-------|
-| 3.1 | Swap mock → real API; **if real data not ready, ship on mock** | `web/`, `api/` | Guttu + Vinh | ✅ | 2.3, 2.4 | pre-decided fallback, no debate |
-| 3.2 | B3 conservation check printed + committed | `pipeline/` | Niko | ✅ | 2.3 | `Σ NPU → ZIP → state: 92,233 ✓` |
-| 3.3 | F4 NPU detail panel | `web/` | Vinh | ✅ | 2.2 | "8.1 hours unprotected" |
+| 3.1 | Swap mock → real API; **if real data not ready, ship on mock** | `web/`, `api/` | Guttu + Vinh | ✅ local 5:53 PM | 2.3, 2.4 | verified headless vs fresh API on real `data/processed/` (25 real NPUs render); deployed URL still pending 2.4 |
+| 3.2 | B3 conservation check printed + committed | `pipeline/` | Niko | 🟡 NOT verified | 2.3 | runtime print exists in code; no committed output; blocked on 2.3 sign-off |
+| 3.3 | F4 NPU detail panel | `web/` | Vinh | ⬜ | 2.2 | **NOT in canonical frontend** — Kareem's `NpuDetailPanel.jsx` is salvage material, needs adapting + wiring |
 | 3.4 | D3 exposure series per NPU × hour 0–24 | `pipeline/` | Kareem | ✅ | 2.3, 2.5 | Helene profile: ETA 9h |
 
 ### Phase 4 — Sites + polish (6:30–7:15 PM)
