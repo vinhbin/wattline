@@ -1,0 +1,11 @@
+# Pipeline-only deps (disaggregation / ingest). Install locally into a venv;
+# these are intentionally NOT in requirements.txt so the Render API build stays
+# light (the deployed API only reads precomputed JSON — see api/main.py).
+#   py -m venv .venv && .venv/Scripts/python -m pip install -r requirements-pipeline.txt
+geopandas
+shapely
+pandas
+SQLAlchemy
+GeoAlchemy2
+psycopg2-binary
+pytest
