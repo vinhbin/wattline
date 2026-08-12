@@ -6,25 +6,37 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 const BASEMAP = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json'
 
 // Palette frozen in BUILD-PLAN §4.
-const TIER_COLORS = {
-  safe: '#1f6f5c',
-  warning: '#c77d0a',
-  critical: '#b3392a',
-}
 const PENDING_COLOR = '#10333a' // exposure not loaded yet
 
-// F2: fill by tier, driven by feature-state so the scrub recolors without
-// touching source data (instant, D-006-friendly).
-const FILL_BY_TIER = [
-  'match',
-  ['coalesce', ['feature-state', 'tier'], 'pending'],
-  'safe',
-  TIER_COLORS.safe,
-  'warning',
-  TIER_COLORS.warning,
-  'critical',
-  TIER_COLORS.critical,
-  PENDING_COLOR,
+// Within-tier ramp by exposure gap (Guttu's demo-blocker #3): tiers saturate
+// on the real data, so brightness carries the gap and the scrub reads
+// continuously. Fixed 3–12h window (where the real gaps live: 6.6–10.6) so
+// hours are comparable and the spread is visible on a projector.
+const GAP_RAMP_START = 3
+const GAP_RAMP_END = 12
+const TIER_RAMPS = {
+  safe: ['#1f6f5c', '#1f6f5c'], // gap ≤ 0 by definition — flat
+  warning: ['#7d4e06', '#e8a52c'],
+  critical: ['#6f2015', '#e2553f'],
+}
+
+const hexToRgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16))
+function rampColor(tier, gapHours) {
+  const [lo, hi] = TIER_RAMPS[tier] ?? [PENDING_COLOR, PENDING_COLOR]
+  const t = Math.max(
+    0,
+    Math.min(1, (gapHours - GAP_RAMP_START) / (GAP_RAMP_END - GAP_RAMP_START)),
+  )
+  const [a, b] = [hexToRgb(lo), hexToRgb(hi)]
+  const mix = a.map((v, i) => Math.round(v + (b[i] - v) * t))
+  return `rgb(${mix[0]},${mix[1]},${mix[2]})`
+}
+
+// F2: fill from feature-state so the scrub recolors without touching source
+// data (instant, D-006-friendly). Color is precomputed per hour in JS.
+const FILL_BY_STATE = [
+  'to-color',
+  ['coalesce', ['feature-state', 'color'], PENDING_COLOR],
 ]
 
 // Handles Polygon and MultiPolygon — real NPU boundaries mix both.
@@ -98,7 +110,7 @@ export default function MapView({ npus, exposure }) {
         type: 'fill',
         source: 'npus',
         paint: {
-          'fill-color': FILL_BY_TIER,
+          'fill-color': FILL_BY_STATE,
           'fill-opacity': [
             'case',
             ['boolean', ['feature-state', 'hover'], false],
@@ -164,7 +176,11 @@ export default function MapView({ npus, exposure }) {
     for (const e of exposure.npus) {
       map.setFeatureState(
         { source: 'npus', id: e.npu_id },
-        { tier: e.tier, dark: e.is_dark },
+        {
+          tier: e.tier,
+          dark: e.is_dark,
+          color: rampColor(e.tier, e.exposure_gap_hours),
+        },
       )
     }
   }, [ready, npus, exposure])
