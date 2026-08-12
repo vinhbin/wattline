@@ -1,0 +1,19 @@
+{
+  "_note": "Manufacturer PUBLISHED MINIMUM runtimes in hours. These are the optimistic case: Georgia Tech CIDI confirmed real-world runtime is lower (partial charge at onset, battery age, defects, deep-discharge abuse, rising current draw). Verify each against the vendor spec sheet before the pitch.",
+  "_verify": "Philips SimplyGo spec sheet; Trilogy Evo manual; ResMed RPS II; CADD-Solis operating tables",
+  "devices": {
+    "oxygen_concentrator": { "min_hours": 0.9, "tier": "critical", "source": "SimplyGo, continuous flow, high setting" },
+    "ventilator":          { "min_hours": 7.5, "tier": "critical", "source": "Trilogy Evo, per battery, IEC method" },
+    "bipap":               { "min_hours": 8.0, "tier": "critical", "source": "ResMed RPS II, average settings" },
+    "iv_pump":             { "min_hours": 69.0, "tier": "critical", "source": "CADD-Solis, high continuous rate" },
+    "enteral_feeding":     { "min_hours": 8.0, "tier": "serious",  "source": "typical pump spec" },
+    "home_dialysis":       { "min_hours": 0.0, "tier": "serious",  "source": "schedule failure, not battery — model separately" },
+    "power_wheelchair":    { "min_hours": 8.0, "tier": "mobility", "source": "full charge, ~10 mile range" },
+    "electric_bed":        { "min_hours": 0.0, "tier": "mobility", "source": "mains only" }
+  },
+  "tiers": {
+    "critical": "battery depletion -> immediate clinical risk, hours",
+    "serious":  "multi-day horizon, schedule or nutrition failure",
+    "mobility": "egress, dignity, and access - serious but not equivalent to ventilator failure"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "sites": [
+    {
+      "site_id": "lib-001",
+      "name": "Central Library",
+      "type": "library",
+      "lat": 33.7615,
+      "lon": -84.3877,
+      "capacity": 120,
+      "transit_reachable": true,
+      "assigned_npus": [
+        "NPU-E",
+        "NPU-P"
+      ],
+      "people_served": 223
+    },
+    {
+      "site_id": "lib-002",
+      "name": "West End Branch",
+      "type": "library",
+      "lat": 33.736,
+      "lon": -84.4135,
+      "capacity": 60,
+      "transit_reachable": true,
+      "assigned_npus": [
+        "NPU-Y",
+        "NPU-Z"
+      ],
+      "people_served": 303
+    },
+    {
+      "site_id": "fire-014",
+      "name": "Station 14",
+      "type": "fire_station",
+      "lat": 33.772,
+      "lon": -84.365,
+      "capacity": 150,
+      "transit_reachable": true,
+      "assigned_npus": [
+        "NPU-M",
+        "NPU-L"
+      ],
+      "people_served": 214
+    },
+    {
+      "site_id": "rec-003",
+      "name": "Grant Park Rec",
+      "type": "rec_center",
+      "lat": 33.737,
+      "lon": -84.37,
+      "capacity": 120,
+      "transit_reachable": true,
+      "assigned_npus": [
+        "NPU-L",
+        "NPU-W"
+      ],
+      "people_served": 295
+    },
+    {
+      "site_id": "rec-009",
+      "name": "Adamsville Rec",
+      "type": "rec_center",
+      "lat": 33.757,
+      "lon": -84.488,
+      "capacity": 60,
+      "transit_reachable": false,
+      "assigned_npus": [],
+      "people_served": 0
+    },
+    {
+      "site_id": "lib-007",
+      "name": "Buckhead Branch",
+      "type": "library",
+      "lat": 33.84,
+      "lon": -84.38,
+      "capacity": 150,
+      "transit_reachable": false,
+      "assigned_npus": [],
+      "people_served": 0
+    },
+    {
+      "site_id": "fire-021",
+      "name": "Station 21",
+      "type": "fire_station",
+      "lat": 33.7,
+      "lon": -84.39,
+      "capacity": 120,
+      "transit_reachable": false,
+      "assigned_npus": [],
+      "people_served": 0
+    }
+  ]
+}

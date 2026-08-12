@@ -1,0 +1,569 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.404,
+              33.741
+            ],
+            [
+              -84.376,
+              33.741
+            ],
+            [
+              -84.376,
+              33.769000000000005
+            ],
+            [
+              -84.404,
+              33.769000000000005
+            ],
+            [
+              -84.404,
+              33.741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-M",
+        "name": "Downtown",
+        "dme_estimate": 142,
+        "dme_low": 130,
+        "dme_high": 153,
+        "device_mix": {
+          "ventilator": 19,
+          "oxygen_concentrator": 25,
+          "bipap": 41,
+          "iv_pump": 1,
+          "power_wheelchair": 2,
+          "electric_bed": 54
+        },
+        "no_vehicle_rate": 0.36,
+        "zip_source_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.39699999999999,
+              33.766999999999996
+            ],
+            [
+              -84.369,
+              33.766999999999996
+            ],
+            [
+              -84.369,
+              33.795
+            ],
+            [
+              -84.39699999999999,
+              33.795
+            ],
+            [
+              -84.39699999999999,
+              33.766999999999996
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-E",
+        "name": "Midtown",
+        "dme_estimate": 153,
+        "dme_low": 140,
+        "dme_high": 165,
+        "device_mix": {
+          "ventilator": 74,
+          "oxygen_concentrator": 3,
+          "bipap": 32,
+          "iv_pump": 6,
+          "power_wheelchair": 1,
+          "electric_bed": 37
+        },
+        "no_vehicle_rate": 0.11,
+        "zip_source_count": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.432,
+              33.721
+            ],
+            [
+              -84.40400000000001,
+              33.721
+            ],
+            [
+              -84.40400000000001,
+              33.749
+            ],
+            [
+              -84.432,
+              33.749
+            ],
+            [
+              -84.432,
+              33.721
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-V",
+        "name": "West End",
+        "dme_estimate": 77,
+        "dme_low": 70,
+        "dme_high": 83,
+        "device_mix": {
+          "ventilator": 15,
+          "oxygen_concentrator": 5,
+          "bipap": 17,
+          "iv_pump": 13,
+          "power_wheelchair": 0,
+          "electric_bed": 27
+        },
+        "no_vehicle_rate": 0.36,
+        "zip_source_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.411,
+              33.778
+            ],
+            [
+              -84.38300000000001,
+              33.778
+            ],
+            [
+              -84.38300000000001,
+              33.806000000000004
+            ],
+            [
+              -84.411,
+              33.806000000000004
+            ],
+            [
+              -84.411,
+              33.778
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-T",
+        "name": "Atlantic Station",
+        "dme_estimate": 302,
+        "dme_low": 277,
+        "dme_high": 326,
+        "device_mix": {
+          "ventilator": 57,
+          "oxygen_concentrator": 80,
+          "bipap": 80,
+          "iv_pump": 37,
+          "power_wheelchair": 1,
+          "electric_bed": 47
+        },
+        "no_vehicle_rate": 0.28,
+        "zip_source_count": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.442,
+              33.757
+            ],
+            [
+              -84.414,
+              33.757
+            ],
+            [
+              -84.414,
+              33.785000000000004
+            ],
+            [
+              -84.442,
+              33.785000000000004
+            ],
+            [
+              -84.442,
+              33.757
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-L",
+        "name": "Bankhead",
+        "dme_estimate": 72,
+        "dme_low": 66,
+        "dme_high": 77,
+        "device_mix": {
+          "ventilator": 14,
+          "oxygen_concentrator": 1,
+          "bipap": 17,
+          "iv_pump": 4,
+          "power_wheelchair": 9,
+          "electric_bed": 27
+        },
+        "no_vehicle_rate": 0.22,
+        "zip_source_count": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.37899999999999,
+              33.751999999999995
+            ],
+            [
+              -84.351,
+              33.751999999999995
+            ],
+            [
+              -84.351,
+              33.78
+            ],
+            [
+              -84.37899999999999,
+              33.78
+            ],
+            [
+              -84.37899999999999,
+              33.751999999999995
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-N",
+        "name": "Old Fourth Ward",
+        "dme_estimate": 90,
+        "dme_low": 82,
+        "dme_high": 97,
+        "device_mix": {
+          "ventilator": 36,
+          "oxygen_concentrator": 9,
+          "bipap": 17,
+          "iv_pump": 13,
+          "power_wheelchair": 2,
+          "electric_bed": 13
+        },
+        "no_vehicle_rate": 0.12,
+        "zip_source_count": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.35499999999999,
+              33.726
+            ],
+            [
+              -84.327,
+              33.726
+            ],
+            [
+              -84.327,
+              33.754000000000005
+            ],
+            [
+              -84.35499999999999,
+              33.754000000000005
+            ],
+            [
+              -84.35499999999999,
+              33.726
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-W",
+        "name": "East Atlanta",
+        "dme_estimate": 223,
+        "dme_low": 205,
+        "dme_high": 240,
+        "device_mix": {
+          "ventilator": 24,
+          "oxygen_concentrator": 47,
+          "bipap": 12,
+          "iv_pump": 70,
+          "power_wheelchair": 4,
+          "electric_bed": 66
+        },
+        "no_vehicle_rate": 0.27,
+        "zip_source_count": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.39699999999999,
+              33.808
+            ],
+            [
+              -84.369,
+              33.808
+            ],
+            [
+              -84.369,
+              33.836000000000006
+            ],
+            [
+              -84.39699999999999,
+              33.836000000000006
+            ],
+            [
+              -84.39699999999999,
+              33.808
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-Y",
+        "name": "Buckhead South",
+        "dme_estimate": 112,
+        "dme_low": 103,
+        "dme_high": 120,
+        "device_mix": {
+          "ventilator": 31,
+          "oxygen_concentrator": 34,
+          "bipap": 13,
+          "iv_pump": 10,
+          "power_wheelchair": 7,
+          "electric_bed": 17
+        },
+        "no_vehicle_rate": 0.28,
+        "zip_source_count": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.36699999999999,
+              33.772
+            ],
+            [
+              -84.339,
+              33.772
+            ],
+            [
+              -84.339,
+              33.800000000000004
+            ],
+            [
+              -84.36699999999999,
+              33.800000000000004
+            ],
+            [
+              -84.36699999999999,
+              33.772
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-O",
+        "name": "Virginia Highland",
+        "dme_estimate": 152,
+        "dme_low": 139,
+        "dme_high": 164,
+        "device_mix": {
+          "ventilator": 38,
+          "oxygen_concentrator": 15,
+          "bipap": 11,
+          "iv_pump": 44,
+          "power_wheelchair": 7,
+          "electric_bed": 37
+        },
+        "no_vehicle_rate": 0.11,
+        "zip_source_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.40899999999999,
+              33.686
+            ],
+            [
+              -84.381,
+              33.686
+            ],
+            [
+              -84.381,
+              33.714000000000006
+            ],
+            [
+              -84.40899999999999,
+              33.714000000000006
+            ],
+            [
+              -84.40899999999999,
+              33.686
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-X",
+        "name": "Lakewood",
+        "dme_estimate": 194,
+        "dme_low": 178,
+        "dme_high": 209,
+        "device_mix": {
+          "ventilator": 63,
+          "oxygen_concentrator": 43,
+          "bipap": 28,
+          "iv_pump": 9,
+          "power_wheelchair": 19,
+          "electric_bed": 32
+        },
+        "no_vehicle_rate": 0.41,
+        "zip_source_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.366,
+              33.698
+            ],
+            [
+              -84.33800000000001,
+              33.698
+            ],
+            [
+              -84.33800000000001,
+              33.726000000000006
+            ],
+            [
+              -84.366,
+              33.726000000000006
+            ],
+            [
+              -84.366,
+              33.698
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-Z",
+        "name": "Southeast",
+        "dme_estimate": 191,
+        "dme_low": 175,
+        "dme_high": 206,
+        "device_mix": {
+          "ventilator": 53,
+          "oxygen_concentrator": 21,
+          "bipap": 48,
+          "iv_pump": 21,
+          "power_wheelchair": 4,
+          "electric_bed": 44
+        },
+        "no_vehicle_rate": 0.4,
+        "zip_source_count": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.503,
+              33.742999999999995
+            ],
+            [
+              -84.47500000000001,
+              33.742999999999995
+            ],
+            [
+              -84.47500000000001,
+              33.771
+            ],
+            [
+              -84.503,
+              33.771
+            ],
+            [
+              -84.503,
+              33.742999999999995
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "npu_id": "NPU-P",
+        "name": "Adamsville",
+        "dme_estimate": 70,
+        "dme_low": 64,
+        "dme_high": 75,
+        "device_mix": {
+          "ventilator": 4,
+          "oxygen_concentrator": 20,
+          "bipap": 10,
+          "iv_pump": 11,
+          "power_wheelchair": 9,
+          "electric_bed": 16
+        },
+        "no_vehicle_rate": 0.25,
+        "zip_source_count": 5
+      }
+    }
+  ]
+}
