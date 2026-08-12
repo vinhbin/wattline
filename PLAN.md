@@ -25,6 +25,29 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~5:48 PM — Team Handoff: Phase 1–4 Core Pipeline & Interactive Web Frontend Landed on main
+
+- **Done / Shipped on `main`**:
+  - **Pipeline & Ingestion (Kareem & Niko)**: `pipeline/atlanta_layers.py`, `pipeline/disaggregation.py`, `pipeline/sites.py`, `pipeline/exposure.py`, `pipeline/run_full_pipeline.py`.
+    - 25 NPUs processed, emPOWER DME disaggregated to NPUs (converses vs **92,233** GA anchor check).
+    - 7,057 MARTA GTFS stops analyzed; 90 emergency facilities evaluated for 0.5-mi walk reachability (83 reachable, 7 transit deserts).
+    - 0–24 hour exposure gaps calculated under Helene profile.
+    - Clean datasets generated under `data/processed/` (`npus.json`, `sites.json`, `exposure.json`, `stats.json`).
+  - **Web Frontend (Vinh)**: Full Vite + React + MapLibre GL JS app in `web/`.
+    - Dark-matter basemap, NPU choropleth tier coloring, 0–24h timeline scrubber with ~600ms autoplay, NPU detail drawer ("8.1 hours unprotected"), emergency sites panel with MARTA reachability badges, and offline mock fallbacks.
+  - **Git Sync**: Reconciled and merged with `origin/main` (`e8e9e82`). `main` is clean.
+
+- **Handoff & Next Steps by Team Member**:
+  - 🟢 **Guttu (API & Deploy)**:
+    - `main` now has all real pipeline outputs in `data/processed/` and the complete `web/` frontend code.
+    - **Action**: Re-commit and push your local API code (`/api/health`, `/api/exposure/all`) from your machine. Complete Devpost registration (1.6) and deploy to Render (2.4: FastAPI web service + static site from `web/dist`).
+  - 🟢 **Kareem (Demo & Video)**:
+    - **Action**: Capture screenshot for `docs/demo.png` and uncomment in `README.md` (4.4). Prepare and record 2-minute demo video (5.1) following §10 script.
+  - 🟢 **Vinh (Frontend & Verification)**:
+    - **Action**: Verify static site deployment on Render once Guttu pushes, double-check responsive mobile styles for judges.
+  - 🟢 **Niko (Data & Track Validation)**:
+    - **Action**: Ensure B3 conservation statement `Σ NPU → ZIP → state: 92,233 ✓` is highlighted in track writeup for Atlanta Open Data prize.
+
 ### 2026-08-12 ~5:45 PM — Phase 1-4 Core Build, Pipeline & Web Frontend Complete
 
 - Done: **Task 2.3 & 3.2 (B3 Disaggregation & Anchor Conservation)** — `pipeline/disaggregation.py` implemented. Disaggregates emPOWER ZIP DME to 25 NPUs, conserving against Georgia state anchor 92,233.
