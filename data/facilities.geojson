@@ -1,0 +1,1355 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.41131,
+     33.697383
+    ]
+   },
+   "properties": {
+    "name": "Stewart Lakewood",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.395179,
+     33.700633
+    ]
+   },
+   "properties": {
+    "name": "Carver Homes Branch",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.354886,
+     33.703783
+    ]
+   },
+   "properties": {
+    "name": "Thomasville Heights Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.462448,
+     33.704938
+    ]
+   },
+   "properties": {
+    "name": "Adams Park Branch",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.379542,
+     33.736863
+    ]
+   },
+   "properties": {
+    "name": "Georgia Hill Branch Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.420619,
+     33.740766
+    ]
+   },
+   "properties": {
+    "name": "West End Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.347091,
+     33.741506
+    ]
+   },
+   "properties": {
+    "name": "East Atlanta Branch Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.395509,
+     33.74349
+    ]
+   },
+   "properties": {
+    "name": "Mechanicsville Branch",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.321497,
+     33.751553
+    ]
+   },
+   "properties": {
+    "name": "Kirkwood Branch Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.371773,
+     33.754179
+    ]
+   },
+   "properties": {
+    "name": "Martin Luther King Jr. Community Center",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.424549,
+     33.754254
+    ]
+   },
+   "properties": {
+    "name": "Washington Park-McPheeters Branch Librar",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.384089,
+     33.755429
+    ]
+   },
+   "properties": {
+    "name": "Auburn Avenue Research Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.500127,
+     33.755519
+    ]
+   },
+   "properties": {
+    "name": "Adamsville-Collier Heights Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.388415,
+     33.757476
+    ]
+   },
+   "properties": {
+    "name": "Atlanta-Fulton Public Library Central",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.446715,
+     33.774397
+    ]
+   },
+   "properties": {
+    "name": "Dogwood Branch Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.363714,
+     33.781224
+    ]
+   },
+   "properties": {
+    "name": "Ponce de Leon Branch Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.482079,
+     33.781982
+    ]
+   },
+   "properties": {
+    "name": "Bowen Home Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.384883,
+     33.79053
+    ]
+   },
+   "properties": {
+    "name": "Peachtree Branch Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.498427,
+     33.794517
+    ]
+   },
+   "properties": {
+    "name": "Bankhead Courts Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.476857,
+     33.810714
+    ]
+   },
+   "properties": {
+    "name": "Perry Homes Branch",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.378812,
+     33.838067
+    ]
+   },
+   "properties": {
+    "name": "Buckhead Branch Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.427311,
+     33.84598
+    ]
+   },
+   "properties": {
+    "name": "Northside Branch Library",
+    "type": "library",
+    "source": "Atlanta Libraries (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.398374,
+     33.752619
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 1",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.381369,
+     33.710329
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 2",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.362814,
+     33.853023
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 3",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.37765,
+     33.753971
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 4",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.481083,
+     33.700216
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 5",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.435681,
+     33.802139
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 8",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.502003,
+     33.757803
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 9",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.368478,
+     33.742244
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 10",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.392786,
+     33.790359
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 11",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.345328,
+     33.761537
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 12",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.347718,
+     33.741968
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 13",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.423527,
+     33.722095
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 14",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.381728,
+     33.782109
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 15",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.421937,
+     33.763165
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 16",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.436453,
+     33.742453
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 17",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.322098,
+     33.75052
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 18",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.354267,
+     33.783602
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 19",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.406917,
+     33.718046
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 20",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.378431,
+     33.842551
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 21",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.450593,
+     33.777599
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 22",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.415873,
+     33.797668
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 23",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.410259,
+     33.652461
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 24",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.464499,
+     33.723014
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 25",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.420886,
+     33.837537
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 26",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.408516,
+     33.87104
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 27",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.471712,
+     33.80876
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 28",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.369021,
+     33.810665
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 29",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.389355,
+     33.6807
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 30",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.431773,
+     33.623398
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 33",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.374694,
+     33.655161
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 34",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.407105,
+     33.639023
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 35",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.483435,
+     33.781848
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 38",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.431594,
+     33.629225
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 40",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.412437,
+     33.740489
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 7",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.448844,
+     33.637074
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 32",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.513035,
+     33.683264
+    ]
+   },
+   "properties": {
+    "name": "AFRD Station 36",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.536316,
+     33.695993
+    ]
+   },
+   "properties": {
+    "name": "AFRD EMS Station 37",
+    "type": "fire_station",
+    "source": "Atlanta Fire Stations (COA DPCD GIS)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.369451,
+     33.766737
+    ]
+   },
+   "properties": {
+    "name": "J.D. Sims Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.299681,
+     33.746386
+    ]
+   },
+   "properties": {
+    "name": "Zanban Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.512838,
+     33.688961
+    ]
+   },
+   "properties": {
+    "name": "Ben Hill Park - Ben Hill Rec Ctr",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.320646,
+     33.754934
+    ]
+   },
+   "properties": {
+    "name": "Bessie Branham Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.383513,
+     33.700752
+    ]
+   },
+   "properties": {
+    "name": "South Bend Center for Art & Culture",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.374507,
+     33.769062
+    ]
+   },
+   "properties": {
+    "name": "Central Park Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.34706,
+     33.73788
+    ]
+   },
+   "properties": {
+    "name": "Brownwood Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.370394,
+     33.7397
+    ]
+   },
+   "properties": {
+    "name": "Grant Park Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.428782,
+     33.718477
+    ]
+   },
+   "properties": {
+    "name": "Rev. James Orange Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.506545,
+     33.769743
+    ]
+   },
+   "properties": {
+    "name": "Collier Drive Park Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.377705,
+     33.818229
+    ]
+   },
+   "properties": {
+    "name": "Peachtree Hills Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.355316,
+     33.751539
+    ]
+   },
+   "properties": {
+    "name": "Lang-Carson Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.35236,
+     33.796365
+    ]
+   },
+   "properties": {
+    "name": "Morningside Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.410523,
+     33.693603
+    ]
+   },
+   "properties": {
+    "name": "Avery Park - Gilbert House",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.462204,
+     33.711903
+    ]
+   },
+   "properties": {
+    "name": "Adams Park Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.492,
+     33.735198
+    ]
+   },
+   "properties": {
+    "name": "Anthony Flanagan Memorial Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.336677,
+     33.751944
+    ]
+   },
+   "properties": {
+    "name": "Coan Park Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.438684,
+     33.753396
+    ]
+   },
+   "properties": {
+    "name": "C.A. Scott Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.395436,
+     33.713694
+    ]
+   },
+   "properties": {
+    "name": "Arthur Langford Jr. Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.399698,
+     33.741255
+    ]
+   },
+   "properties": {
+    "name": "Dunbar Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.438503,
+     33.775031
+    ]
+   },
+   "properties": {
+    "name": "Grove Park Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.493839,
+     33.791126
+    ]
+   },
+   "properties": {
+    "name": "English Park Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.376161,
+     33.751916
+    ]
+   },
+   "properties": {
+    "name": "ML King Jr Recreation and Aquatic Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.41303,
+     33.712969
+    ]
+   },
+   "properties": {
+    "name": "Perkerson Park Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.499317,
+     33.756441
+    ]
+   },
+   "properties": {
+    "name": "Old Adamsville Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.491982,
+     33.75412
+    ]
+   },
+   "properties": {
+    "name": "C.T. Martin Natatorium Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.428782,
+     33.718477
+    ]
+   },
+   "properties": {
+    "name": "Rev James Orange Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.398831,
+     33.72857
+    ]
+   },
+   "properties": {
+    "name": "Pittman Park Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.378984,
+     33.679562
+    ]
+   },
+   "properties": {
+    "name": "Rosel Fann Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.356754,
+     33.704412
+    ]
+   },
+   "properties": {
+    "name": "Thomasville Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.513017,
+     33.688699
+    ]
+   },
+   "properties": {
+    "name": "William Walker Recreation Center",
+    "type": "rec_center",
+    "source": "CoA DPR Recreation Centers"
+   }
+  }
+ ]
+}
