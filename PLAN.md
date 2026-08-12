@@ -25,6 +25,20 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~7:20 PM — Removed dead PostGIS code; drop postgres/postgis from "Built with" (Niko)
+
+- **Confirmed the PostGIS path never ran** — gated behind `DATABASE_URL` in
+  `empower.py`, never set, no DB provisioned (local or Render). The `zips` table
+  never existed anywhere. `pipeline/db.py` + `load_zips()` were dead code.
+- **Deleted it**: removed `pipeline/db.py`, `load_zips`/`records_to_gdf`/the DB
+  gate in `empower.py`, and `SQLAlchemy`/`GeoAlchemy2`/`psycopg2-binary` from
+  `requirements-pipeline.txt`; cleaned `.env.example`. **18 tests still green**;
+  `python -m pipeline.empower` still prints the conservation check.
+- **@Guttu — strip `postgresql` + `postgis` from the Devpost "Built with" tags.**
+  Real stack: Python/geopandas/shapely/pandas · FastAPI/Uvicorn · React/Vite/
+  MapLibre GL · Render. **@Kareem — keep the corrected video line (no "Postgres
+  with PostGIS").** Nothing we ship touches a database.
+
 ### 2026-08-12 ~6:45 PM — ⛔→✅ exposure.json regenerated against real npus (Niko)
 
 - **Fixed the 6:40 blocker.** Re-ran `pipeline/exposure.py` against the real
@@ -566,7 +580,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked · ✂️
 | 1.1 | Vite + MapLibre scaffold, F1 map renders NPUs from mocks | `web/` | **Vinh** | ✅ | 0.1 | checkpoint: looks like a product |
 | 1.2 | B1 emPOWER → PostGIS (reproject 3857→4326, suppression intervals) | `pipeline/` | **Niko** | ✅ | — | rules D-001..D-005 |
 | 1.3 | FastAPI serving the four endpoints straight from `mocks/` | `api/` | **Guttu** | ✅ | 0.1 | CORS open, read-only |
-| 1.4 | **Verify PostGIS on Render vs Tiger Data** (15 min, then decide) | — | **Guttu** | ✂️ | — | Q-004 **moot**: no DB was ever provisioned. `pipeline/db.py` + `empower.py` carry a real PostGIS loader but it is gated on `DATABASE_URL` and there is no evidence it ever ran (Niko to confirm). Deployed API has no database — `geopandas`/`sqlalchemy` are deliberately out of `requirements.txt`. Tiger dropped. |
+| 1.4 | **Verify PostGIS on Render vs Tiger Data** (15 min, then decide) | — | **Guttu** | ✂️ | — | Q-004 **moot**: no DB ever provisioned. **Niko confirmed the PostGIS loader never ran** (unset `DATABASE_URL`, no `zips` table anywhere) and **deleted `pipeline/db.py` + `load_zips()`** (7:20 PM). Deployed API has no database. Tiger dropped; **strip `postgresql`/`postgis` from Devpost "Built with".** |
 | 1.5 | D1 Atlanta layers: NPU boundaries, parcels, facilities | `pipeline/` | **Kareem** | ✅ | — | `pipeline/atlanta_layers.py`, output in `data/processed/` |
 | 1.6 | Complete Devpost registration + create project entry | Devpost | **Guttu** | 🟡 3/5 | — | submission `1135217-wattline`, status DRAFT. ✅ Manage team · ✅ Project overview · ✅ Additional info. **Blocked: Project details needs ONLY a public video URL** (5.2). Live/repo/API-docs links + `docs/demo.png` uploaded 6:5x PM. |
 

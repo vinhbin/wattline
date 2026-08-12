@@ -5,7 +5,4 @@
 geopandas
 shapely
 pandas
-SQLAlchemy
-GeoAlchemy2
-psycopg2-binary
 pytest

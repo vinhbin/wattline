@@ -1,15 +1,14 @@
 """B1 — emPOWER ingest (pipeline stage S1: the `zips` table).
 
 Normalizes the raw HHS emPOWER ZIP dump (data/empower_ga_zip.json, already
-EPSG:4326 via outSR=4326) into clean per-ZIP records, then loads them into a
-PostGIS `zips` table. Correctness rules D-001..D-005 land here; see
+EPSG:4326 via outSR=4326) into clean per-ZIP records that the disaggregation
+stage consumes. Correctness rules D-001..D-005 land here; see
 pipeline/constants.py and docs/decision-log.md.
 
-Run: .venv/Scripts/python -m pipeline.empower   (needs DATABASE_URL)
+Run: .venv/Scripts/python -m pipeline.empower
 """
 import json
 import logging
-import os
 from pathlib import Path
 
 from shapely.geometry import shape
@@ -116,32 +115,6 @@ def check_anchors(records):
     )
 
 
-# --- optional PostGIS load (D-006/D-007) ---------------------------------
-
-_COLS = ("zip_code", "county", "population", "pop_low", "pop_high",
-         "is_suppressed", "device_mix")
-
-
-def records_to_gdf(records):
-    """Normalized records -> GeoDataFrame in EPSG:4326 (no reprojection)."""
-    import geopandas as gpd
-
-    rows = [{c: r[c] for c in _COLS} for r in records]
-    return gpd.GeoDataFrame(
-        rows, geometry=[r["geometry"] for r in records], crs="EPSG:4326"
-    )
-
-
-def load_zips(records):
-    """Write the `zips` table to PostGIS. Requires DATABASE_URL."""
-    from sqlalchemy.dialects.postgresql import JSONB
-
-    from pipeline.db import write_postgis
-
-    gdf = records_to_gdf(records)
-    return write_postgis(gdf, "zips", dtype={"device_mix": JSONB})
-
-
 DATA = Path(__file__).resolve().parent.parent / "data" / "empower_ga_zip.json"
 
 
@@ -149,12 +122,6 @@ def main():
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     records = normalize_all(DATA)
     check_anchors(records)  # prints the conservation check
-    if os.environ.get("DATABASE_URL"):
-        n = load_zips(records)
-        print(f"loaded {n} rows into PostGIS table `zips`")
-    else:
-        print("DATABASE_URL not set - skipped PostGIS load "
-              "(conservation check above is the ship-critical output)")
 
 
 if __name__ == "__main__":

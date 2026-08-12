@@ -1,7 +1,6 @@
 """TDD tests for B1 emPOWER ingest (pipeline/empower.py).
 
 Pure-Python, no database — run with `.venv/Scripts/python -m pytest tests/`.
-The DB load (load_zips) is verified manually against Docker PostGIS.
 """
 from pathlib import Path
 
