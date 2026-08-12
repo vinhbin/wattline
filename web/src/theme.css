@@ -419,7 +419,11 @@ body {
 }
 
 .sites-cap .no-transit {
-  color: #e06a57;
+  color: #a99ae0;
+}
+
+.map-tooltip .t-gap.t-no-transit {
+  color: #a99ae0;
 }
 
 /* ---------- legend (F6) ---------- */
@@ -529,8 +533,8 @@ body {
 }
 
 .legend-dot.dot-desert {
-  background: #8a9698;
-  opacity: 0.55;
+  background: #8f7bd6;
+  border-color: #c9bcf5;
 }
 
 .legend-line {

@@ -11,11 +11,15 @@ import Sidebar from './components/Sidebar.jsx'
 import MapView from './components/MapView.jsx'
 import Scrubber from './components/Scrubber.jsx'
 import NpuDetailPanel from './components/NpuDetailPanel.jsx'
+import Landing from './components/Landing.jsx'
+import './landing.css'
 
 const HOURS = 25 // hour 0–24 inclusive (frozen contract)
 const PLAY_STEP_MS = 600
 
 export default function App() {
+  // landing page is the entry screen; "Enter the map" switches to the dashboard
+  const [view, setView] = useState('landing')
   const [npus, setNpus] = useState(null)
   const [stats, setStats] = useState(null)
   const [sites, setSites] = useState(null)
@@ -79,6 +83,10 @@ export default function App() {
     if (!series) return
     if (!playing && hour >= HOURS - 1) setHour(0) // replay from the top
     setPlaying((p) => !p)
+  }
+
+  if (view === 'landing') {
+    return <Landing onEnter={() => setView('map')} />
   }
 
   return (

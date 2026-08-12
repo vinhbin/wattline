@@ -138,11 +138,14 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
       style: BASEMAP,
       center: [-84.42, 33.77], // Atlanta, refined by fitBounds once data lands
       zoom: 10.3,
+      pitch: 47, // 3D: NPUs extrude by exposure gap — critical areas rise
+      bearing: -14,
+      maxPitch: 68,
       attributionControl: { compact: true },
     })
-    // bottom-right so the F4 detail panel (top-right) never covers zoom
+    // compass shown so judges can reset the 3D tilt/rotation
     map.addControl(
-      new maplibregl.NavigationControl({ showCompass: false }),
+      new maplibregl.NavigationControl({ visualizePitch: true }),
       'bottom-right',
     )
     map.on('load', () => setReady(true))
@@ -171,6 +174,8 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
       .getStyle()
       .layers.find((l) => l.type === 'symbol')?.id
 
+    // flat base tint — reads as the "ground" under the extrusions and keeps
+    // the choropleth legible on low-gap (short) areas from a top-down angle
     map.addLayer(
       {
         id: 'npu-fill',
@@ -181,9 +186,32 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
           'fill-opacity': [
             'case',
             ['boolean', ['feature-state', 'hover'], false],
-            0.85,
-            0.62,
+            0.55,
+            0.32,
           ],
+        },
+      },
+      firstSymbol,
+    )
+    // 3D: extrude each NPU by its exposure gap. Height is pushed via
+    // feature-state per hour, so the towers rise and fall during the scrub —
+    // the exposure gap becomes physical relief, not just color.
+    map.addLayer(
+      {
+        id: 'npu-extrusion',
+        type: 'fill-extrusion',
+        source: 'npus',
+        paint: {
+          'fill-extrusion-color': FILL_BY_STATE,
+          'fill-extrusion-height': [
+            'coalesce',
+            ['feature-state', 'height'],
+            0,
+          ],
+          'fill-extrusion-base': 0,
+          // fill-extrusion-opacity is layer-wide only (no data expressions);
+          // hover emphasis is carried by the flat-fill layer instead
+          'fill-extrusion-opacity': 0.82,
         },
       },
       firstSymbol,
@@ -223,16 +251,21 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
 
     // F4: click a polygon → select; click empty basemap → deselect.
     // Site dots sit above the fills and are not selectable — clicking one
-    // must not deselect the NPU under it.
+    // must not deselect the NPU under it. In 3D the extrusion is what the
+    // cursor lands on, so both npu layers count as hits.
     map.on('click', (e) => {
-      const layers = ['site-dots', 'npu-fill'].filter((id) => map.getLayer(id))
+      const layers = ['site-dots', 'npu-extrusion', 'npu-fill'].filter((id) =>
+        map.getLayer(id),
+      )
       const hits = map.queryRenderedFeatures(e.point, { layers })
       if (!hits.length) return onSelectRef.current(null)
       if (hits[0].layer.id === 'site-dots') return
       onSelectRef.current(hits[0].id)
     })
 
-    map.on('mousemove', 'npu-fill', (e) => {
+    // hover works off whichever npu layer the pointer is over (flat fill when
+    // top-down, extrusion tower when pitched)
+    const onNpuMove = (e) => {
       const f = e.features?.[0]
       if (!f) return
       map.getCanvas().style.cursor = 'pointer'
@@ -245,8 +278,8 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
       hoverIdRef.current = f.id
       map.setFeatureState({ source: 'npus', id: f.id }, { hover: true })
       setTip({ x: e.point.x, y: e.point.y, props: f.properties })
-    })
-    map.on('mouseleave', 'npu-fill', () => {
+    }
+    const onNpuLeave = () => {
       map.getCanvas().style.cursor = ''
       if (hoverIdRef.current !== null) {
         map.setFeatureState(
@@ -255,8 +288,12 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
         )
         hoverIdRef.current = null
       }
-      setTip(null)
-    })
+      setTip((t) => (t?.kind === 'site' ? t : null))
+    }
+    for (const id of ['npu-extrusion', 'npu-fill']) {
+      map.on('mousemove', id, onNpuMove)
+      map.on('mouseleave', id, onNpuLeave)
+    }
 
     map.fitBounds(boundsOf(npus), { padding: 48, duration: 900 })
   }, [ready, npus])
@@ -300,22 +337,29 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
         type: 'circle',
         source: 'sites',
         paint: {
-          // the grey-out IS the demo beat: no transit → dim grey dot
+          // reachable = amber; no-transit = indigo (the demo beat). Indigo sits
+          // outside the tier palette (green/amber/red) so it can't be mistaken
+          // for a tier, and unlike grey it reads clearly off the dark basemap.
           'circle-color': [
             'case',
             ['get', 'transit_reachable'],
             '#f5b54a',
-            '#8a9698',
+            '#8f7bd6',
           ],
           'circle-opacity': [
             'case',
             ['get', 'transit_reachable'],
             0.92,
-            0.4,
+            0.85,
           ],
-          'circle-radius': ['case', ['get', 'transit_reachable'], 4.2, 3.4],
-          'circle-stroke-color': '#0b1416',
-          'circle-stroke-width': 1.2,
+          'circle-radius': ['case', ['get', 'transit_reachable'], 4.2, 4.6],
+          'circle-stroke-color': [
+            'case',
+            ['get', 'transit_reachable'],
+            '#0b1416',
+            '#c9bcf5',
+          ],
+          'circle-stroke-width': ['case', ['get', 'transit_reachable'], 1.2, 1.4],
         },
       },
       firstSymbol,
@@ -363,17 +407,24 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
     prevSelectedRef.current = selectedId
   }, [ready, npus, selectedId])
 
-  // F2/F3: push the current hour's tier into feature-state — instant recolor.
+  // F2/F3: push the current hour's tier + 3D height into feature-state.
+  // height = exposure gap × EXTRUDE_PER_HOUR (metres) so critical NPUs tower
+  // and the relief rises/falls live during the scrub. Floor keeps every NPU
+  // slightly raised so nothing sits flush with the basemap.
   useEffect(() => {
     const map = mapRef.current
     if (!ready || !map || !exposure || !map.getSource('npus')) return
+    const EXTRUDE_PER_HOUR = 420 // metres per gap-hour
+    const FLOOR = 120 // metres — a visible base even at zero gap
     for (const e of exposure.npus) {
+      const gap = Math.max(0, e.exposure_gap_hours)
       map.setFeatureState(
         { source: 'npus', id: e.npu_id },
         {
           tier: e.tier,
           dark: e.is_dark,
           color: rampColor(e.tier, e.exposure_gap_hours),
+          height: FLOOR + gap * EXTRUDE_PER_HOUR,
         },
       )
     }
@@ -417,7 +468,7 @@ export default function MapView({ npus, exposure, sites, selectedId, onSelect })
           {tip.props.transit_reachable ? (
             <div className="t-gap tier-safe">MARTA-reachable</div>
           ) : (
-            <div className="t-gap tier-critical">No transit access</div>
+            <div className="t-gap t-no-transit">No transit access</div>
           )}
         </div>
       )}
