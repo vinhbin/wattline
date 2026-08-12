@@ -25,6 +25,64 @@ When two artifacts disagree, the higher one wins. Fix the LOWER artifact to matc
 
 ## Status snapshot (APPEND a new dated block on top; never overwrite)
 
+### 2026-08-12 ~5:35 PM — TEAM HANDOFF: wave 2, compressed clock (~2h25m left)
+
+**State:** Phase 0 fully green + 1.1 done. All inputs are in the repo — nobody
+is blocked on data. Every commit so far is Vinh's; Niko/Guttu/Kareem start
+here after `git pull`.
+
+**Compressed clock (old phase times are stale):**
+by 6:00 unblock · by 6:30 core lands (cut-check #1) · 7:15 feature freeze
+(cut-check #2) · 7:45 SUBMIT.
+
+**Niko — start now, critical path (1.2 → 2.3):**
+- Inputs ready: `data/empower_ga_zip.json` (**already EPSG:4326 — do NOT
+  reproject**, D-001 satisfied at fetch; suppressed cells are literal `11` →
+  store `[1,11]` intervals), `data/arc_tract_demographics.json` (530 tracts:
+  senior/disability/no-vehicle/housing-units — ACS fallback not needed),
+  `data/npu_boundaries.geojson` (letter is in `NAME`, `NPU` field is null;
+  Polygon+MultiPolygon mixed).
+- Ship-blocking output = `data/processed/npus.json` + `stats.json` in the
+  frozen mock shapes — the API stub already prefers `data/processed/` over
+  `mocks/`. PostGIS is optional if it costs time (D-007 tables where cheap).
+- Print the conservation check vs **92,233** (containment for suppressed).
+- Ping Kareem for column names FIRST (5-min chat, log in Shared Contracts).
+
+**Guttu — in this order:**
+1. **Devpost registration + project entry (1.6) — DQ condition, 10 min, do
+   before anything technical.** All 4 members added.
+2. 1.3 is already built (`api/main.py` serves the contract; CORS open,
+   hour-validation 422s). Just `pip install -r requirements.txt`, smoke it,
+   flip the row.
+3. 1.4 PostGIS-on-Render check (15 min hard cap) → decides Tiger (S2).
+4. 2.4 deploy: API web service + `web/` static site (`npm run build`,
+   `dist/`). Live URL into README + Q-001. Frontend falls back to bundled
+   mocks with a MOCK DATA chip, so a half-up deploy still demos.
+5. Workflows (S1): code is in `workflows/main.py` + `render.yaml` — deploy
+   ONLY if everything is green at 6:30 (D-012).
+
+**Kareem — D1 is ~done, skip to D2 (2.5) → D3 (3.4):**
+- Already in repo: NPU boundaries, `data/facilities.geojson` (22 libraries +
+  37 fire + 31 rec — sanity-pass names, a couple may be historical),
+  `data/device_runtimes.json` (verify vs vendor sheets, Q-005).
+- Run `python scripts/fetch_gtfs.py` locally (~30s, 7,057 stops, gitignored).
+- D2 honest heuristic only (walk + headway + one transit leg) — NO RAPTOR.
+  Output `data/processed/sites.json` in the mock shape;
+  `transit_reachable:false` is the demo beat.
+- D3 exposure series → `data/processed/exposure.json` **keyed by hour
+  "0"–"24"** like the mock. Helene profile, ETA 9h. Tier by device class,
+  never averaged.
+- You own the video (5.1–5.2) from 7:15 — set up capture early.
+
+**Vinh (me):** F1 shipped + verified. Now 2.1 tier coloring → 2.2 scrubber.
+Fill layer is structured for the tier swap; exposure prefetch pattern matches
+the hour-keyed mock.
+
+**Standing rules:** lock rows 🟡 in PLAN.md before starting (commit PLAN.md
+only, push); conventional commits; push after every commit. Cut order S1→S5
+pre-decided — if behind at 6:30 cut S1+S2, at 7:00 S3–S5. Disaggregation,
+scrubber, polish are never cut.
+
 ### 2026-08-12 ~5:30 PM — 1.1 done: F1 map on screen (Vinh)
 
 - Done: **`web/` scaffold + F1** (`2101e00`) — Vite + React + MapLibre, CARTO
