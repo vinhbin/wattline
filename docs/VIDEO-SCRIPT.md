@@ -52,12 +52,19 @@ Atlanta NPU allocation: 2,513 across 25 NPUs (2.7% of the anchor) -> conserves  
 
 ### Beat 6 · 1:25–1:40 · LEARNING (all four teammates — rubric criterion)
 **Visual:** Stay on the map, slow drift; or landing "how it works" cards.
-**Lines (one sentence each, first-person, recorded by each teammate):**
-- **Niko:** "I learned that suppressed federal data isn't missing data, a published eleven means one-to-eleven, so we test containment, not equality."
-- **Guttu:** "I learned to precompute everything, the API only reads, so nothing computes while a judge is watching."
-- **Kareem:** "I learned that no one, not even Georgia Tech's assistive tech lab, will commit to a hard battery runtime, so our gap is the optimistic case."
-- **Vinh:** "And I learned that the most important pixel on a map can be the one that greys out."
-**Fallback:** if any recording is missing by 7:30, Vinh reads it as "Niko learned that..."
+**Lines (one sentence each, first-person, SELF-IDENTIFYING — say your name first so viewers know who's speaking even during full screen-share):**
+- **Vinh (handoff):** "Each of us learned something building this."
+- **Niko:** "I'm Niko, I built the disaggregation, and I learned that suppressed federal data isn't missing data, a published eleven means one-to-eleven, so we test containment, not equality."
+- **Guttu:** "I'm Guttu, I built the API, and I learned to precompute everything, the API only reads, so nothing computes while a judge is watching."
+- **Kareem:** "I'm Kareem, I built the exposure model, and I learned that no one, not even Georgia Tech's assistive tech lab, will commit to a hard battery runtime, so our gap is the optimistic case."
+- **Vinh:** "And I built the map, where I learned the most important pixel can be the one that greys out."
+
+**Name display (belt and suspenders):**
+1. Audio self-ID above is the guarantee — it works even when the screen-share hides the tiles.
+2. In StreamYard: each teammate types their real name when joining the studio (that's the name banner text). Host: turn on participant name labels (Brand panel → toggle "Show names"), and when a teammate speaks, click their tile to add it to the stage next to the screen-share so their face + name banner appear for their sentence, then remove.
+3. This beat is also team-membership evidence for judges: four named voices, four named roles.
+
+**Fallback:** if anyone can't join by 7:30, Vinh reads their line as "Niko built the disaggregation, and he learned..."
 
 ### Beat 7 · 1:40–1:55 · THE CLOSE (bookend)
 **Visual:** Landing close section: giant 92,233, then "THE MONDAY AFTER" line, end on "WATTLINE is the missing join."
@@ -96,9 +103,9 @@ Same beats, same lines, same numbers. What changes is mechanics:
 **Teammate lines (Beat 6):** best case, Niko / Guttu / Kareem join the StreamYard room muted and unmute for their one sentence in order. One flub means a full retake, so decide BEFORE recording: if anyone is shaky on their line, use the fallback (Vinh reads it as "Niko learned that...") — it costs nothing on the rubric.
 
 **Live checkpoints (replaces the trim plan — glance at the timer):**
-- By "Enter the live map" you should be at **≤0:42**. If later: skip the 115,000 sentence in Beat 3.
-- By "Hit dispatch" you should be at **≤1:15**. If later: skip the dispatch sentence, point at the seven indigo dots instead.
-- By the Learning beat you should be at **≤1:30**. If later: only Niko + Vinh lines.
+- By "Enter the live map" you should be at **≤0:40**. If later: skip the 115,000 sentence in Beat 3.
+- By "Hit dispatch" you should be at **≤1:10**. If later: skip the dispatch sentence, point at the seven indigo dots instead.
+- By the Learning handoff you should be at **≤1:20** (the named lines now take ~22s). If later: only Niko + Vinh speak, Vinh names the other two in one breath ("Guttu built the API, Kareem built the exposure model").
 - The close needs 15 seconds. Protect it.
 
 **Retake rule:** flubbing a word is fine, keep going — judges forgive live imperfection and it reads as authentic. Retake ONLY for: passing 2:00, a dead app, or a wrong number said out loud. Do at most 3 takes, then ship the best one; a shipped 1:58 with a stumble beats a missed deadline.
