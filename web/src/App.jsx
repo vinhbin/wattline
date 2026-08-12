@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react'
-import { fetchNpus, fetchStats, fetchExposureSeries, isUsingMock } from './api.js'
+import {
+  fetchNpus,
+  fetchStats,
+  fetchSites,
+  fetchExposureSeries,
+  isUsingMock,
+} from './api.js'
 import Header from './components/Header.jsx'
 import Sidebar from './components/Sidebar.jsx'
 import MapView from './components/MapView.jsx'
@@ -12,6 +18,7 @@ const PLAY_STEP_MS = 600
 export default function App() {
   const [npus, setNpus] = useState(null)
   const [stats, setStats] = useState(null)
+  const [sites, setSites] = useState(null)
   const [mock, setMock] = useState(false)
   // All 25 hours prefetched on mount — the scrub must never be network-bound.
   const [series, setSeries] = useState(null)
@@ -25,11 +32,13 @@ export default function App() {
     Promise.all([
       fetchNpus(),
       fetchStats(),
+      fetchSites(),
       fetchExposureSeries(HOURS),
-    ]).then(([n, s, hours]) => {
+    ]).then(([n, s, st, hours]) => {
       if (!alive) return
       setNpus(n)
       setStats(s)
+      setSites(st)
       setSeries(hours)
       setMock(isUsingMock())
     })
@@ -85,6 +94,7 @@ export default function App() {
         <MapView
           npus={npus}
           exposure={exposure}
+          sites={sites}
           selectedId={selectedId}
           onSelect={setSelectedId}
         />
